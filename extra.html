@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="flex bg-gray-100 h-[100vh] overflow-hidden" x-data="{panel:false, menu:true}" :class="{'justify-start': menu, 'justify-center': menu == false}">
+  <aside class="flex flex-col  bg-white side-main px-5 overflow-y-auto" :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768}">
+    <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-5" x-show="menu">
+<img class="w-[150px]" src="./assets/images/logo.png" alt="logo"/>
+    
+    </a>
+    <div class="w-full text-center cont-h " >
+      <h1 x-show="menu">John Doe</h1>
+      <p x-show="menu">Johndoe@gmail.com</p>
+    </div>
+    <div class="flex-grow flex flex-col justify-between text-gray-500 bg-white w-1s" >
+      
+      
+       <div class="dash-div">
+        <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <h1 class="ml-2 uppercase"  x-show="menu">Dashboard</h1>
+          <p class="ml-2 text-xs text-gray-50" x-show="menu">View and export company reports in real time.</p>
+        </div>
+        <nav class="flex flex-col mx-4 my-6 space-y-4 mt-10">
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Core KPIs</span>
+        </a>
+        
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Customer Transaction KPI 
+            Summary</span>
+        </a>
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Received Work Orders</span>
+        </a>
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">AHT and Transaction Scatter</span>
+        </a>
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">AHT vs. Transaction Bar</span>
+        </a>
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Work Order Status</span>
+        </a>
+      </nav>
+       </div>
+       <div class="dash-div">
+        <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <h1 class="ml-2 uppercase"  x-show="menu">ADMIN</h1>
+          <p class="ml-2 text-xs text-gray-50" x-show="menu">Add and Modify User profiles.</p>
+        </div>
+        <nav class="flex flex-col mx-4 my-6 space-y-4">
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">All Users</span>
+        </a>
+        
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Add New User</span>
+        </a>
+      </nav>
+       </div>
+       <div class="dash-div">
+        <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <h1 class="ml-2 uppercase"  x-show="menu">Resources</h1>
+          <p class="ml-2 text-xs text-gray-50" x-show="menu">Help guides for your company.</p>
+        </div>
+        <nav class="flex flex-col mx-4 my-6 space-y-4">
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Training Resources</span>
+        </a>
+        
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">FAQs</span>
+        </a>
+       
+      </nav>
+       </div>
+   
+    </div>
+  </aside>
+  <div class="flex-grow text-gray-800 relative overflow-y-auto">
+    <img src="/assets/images/dash-header-bg.png" class="absolute top-0 right-[15em]" />
+    <div class=" py-8 px-10 space-y-6 bg-[#436AD6] ">
+      <header class="flex items-center h-20  ">
+        <div class="mr-8 cursor-pointer" @click="menu = !menu" >
+          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" >
+            <path xmlns="http://www.w3.org/2000/svg" d="M1.125 18C0.50368 18 0 17.4963 0 16.875C0 16.2537 0.50368 15.75 1.125 15.75H13.875C14.4963 15.75 15 16.2537 15 16.875C15 17.4963 14.4963 18 13.875 18H1.125ZM1.125 10.125C0.503679 10.125 0 9.62132 0 9C0 8.37868 0.50368 7.875 1.125 7.875H19.875C20.4963 7.875 21 8.37868 21 9C21 9.62132 20.4963 10.125 19.875 10.125H1.125ZM1.125 2.25C0.50368 2.25 0 1.74632 0 1.125C0 0.50368 0.50368 0 1.125 0H25.875C26.4963 0 27 0.50368 27 1.125C27 1.74632 26.4963 2.25 25.875 2.25H1.125Z" fill="white"/>
+  </svg>
+        </div>
+        
+        <div class="flex flex-shrink-0 items-center ml-auto">
+          <!-- <button class="relative inline-flex items-center p-2 hover:bg-gray-100 focus:bg-gray-100 rounded-lg" @click="panel = !panel" @click.away="panel = false">
+            <span class="sr-only">User Menu</span>
+            <div class="hidden md:flex md:flex-col md:items-end md:leading-tight" >
+              <span class="font-semibold">Sinan AYDOĞAN</span>
+              <span class="text-sm text-gray-600">Quality Engineer</span>
+            </div>
+            <span class="h-12 w-12 ml-2 sm:ml-3 mr-2 bg-gray-100 rounded-full overflow-hidden">
+              <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="user profile photo" class="h-full w-full object-cover">
+            </span>
+            <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" class="hidden sm:block h-6 w-6 text-gray-300">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg> 
+          </button>
+          <div class="absolute top-20 bg-white border rounded-md p-2 w-56" x-show="panel" style="display:none">
+            <div class="p-2 hover:bg-blue-100 cursor-pointer">Profile</div>
+            <div class="p-2 hover:bg-blue-100 cursor-pointer">Messages</div>
+            <div class="p-2 hover:bg-blue-100 cursor-pointer">To-Do's</div>
+          </div> -->
+          <div class=" pl-3 ml-3 space-x-1">
+            <button class="relative p-2 hover:bg-gray-100 text-white hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
+              <span class="sr-only">Notifications</span>
+              <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
+              <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
+              <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            </button>
+           
+            <button class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            </svg>
+            </button>
+            <button class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
+              <span class="sr-only">Log out</span>
+              <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                <path xmlns="http://www.w3.org/2000/svg" d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01805 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z" fill="currentColor"/>
+  </svg>
+            </button>
+            <button class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
+              <span class="sr-only">Log out</span>
+              <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+  </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between">
+        <div class="mr-6">
+          <h1 class="text-3xl text-white font-600 mb-5">Welcome back, John</h1>
+          <div class="">
+            <nav class="tabs flex flex-col sm:flex-row">
+                <button data-target="panel-1" class="tab active text-white py-2 px-0 mr-10 block font-medium">
+                  Company 1
+                </button><button data-target="panel-2" class="tab text-white py-2 font-medium px-0 mr-10 block">
+                  Company 2
+                </button><button data-target="panel-3" class="tab text-white py-2 font-medium px-0 mr-10 block">
+                  Company 3
+                </button>
+            </nav>
+        </div>
+
+        </div>
+        
+      </div>
+    </div>
+    <main class="p-6 sm:p-10 space-y-6">
+      <div id="panels">
+        <div class="panel-1 tab-content active py-5">
+          <div class=" p-0 flex ">
+            <div
+              x-data="{ open: false }"
+              class="relative mr-10"
+            >
+              <button
+                x-on:click="open = true"
+                class="flex items-center bg-white focus:bg-gray-400 text-gray-700 focus:text-gray-900 font-semibold rounded focus:outline-none focus:shadow-inner py-3 px-4"
+                type="button"
+              >
+                 <span class="mr-1">Department</span>
+                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"  style="margin-top:3px">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                 </svg>
+              </button>
+              <ul
+                x-show="open"
+                x-on:click.away="open = false"
+                class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-1"
+                style="min-width:15rem"
+               >
+                <li>
+                  <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                    Mont Blanc
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                    Monte Rosa
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                    Dom <span class="text-gray-400">(no good)</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--  -->
+            <div
+            x-data="{ open: false }"
+            class="relative mr-10"
+          >
+            <button
+              x-on:click="open = true"
+              class="flex items-center bg-white focus:bg-gray-400 text-gray-700 focus:text-gray-900 font-semibold rounded focus:outline-none focus:shadow-inner py-3 px-4"
+              type="button"
+            >
+               <span class="mr-1">Company Group</span>
+               <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"  style="margin-top:3px">
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+               </svg>
+            </button>
+            <ul
+              x-show="open"
+              x-on:click.away="open = false"
+              class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-1"
+              style="min-width:15rem"
+             >
+              <li>
+                <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                  Mont Blanc
+                </a>
+              </li>
+              <li>
+                <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                  Monte Rosa
+                </a>
+              </li>
+              <li>
+                <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                  Dom <span class="text-gray-400">(no good)</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- 2 -->
+          <div
+          x-data="{ open: false }"
+          class="relative mr-10"
+        >
+          <button
+            x-on:click="open = true"
+            class="flex items-center bg-white focus:bg-gray-400 text-gray-700 focus:text-gray-900 font-semibold rounded focus:outline-none focus:shadow-inner py-3 px-4"
+            type="button"
+          >
+             <span class="mr-1">Company Name</span>
+             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"  style="margin-top:3px">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+             </svg>
+          </button>
+          <ul
+            x-show="open"
+            x-on:click.away="open = false"
+            class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-1"
+            style="min-width:15rem"
+           >
+            <li>
+              <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                Mont Blanc
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                Monte Rosa
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                Dom <span class="text-gray-400">(no good)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 3 -->
+        <div
+          x-data="{ open: false }"
+          class="relative mr-10"
+        >
+          <button
+            x-on:click="open = true"
+            class="flex items-center bg-white focus:bg-gray-400 text-gray-700 focus:text-gray-900 font-semibold rounded focus:outline-none focus:shadow-inner py-3 px-4"
+            type="button"
+          >
+             <span class="mr-1">Transaction Type</span>
+             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"  style="margin-top:3px">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+             </svg>
+          </button>
+          <ul
+            x-show="open"
+            x-on:click.away="open = false"
+            class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-1"
+            style="min-width:15rem"
+           >
+            <li>
+              <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                Mont Blanc
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                Monte Rosa
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                Dom <span class="text-gray-400">(no good)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 4 -->
+        <div
+          x-data="{ open: false }"
+          class="relative mr-10"
+        >
+          <button
+            x-on:click="open = true"
+            class="flex items-center bg-white focus:bg-gray-400 text-gray-700 focus:text-gray-900 font-semibold rounded focus:outline-none focus:shadow-inner py-3 px-4"
+            type="button"
+          >
+             <span class="mr-1">Service Description</span>
+             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"  style="margin-top:3px">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+             </svg>
+          </button>
+          <ul
+            x-show="open"
+            x-on:click.away="open = false"
+            class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-1"
+            style="min-width:15rem"
+           >
+            <li>
+              <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                Mont Blanc
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                Monte Rosa
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
+                Dom <span class="text-gray-400">(no good)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+   
+          </div>
+          <div class=" flex items-center  px-5 py-5">
+            
+        </div>
+        <section class="grid md:grid-cols-2 xl:grid-cols-2 xl:grid-rows-2 xl:grid-flow-col gap-6">
+          <div class="flex flex-col md:col-span-2 md:row-span-2 ">
+            <div class="bg-white text-gray-500 rounded shadow-xl py-5 px-5 w-full" >
+              <div class="chartjs-wrapper">
+                <canvas id="acquisition" class="chartjs w-full"></canvas>
+                <div id='customLegend' class='customLegend'></div>
+              </div>
+          </div>
+          </div>
+          <div class="flex flex-col md:col-span-2 md:row-span-2 ">
+          <div class="row-span-2 bg-white rounded-lg shadow-xl py-5 px-5 w-full">
+            <div class="chart-inner">
+              <canvas id="BA-chart-job-error" width="400" height="400"></canvas>
+              <div id='customLegend1' class='customLegend'></div>
+            </div>
+          </div>
+          </div>
+        </section>
+        </div>
+        <div class="panel-2 tab-content py-5">
+            Map here
+        </div>
+        <div class="panel-3 tab-content py-5">
+            other info
+        </div>  
+    </div>
+     
+    </main>
+  </div>
+</div>
+     <!-- ====== About Section End -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio,forms,line-clamp,typography"></script>
+     <!-- <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.5.0/dist/alpine.min.js"></script> -->
+     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-doughnutlabel/2.0.3/chartjs-plugin-doughnutlabel.js"></script>
+     <script src="/assets/js/main.js"></script>
+</body>
+</html>

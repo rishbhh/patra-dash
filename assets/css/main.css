@@ -1,0 +1,117 @@
+.container{
+    margin: auto;
+}
+.bsh{
+    box-shadow: 0px 75px 30px rgba(9, 18, 42, 0.01), 0px 42px 25px rgba(9, 18, 42, 0.03), 0px 19px 19px rgba(9, 18, 42, 0.04), 0px 5px 10px rgba(9, 18, 42, 0.05), 0px 0px 0px rgba(9, 18, 42, 0.05);
+
+}
+input:checked ~ .box {
+    border-color: rgb(48, 86, 211);
+}
+input#checkboxLabelTwo:checked ~ .box span {
+    opacity: 1;
+}
+
+input[type="checkbox"]:checked ~ .box span {
+    opacity: 1;
+}
+.form-div{
+    padding-top: 20%;
+}
+.side-main{
+    padding-top: 6%;
+}
+.cont-h h1{
+color: #436AD6;
+font-size: 30px;
+font-weight: 600;
+}
+.cont-h p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 36px;
+
+color: rgba(68, 68, 68, 0.75);
+}
+.dash-div h1{
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.dash-div>div{
+    box-shadow: 0 8px 19px #436ad663;
+}
+/* .w-1s{
+    width: 90%;
+} */
+button:focus{
+    outline: none;
+}
+.tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  .tabs .tab{
+letter-spacing: 1px;
+position: relative;
+  }
+  .tabs .tab::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background: #fff;
+    height: 2px;
+    transition: 0.3s all ease-in-out;
+  }
+  .tabs .tab.active::after{
+    width: 100%;
+  }
+  #panels .tab-content button{
+    box-shadow: 0px 75px 30px rgba(9, 18, 42, 0.01), 0px 42px 25px rgba(9, 18, 42, 0.03), 0px 19px 19px rgba(9, 18, 42, 0.04), 0px 5px 10px rgba(9, 18, 42, 0.05), 0px 0px 0px rgba(9, 18, 42, 0.05);
+  }
+
+  /* Chart CSS */
+  .chartjs-wrapper {
+  
+    padding: 20px;
+    width: 100%;
+  }
+  .chartjs-wrapper .chartjs {
+    min-height: 200px;
+  }
+  
+  .customLegend li {
+    display: inline-block;
+    color: #000;
+    margin-right: 25px;
+    margin-top: 15px;
+  }
+  .customLegend li span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+  
+    border-radius: 25px;
+  }
+  .customLegend li:nth-child(1) span{
+    background-color: #00CA72 !important;
+  }
+  .customLegend li:nth-child(2) span{
+    background-color: #FFCC00 !important;
+  }
+
+
+  #customLegend1 li:nth-child(1) span{
+    background-color: #FFCC00 !important;
+  }
+  #customLegend1 li:nth-child(2) span{
+    background-color: #436AD6 !important;
+  }
