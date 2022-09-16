@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="flex bg-gray-100 h-[100vh] overflow-hidden" x-data="{panel:false, menu:true}" :class="{'justify-start': menu, 'justify-center': menu == false}">
+  <aside class="flex flex-col  bg-white side-main px-5 overflow-y-auto" :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768}">
+    <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-5" x-show="menu">
+<img class="w-[150px]" src="./assets/images/logo.png" alt="logo"/>
+    
+    </a>
+    <div class="w-full text-center cont-h " >
+      <h1 x-show="menu">John Doe</h1>
+      <p x-show="menu">Johndoe@gmail.com</p>
+    </div>
+    <div class="flex-grow flex flex-col justify-between text-gray-500 bg-white w-1s" >
+      
+      
+       <div class="dash-div">
+        <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <h1 class="ml-2 uppercase"  x-show="menu">Dashboard</h1>
+          <p class="ml-2 text-xs text-gray-50" x-show="menu">View and export company reports in real time.</p>
+        </div>
+        <nav class="flex flex-col mx-4 my-6 space-y-4 mt-10">
+        <a href="core-kpis.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Core KPIs</span>
+        </a>
+        
+        <a href="cutomer-transaction-kpi.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Customer Transaction KPI 
+            Summary</span>
+        </a>
+        <a href="received-work.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Received Work Orders</span>
+        </a>
+        <a href="scatter.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">AHT and Transaction Scatter</span>
+        </a>
+        <a href="transaction-bar.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">AHT vs. Transaction Bar</span>
+        </a>
+        <a href="work-order.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Work Order Status</span>
+        </a>
+      </nav>
+       </div>
+       <div class="dash-div">
+        <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <h1 class="ml-2 uppercase"  x-show="menu">ADMIN</h1>
+          <p class="ml-2 text-xs text-gray-50" x-show="menu">Add and Modify User profiles.</p>
+        </div>
+        <nav class="flex flex-col mx-4 my-6 space-y-4">
+        <a href="all-users.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">All Users</span>
+        </a>
+        
+        <a href="add-user.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Add New User</span>
+        </a>
+      </nav>
+       </div>
+       <div class="dash-div">
+        <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <h1 class="ml-2 uppercase"  x-show="menu">Resources</h1>
+          <p class="ml-2 text-xs text-gray-50" x-show="menu">Help guides for your company.</p>
+        </div>
+        <nav class="flex flex-col mx-4 my-6 space-y-4">
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">Training Resources</span>
+        </a>
+        
+        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="ml-2"  x-show="menu">FAQs</span>
+        </a>
+       
+      </nav>
+       </div>
+   
+    </div>
+  </aside>
+  <div class="flex-grow text-gray-800 relative overflow-y-auto bg-white">
+    <div class=" py-8 px-10 space-y-6 bg-white ">
+      <header class="flex items-center h-20  ">
+        <div class="mr-8 cursor-pointer" @click="menu = !menu" >
+          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" >
+            <path xmlns="http://www.w3.org/2000/svg" d="M1.125 18C0.50368 18 0 17.4963 0 16.875C0 16.2537 0.50368 15.75 1.125 15.75H13.875C14.4963 15.75 15 16.2537 15 16.875C15 17.4963 14.4963 18 13.875 18H1.125ZM1.125 10.125C0.503679 10.125 0 9.62132 0 9C0 8.37868 0.50368 7.875 1.125 7.875H19.875C20.4963 7.875 21 8.37868 21 9C21 9.62132 20.4963 10.125 19.875 10.125H1.125ZM1.125 2.25C0.50368 2.25 0 1.74632 0 1.125C0 0.50368 0.50368 0 1.125 0H25.875C26.4963 0 27 0.50368 27 1.125C27 1.74632 26.4963 2.25 25.875 2.25H1.125Z" fill="black"/>
+  </svg>
+        </div>
+        
+        <div class="flex flex-shrink-0 items-center ml-auto">
+          <div class=" pl-3 ml-3 space-x-1">
+            <button class="relative p-2 hover:bg-gray-100 text-white hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
+              <span class="sr-only">Notifications</span>
+              <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
+              <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
+              <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            </button>
+           
+            <button class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            </svg>
+            </button>
+            <button class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
+              <span class="sr-only"></span>
+              <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="black" class="h-6 w-6">
+                <path xmlns="http://www.w3.org/2000/svg" d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01805 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z" fill="black"/>
+  </svg>
+            </button>
+            <button class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
+              <span class="sr-only">Log out</span>
+              <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="black" class="h-6 w-6">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+  </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main class="p-6 sm:p-10 space-y-6">
+
+<div class="px-4 sm:px-6 lg:px-8 ">
+    <div class="sm:flex sm:items-center">
+      <div class="sm:flex-auto relative items-center">
+        <h1 class="text-[40px] font-semibold text-gray-900 uppercase text-center">Add New Users</h1>
+        <a href="add-user.html">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4169D7" class="w-16 h-16 absolute top-[30px] bg-white p-[14px] drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)]">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+        </a>
+          
+      </div>
+    </div>
+    <div >
+      <div class="max-w-6xl mx-auto px-4 py-10 ">
+        <div class=" bottom-0 left-0 right-0 py-5" >
+          <div class="max-w-2xl mx-auto px-16">
+            <div class="flex justify-evenly">
+              <div class="w-32 text-center py-4 px-6 bg-[rgba(255,204,0,0.09)]">
+                <img class="m-auto" src="/assets/images/input-users.svg" alt="">
+                <p class="mt-4 font-medium tracking-normal text-gray-4-600 text-sm">Input User 
+                  Information</p>
+              </div>
+        
+                <div class="w-40 text-center py-4 px-6 bg-[rgba(251,39,93,0.07)]">
+                  <img class="m-auto" src="/assets/images/User-Roles-Rerports.svg" alt="">
+                  <p class="mt-4 font-medium tracking-normal text-gray-4-600 text-sm">Assign User
+                    Roles & Rerports</p>
+                </div>
+        
+            </div>
+          </div>
+        </div>
+    
+  
+          <!-- Step Content -->
+          <div class="py-6 ">	
+            <div class="">
+              <form action="#" method="POST">
+                <div class=" drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] sm:rounded-md">
+                  <div class="bg-white py-16 px-20">
+                    <div class="grid grid-cols-6 gap-6 mt-10">
+        
+                      <div class="col-span-8 sm:col-span-6">
+                        <div>
+                          <label id="listbox-label" class="block text-lg font-medium text-gray-400 "> Assign User Role*</label>
+                          <div class="relative mt-1" x-data="{ open: false }">
+                            <button type="button" @click="open = true" class="relative w-full cursor-default rounded-md py-4 pl-3 pr-10 text-left bg-gray-100 focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm" aria-labelledby="listbox-label">
+                              <span class="block truncate text-lg font-medium text-gray-400 ">Select User Role</span>
+                              <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                                <!-- Heroicon name: mini/chevron-up-down -->
+                                <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                  <path fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" clip-rule="evenodd" />
+                                </svg>
+                              </span>
+                            </button>
+                            <template x-if="open">
+                            <ul class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm" @click.away="open = false"
+                            x-transition:enter="transition ease-out origin-top-left duration-200"
+                            x-transition:enter-start="opacity-0 transform scale-90"
+                            x-transition:enter-end="opacity-100 transform scale-100"
+                            x-transition:leave="transition origin-top-left ease-in duration-100"
+                            x-transition:leave-start="opacity-100 transform scale-100"
+                            x-transition:leave-end="opacity-0 transform scale-90" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3" aria-expanded="false" >
+                             
+                              <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                <div class="flex items-center">
+                                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                    <label for="filter-mobile-category-0" class="ml-3 text-xl text-gray-500 font-medium">Role 1 : Lorem ipsum</label>
+                                  </div>
+                              </li>
+                              <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                <div class="flex items-center">
+                                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                    <label for="filter-mobile-category-0" class="ml-3 text-xl text-gray-500 font-medium">Role 2 : Lorem ipsum</label>
+                                  </div>
+                              </li>
+                              <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                <div class="flex items-center">
+                                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                    <label for="filter-mobile-category-0" class="ml-3 text-xl text-gray-500 font-medium">Role 3 : Lorem ipsum</label>
+                                  </div>
+                              </li>
+                              <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                <div class="flex items-center">
+                                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                    <label for="filter-mobile-category-0" class="ml-3 text-xl text-gray-500 font-medium">Role 4 : Lorem ipsum</label>
+                                  </div>
+                              </li>
+                              <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                <div class="flex items-center">
+                                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                    <label for="filter-mobile-category-0" class="ml-3 text-xl text-gray-500 font-medium">Role 5 : Lorem ipsum</label>
+                                  </div>
+                              </li>
+                            
+                            </ul>
+                            </template>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-span-8 sm:col-span-6">
+                        <div>
+                          <label id="listbox-label" class="block text-lg font-medium text-gray-400 ">Assign Reports*</label>
+                          <div class="relative mt-1" x-data="{ open: false }">
+                            <button type="button" @click="open = true" class="relative w-full cursor-default rounded-md py-4 pl-3 pr-10 text-left bg-gray-100 focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm" aria-labelledby="listbox-label">
+                              <span class="block truncate text-lg font-medium text-gray-400 ">Assign reports/charts/feature</span>
+                              <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                                <!-- Heroicon name: mini/chevron-up-down -->
+                                <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                  <path fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" clip-rule="evenodd" />
+                                </svg>
+                              </span>
+                            </button>
+                            <template x-if="open">
+                                <ul class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm" @click.away="open = false"
+                                x-transition:enter="transition ease-out origin-top-left duration-200"
+                                x-transition:enter-start="opacity-0 transform scale-90"
+                                x-transition:enter-end="opacity-100 transform scale-100"
+                                x-transition:leave="transition origin-top-left ease-in duration-100"
+                                x-transition:leave-start="opacity-100 transform scale-100"
+                                x-transition:leave-end="opacity-0 transform scale-90" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3" aria-expanded="false" >
+                                <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                    <div class="flex items-center">
+                                        <input type="text" class="w-full rounded-md border-0 bg-gray-100 px-4 py-2.5 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="search reports role="combobox" aria-expanded="false" aria-controls="options">
+                                      </div>
+                                  </li>
+                                  <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                    <div class="flex items-center">
+                                        <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                        <label for="filter-mobile-category-0" class="ml-3 text-xl text-gray-500 font-medium">Report 1 : Lorem ipsum</label>
+                                      </div>
+                                  </li>
+                                  <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                    <div class="flex items-center">
+                                        <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                        <label for="filter-mobile-category-0" class="ml-3 text-xl text-gray-500 font-medium">Report 2 : Lorem ipsum</label>
+                                      </div>
+                                  </li>
+                                  <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                    <div class="flex items-center">
+                                        <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                        <label for="filter-mobile-category-0" class="ml-3 text-xl text-gray-500 font-medium">Report 3 : Lorem ipsum</label>
+                                      </div>
+                                  </li>
+                                  <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                    <div class="flex items-center">
+                                        <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                        <label for="filter-mobile-category-0" class="ml-3 text-xl text-gray-500 font-medium">Report 4 : Lorem ipsum</label>
+                                      </div>
+                                  </li>
+                                  <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2" id="listbox-option-0" role="option">
+                                    <div class="flex items-center">
+                                        <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                        <label for="filter-mobile-category-0" class="ml-3 text-xl text-gray-500 font-medium">Report 5 : Lorem ipsum</label>
+                                      </div>
+                                  </li>
+                                
+                                </ul>
+                            </template>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- / Step Content -->
+           <!-- Bottom Navigation -->	
+      <div class=" bottom-0 left-0 right-0 py-5 z-1">
+        <div class="max-w-3xl mx-auto px-4">
+          <div class="flex justify-evenly">
+            <div class="">
+              <a onclick="toggleModal()"
+                class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-xl text-center text-white bg-[#00CA72] tracking-[0.125em] hover:bg-transparent hover:text-[#00CA72] hover:border-[#00CA72] border-2 transition ease-in-out duration-500 font-medium uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)]" 
+              ><svg class="w-10 h-10 mr-4" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.125 11.5625C12.7106 11.5625 12.3132 11.7271 12.0201 12.0201C11.7271 12.3132 11.5625 12.7106 11.5625 13.125V31.875C11.5625 32.2894 11.7271 32.6868 12.0201 32.9799C12.3132 33.2729 12.7106 33.4375 13.125 33.4375H31.875C32.2894 33.4375 32.6868 33.2729 32.9799 32.9799C33.2729 32.6868 33.4375 32.2894 33.4375 31.875V13.125C33.4375 12.7106 33.2729 12.3132 32.9799 12.0201C32.6868 11.7271 32.2894 11.5625 31.875 11.5625H24.8438C24.4293 11.5625 24.0319 11.7271 23.7389 12.0201C23.4459 12.3132 23.2812 12.7106 23.2812 13.125V24.5203L27.4156 20.3844C27.5623 20.2377 27.7613 20.1553 27.9688 20.1553C28.1762 20.1553 28.3752 20.2377 28.5219 20.3844C28.6686 20.5311 28.751 20.73 28.751 20.9375C28.751 21.145 28.6686 21.3439 28.5219 21.4906L23.0531 26.9594C22.9806 27.0321 22.8943 27.0899 22.7994 27.1292C22.7045 27.1686 22.6028 27.1889 22.5 27.1889C22.3972 27.1889 22.2955 27.1686 22.2006 27.1292C22.1057 27.0899 22.0194 27.0321 21.9469 26.9594L16.4781 21.4906C16.4055 21.418 16.3479 21.3318 16.3086 21.2368C16.2692 21.1419 16.249 21.0402 16.249 20.9375C16.249 20.8348 16.2692 20.7331 16.3086 20.6382C16.3479 20.5432 16.4055 20.457 16.4781 20.3844C16.5508 20.3117 16.637 20.2541 16.7319 20.2148C16.8268 20.1755 16.9285 20.1553 17.0312 20.1553C17.134 20.1553 17.2357 20.1755 17.3306 20.2148C17.4255 20.2541 17.5117 20.3117 17.5844 20.3844L21.7188 24.5203V13.125C21.7188 12.2962 22.048 11.5013 22.634 10.9153C23.2201 10.3292 24.0149 10 24.8438 10H31.875C32.7038 10 33.4987 10.3292 34.0847 10.9153C34.6708 11.5013 35 12.2962 35 13.125V31.875C35 32.7038 34.6708 33.4987 34.0847 34.0847C33.4987 34.6708 32.7038 35 31.875 35H13.125C12.2962 35 11.5013 34.6708 10.9153 34.0847C10.3292 33.4987 10 32.7038 10 31.875V13.125C10 12.2962 10.3292 11.5013 10.9153 10.9153C11.5013 10.3292 12.2962 10 13.125 10H17.0312C17.2385 10 17.4372 10.0823 17.5837 10.2288C17.7302 10.3753 17.8125 10.574 17.8125 10.7812C17.8125 10.9885 17.7302 11.1872 17.5837 11.3337C17.4372 11.4802 17.2385 11.5625 17.0312 11.5625H13.125Z" fill="currentColor"/>
+                </svg>
+                save user</a>
+            </div>
+            <div class="">
+              <a href="start-configuring.html"
+                class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-xl text-center text-white bg-[#4169D7] tracking-[0.125em] font-medium uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] transition ease-in-out duration-500 hover:bg-transparent hover:border-[#4169D7] border-2 hover:text-[#4169D7]" 
+              ><svg class="w-10 h-10 mr-4" viewBox="0 0 43 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.8478 10C24.2153 10 24.544 10.2287 24.6678 10.5712L25.5503 13.0175C25.8665 13.0962 26.1378 13.175 26.3678 13.2575C26.619 13.3475 26.9428 13.4837 27.3427 13.67L29.3977 12.5825C29.5655 12.4936 29.7575 12.4615 29.945 12.4911C30.1325 12.5206 30.3054 12.6101 30.4377 12.7462L32.2452 14.6149C32.4852 14.8637 32.5527 15.2274 32.4177 15.5449L31.454 17.8037C31.6139 18.0974 31.7414 18.3487 31.8389 18.5586C31.9439 18.7874 32.0739 19.1024 32.2289 19.5086L34.4752 20.4711C34.8127 20.6149 35.0214 20.9524 34.9989 21.3136L34.8339 23.9073C34.8226 24.0758 34.7621 24.2373 34.6599 24.3718C34.5577 24.5062 34.4183 24.6077 34.2589 24.6636L32.1314 25.4198C32.0702 25.7136 32.0064 25.9648 31.9389 26.1773C31.8301 26.5055 31.7058 26.8283 31.5664 27.1448L32.6352 29.5073C32.7106 29.6733 32.7309 29.859 32.6931 30.0374C32.6553 30.2158 32.5615 30.3774 32.4252 30.4985L30.3927 32.3135C30.2589 32.4325 30.0918 32.5078 29.914 32.5292C29.7362 32.5507 29.556 32.5173 29.3977 32.4335L27.3027 31.3235C26.975 31.497 26.6369 31.6502 26.2903 31.7822L25.3753 32.1247L24.5628 34.3747C24.5026 34.5395 24.394 34.6822 24.2512 34.7841C24.1084 34.8861 23.9382 34.9425 23.7628 34.946L21.3878 34.9997C21.2078 35.0044 21.0307 34.9532 20.8809 34.8532C20.7312 34.7531 20.6161 34.6091 20.5516 34.441L19.5941 31.9072C19.2674 31.7956 18.9439 31.6747 18.6241 31.5447C18.3625 31.4315 18.1049 31.3094 17.8516 31.1785L15.4766 32.1935C15.3202 32.2602 15.1476 32.2801 14.9801 32.2506C14.8125 32.221 14.6572 32.1435 14.5329 32.0272L12.7754 30.3785C12.6446 30.2563 12.5555 30.096 12.5207 29.9204C12.4859 29.7447 12.5073 29.5626 12.5817 29.3998L13.6029 27.1748C13.4671 26.9113 13.3412 26.6427 13.2254 26.3698C13.0903 26.0357 12.9652 25.6977 12.8504 25.3561L10.613 24.6748C10.4311 24.6199 10.2724 24.5064 10.1617 24.352C10.0509 24.1976 9.99426 24.011 10.0005 23.8211L10.088 21.4199C10.0942 21.2632 10.1431 21.1112 10.2295 20.9803C10.3159 20.8495 10.4364 20.7447 10.578 20.6774L12.9254 19.5499C13.0342 19.1511 13.1292 18.8411 13.2129 18.6149C13.3308 18.3127 13.4618 18.0158 13.6054 17.7249L12.5879 15.5749C12.5107 15.4117 12.4873 15.2281 12.521 15.0507C12.5546 14.8732 12.6437 14.7111 12.7754 14.5874L14.5304 12.93C14.6534 12.8139 14.8074 12.7359 14.9737 12.7053C15.14 12.6747 15.3116 12.6928 15.4679 12.7575L17.8404 13.7375C18.1029 13.5625 18.3404 13.4212 18.5554 13.3075C18.8116 13.1712 19.1541 13.0287 19.5853 12.875L20.4103 10.5737C20.4713 10.4053 20.5828 10.2599 20.7296 10.1572C20.8763 10.0545 21.0512 9.99959 21.2303 10H23.8478ZM23.2353 11.7212H21.8441L21.0878 13.8387C21.0434 13.9622 20.9714 14.0739 20.8774 14.1655C20.7835 14.2571 20.6699 14.3262 20.5453 14.3674C20.0003 14.5487 19.6066 14.7049 19.3766 14.8262C19.1328 14.9549 18.8216 15.1512 18.4516 15.4137C18.3305 15.4987 18.1899 15.5517 18.0429 15.5679C17.8958 15.5841 17.747 15.5628 17.6104 15.5062L15.3229 14.5624L14.4317 15.4049L15.3604 17.3674C15.416 17.4842 15.4442 17.6121 15.4429 17.7414C15.4416 17.8707 15.4108 17.998 15.3529 18.1137C15.1029 18.6149 14.9341 18.9849 14.8492 19.2124C14.7188 19.5911 14.6062 19.9757 14.5117 20.3649C14.4802 20.4867 14.4226 20.6002 14.3427 20.6973C14.2628 20.7945 14.1626 20.873 14.0492 20.9274L11.8117 22.0011L11.7667 23.2261L13.7917 23.8411C14.0604 23.9223 14.2729 24.1286 14.3617 24.3936C14.5617 24.9936 14.7217 25.4361 14.8367 25.7136C14.989 26.0657 15.1575 26.4107 15.3416 26.7473C15.4039 26.8631 15.4385 26.9918 15.4426 27.1233C15.4467 27.2547 15.4203 27.3853 15.3654 27.5048L14.4267 29.5523L15.3154 30.3873L17.5429 29.4348C17.6629 29.3835 17.7927 29.3596 17.9231 29.3648C18.0535 29.37 18.1811 29.4041 18.2966 29.4648C18.7529 29.7048 19.0928 29.871 19.3078 29.9623C19.5266 30.0535 19.9453 30.206 20.5528 30.4135C20.6734 30.4547 20.7835 30.522 20.8751 30.6106C20.9667 30.6991 21.0376 30.8068 21.0828 30.926L21.9678 33.2647L23.1253 33.2397L23.8715 31.1722C23.9142 31.0543 23.9821 30.947 24.0703 30.8578C24.1586 30.7687 24.2652 30.6998 24.3828 30.656L25.679 30.171C26.0065 30.0498 26.404 29.8585 26.8678 29.596C26.9961 29.5239 27.1405 29.4852 27.2877 29.4835C27.4349 29.4817 27.5802 29.517 27.7102 29.586L29.6815 30.6298L30.7902 29.641L29.8202 27.4998C29.7704 27.3899 29.7445 27.2706 29.7443 27.1499C29.7441 27.0292 29.7695 26.9099 29.819 26.7998C30.0465 26.2911 30.2002 25.9073 30.2777 25.6623C30.354 25.4223 30.4327 25.0761 30.509 24.6311C30.5352 24.4799 30.6013 24.3385 30.7003 24.2214C30.7994 24.1043 30.928 24.0157 31.0727 23.9648L33.1327 23.2336L33.2227 21.8086L31.1977 20.9411C31.0899 20.8952 30.9925 20.8279 30.9115 20.7432C30.8305 20.6586 30.7676 20.5584 30.7265 20.4486C30.582 20.0502 30.4245 19.6566 30.254 19.2686C30.0925 18.9308 29.9174 18.5997 29.729 18.2762C29.6637 18.1618 29.6258 18.034 29.6182 17.9025C29.6106 17.7711 29.6335 17.6397 29.6852 17.5187L30.5915 15.3937L29.6365 14.4062L27.7765 15.3912C27.6551 15.4556 27.5202 15.4906 27.3828 15.4934C27.2454 15.4963 27.1092 15.4668 26.9853 15.4074C26.5905 15.2111 26.1867 15.0335 25.7753 14.8749C25.4245 14.7571 25.0667 14.6611 24.704 14.5874C24.5601 14.5569 24.4264 14.4903 24.3153 14.3939C24.2042 14.2975 24.1195 14.1744 24.069 14.0362L23.234 11.72L23.2353 11.7212ZM22.5303 17.0512C25.574 17.0512 28.0427 19.4924 28.0427 22.5024C28.0427 25.5123 25.574 27.9523 22.5303 27.9523C19.4853 27.9523 17.0179 25.5123 17.0179 22.5024C17.0179 19.4924 19.4853 17.0524 22.5303 17.0524V17.0512ZM22.5303 18.7736C20.4466 18.7736 18.7579 20.4424 18.7579 22.5024C18.7579 24.5623 20.4466 26.2323 22.5303 26.2323C24.6128 26.2323 26.3015 24.5623 26.3015 22.5024C26.3015 20.4424 24.614 18.7736 22.5303 18.7736Z" fill="currentColor"/>
+                </svg> Start Configuring</a>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+
+      </div>
+  
+     
+    </div>
+    <div class="px-4 sm:px-6 lg:px-8">
+    <div class=" drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] sm:rounded-md">
+        <div class="bg-white py-20 px-20 text-center">
+            <h5 class="text-gray-400 font-medium text-2xl mb-10">Reports assigned : </h5>
+            <div class="">
+                <span class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5 text-xl font-normal text-gray-400 mr-5">
+                   Report 2
+                    <button type="button" class="ml-2 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-gray-400 focus:outline-none">
+                      <span class="sr-only">Remove large option</span>
+                      <svg class="h-3 w-3" stroke="currentColor" fill="none" viewBox="0 0 8 8">
+                        <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7" />
+                      </svg>
+                    </button>
+                  </span>
+                  <span class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5 text-xl font-normal text-gray-400 mr-5">
+                    Report 3
+                     <button type="button" class="ml-2 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-gray-400 focus:outline-none">
+                       <span class="sr-only">Remove large option</span>
+                       <svg class="h-3 w-3" stroke="currentColor" fill="none" viewBox="0 0 8 8">
+                         <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7" />
+                       </svg>
+                     </button>
+                   </span>
+                   <span class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5 text-xl font-normal text-gray-400">
+                    Report 5
+                     <button type="button" class="ml-2 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-gray-400 focus:outline-none">
+                       <span class="sr-only">Remove large option</span>
+                       <svg class="h-3 w-3" stroke="currentColor" fill="none" viewBox="0 0 8 8">
+                         <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7" />
+                       </svg>
+                     </button>
+                   </span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="relative z-10 hidden " aria-labelledby="modal-title" role="dialog" aria-modal="true" id="modal">
+   
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+  
+    <div class="fixed inset-0 z-10 overflow-y-auto " >
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+  
+        <div class="ma relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl sm:p-6 relative">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute right-[20px]" onclick="toggleModal()">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              
+          <div>
+            <div class="mx-auto flex items-center justify-center">
+                <lottie-player src="/assets/save.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+            </div>
+            <div class="mt-3 text-center sm:mt-5">
+              <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">User Info saved</h3>
+              <div class="mt-2">
+                <p class="text-lg text-gray-500 font-medium px-5">User information have been saved, move to the 
+                    next step or go back.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    </main>
+  </div>
+</div>
+     <!-- ====== About Section End -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+     <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio,forms,line-clamp,typography"></script>
+     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+     <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+     <script src="/assets/js/main.js"></script>
+</body>
+</html>
