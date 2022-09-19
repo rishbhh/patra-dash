@@ -56,3 +56,6 @@
 function toggleModal() {
 	document.getElementById('modal').classList.toggle('hidden')
   }
+  function toggleModals() {
+    document.getElementById('modals').classList.toggle('hidden')
+    }

@@ -1,162 +1,196 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ============= CSS CDN Links ================ -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" rel="stylesheet">
   <link href="/assets/css/main.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- ============= CSS CDN Links End ================ -->
 </head>
+
 <body>
-  <div class="flex bg-gray-100 h-[100vh] overflow-hidden" x-data="{panel:false, menu:true}" :class="{'justify-start': menu, 'justify-center': menu == false}">
-  <aside class="flex flex-col  bg-white side-main px-5 overflow-y-auto" :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768}">
-    <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-5" x-show="menu">
-<img class="w-[150px]" src="./assets/images/logo.png" alt="logo"/>
-    
-    </a>
-    <div class="w-full text-center cont-h " >
-      <h1 x-show="menu">John Doe</h1>
-      <p x-show="menu">Johndoe@gmail.com</p>
-    </div>
-    <div class="flex-grow flex flex-col justify-between text-gray-500 bg-white w-1s" >
-      
-      
-       <div class="dash-div">
-        <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <h1 class="ml-2 uppercase"  x-show="menu">Dashboard</h1>
-          <p class="ml-2 text-xs text-gray-50" x-show="menu">View and export company reports in real time.</p>
-        </div>
-        <nav class="flex flex-col mx-4 my-6 space-y-4 mt-10">
-        <a href="core-kpis.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-          </svg>
-          <span class="ml-2"  x-show="menu">Core KPIs</span>
-        </a>
-        
-        <a href="cutomer-transaction-kpi.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-          <span class="ml-2"  x-show="menu">Customer Transaction KPI 
-            Summary</span>
-        </a>
-        <a href="received-work.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-          </svg>
-          <span class="ml-2"  x-show="menu">Received Work Orders</span>
-        </a>
-        <a href="scatter.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-          </svg>
-          <span class="ml-2"  x-show="menu">AHT and Transaction Scatter</span>
-        </a>
-        <a href="transaction-bar.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-          </svg>
-          <span class="ml-2"  x-show="menu">AHT vs. Transaction Bar</span>
-        </a>
-        <a href="work-order.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-          </svg>
-          <span class="ml-2"  x-show="menu">Work Order Status</span>
-        </a>
-      </nav>
-       </div>
-       <div class="dash-div">
-        <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <h1 class="ml-2 uppercase"  x-show="menu">ADMIN</h1>
-          <p class="ml-2 text-xs text-gray-50" x-show="menu">Add and Modify User profiles.</p>
-        </div>
-        <nav class="flex flex-col mx-4 my-6 space-y-4">
-        <a href="all-users.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-          </svg>
-          <span class="ml-2"  x-show="menu">All Users</span>
-        </a>
-        
-        <a href="add-user.html" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-          <span class="ml-2"  x-show="menu">Add New User</span>
-        </a>
-      </nav>
-       </div>
-       <div class="dash-div">
-        <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <h1 class="ml-2 uppercase"  x-show="menu">Resources</h1>
-          <p class="ml-2 text-xs text-gray-50" x-show="menu">Help guides for your company.</p>
-        </div>
-        <nav class="flex flex-col mx-4 my-6 space-y-4">
-        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-          </svg>
-          <span class="ml-2"  x-show="menu">Training Resources</span>
-        </a>
-        
-        <a href="#" class="inline-flex items-center py-3 hover:text-gray-400 hover:bg-white hover:shadow-lg rounded-lg px-2" :class="{'justify-start': menu, 'justify-center': menu == false}">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-          <span class="ml-2"  x-show="menu">FAQs</span>
-        </a>
-       
-      </nav>
-       </div>
-   
-    </div>
-  </aside>
-  <div class="flex-grow text-gray-800 relative overflow-y-auto bg-white">
-    <div class=" py-8 px-10 space-y-6 bg-white ">
-      <header class="flex items-center h-20  ">
-        <div class="mr-8 cursor-pointer" @click="menu = !menu" >
-          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" >
-            <path xmlns="http://www.w3.org/2000/svg" d="M1.125 18C0.50368 18 0 17.4963 0 16.875C0 16.2537 0.50368 15.75 1.125 15.75H13.875C14.4963 15.75 15 16.2537 15 16.875C15 17.4963 14.4963 18 13.875 18H1.125ZM1.125 10.125C0.503679 10.125 0 9.62132 0 9C0 8.37868 0.50368 7.875 1.125 7.875H19.875C20.4963 7.875 21 8.37868 21 9C21 9.62132 20.4963 10.125 19.875 10.125H1.125ZM1.125 2.25C0.50368 2.25 0 1.74632 0 1.125C0 0.50368 0.50368 0 1.125 0H25.875C26.4963 0 27 0.50368 27 1.125C27 1.74632 26.4963 2.25 25.875 2.25H1.125Z" fill="black"/>
-  </svg>
-        </div>
-        
-        <div class="flex flex-shrink-0 items-center ml-auto">
-          <div class=" pl-3 ml-3 space-x-1">
-            <button class="relative p-2 hover:bg-gray-100 text-white hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
-              <span class="sr-only">Notifications</span>
-              <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
-              <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
-              <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-              </svg>
-            </button>
-           
-            <button class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-            </svg>
-            </button>
-            <button class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
-              <span class="sr-only"></span>
-              <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="black" class="h-6 w-6">
-                <path xmlns="http://www.w3.org/2000/svg" d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01805 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z" fill="black"/>
-  </svg>
-            </button>
-            <button class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
-              <span class="sr-only">Log out</span>
-              <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="black" class="h-6 w-6">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-  </svg>
-            </button>
+  <div class="flex bg-gray-100 h-[100vh] overflow-hidden" x-data="{panel:false, menu:true}"
+    :class="{'justify-start': menu, 'justify-center': menu == false}">
+
+    <!-- =========== side NavBar Section ================ -->
+    <aside class="flex flex-col  bg-white side-main px-5 overflow-y-auto"
+      :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768}">
+      <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-5" x-show="menu">
+        <img class="w-[150px]" src="./assets/images/logo.png" alt="logo" />
+
+      </a>
+      <div class="w-full text-center cont-h ">
+        <h1 x-show="menu">John Doe</h1>
+        <p x-show="menu">Johndoe@gmail.com</p>
+      </div>
+      <div class="flex-grow flex flex-col justify-between text-gray-500 bg-white w-1s">
+
+
+        <div class="dash-div">
+          <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+            <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/dashboard.png" alt=""></span><span x-show="menu">Dashboard</span> </h1>
+            <p class="ml-2 text-xs text-gray-50" x-show="menu">View and export company reports in real time.</p>
           </div>
+          <nav class="flex flex-col mx-4 my-6 space-y-4 mt-10">
+            <a href="core-kpis.html"
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+              :class="{'justify-start': menu, 'justify-center': menu == false}">
+             <img src="/assets/images/icons-nav/core-kpi.png" alt="" class="">
+              <span class="ml-2" x-show="menu">Core KPIs</span>
+            </a>
+
+            <a href="cutomer-transaction-kpi.html"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+           <img src="/assets/images/icons-nav/Customer-Transaction.png" alt="" class="">
+              <span class="ml-2" x-show="menu">Customer Transaction KPI
+                Summary</span>
+            </a>
+            <a href="received-work.html"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+           <img src="/assets/images/icons-nav/received-work-orders.png" alt="" class="">
+              <span class="ml-2" x-show="menu">Received Work Orders</span>
+            </a>
+            <a href="scatter.html"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+           <img src="/assets/images/icons-nav/aht-trans.png" alt="" class="">
+              <span class="ml-2" x-show="menu">AHT and Transaction Scatter</span>
+            </a>
+            <a href="transaction-bar.html"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+           <img src="/assets/images/icons-nav/aht-transction-bar.png" alt="" class="">
+              <span class="ml-2" x-show="menu">AHT vs. Transaction Bar</span>
+            </a>
+            <a href="work-order.html"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+           <img src="/assets/images/icons-nav/received-work-orders.png" alt="" class="">
+              <span class="ml-2" x-show="menu">Work Order Status</span>
+            </a>
+          </nav>
         </div>
-      </header>
-    </div>
-    <main class="p-6 sm:p-10 space-y-6">
-    <!--
+        <div class="dash-div">
+          <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+            <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.png" alt=""></span><span x-show="menu">ADMIN</span> </h1>
+            <p class="ml-2 text-xs text-gray-50" x-show="menu">Add and Modify User profiles.</p>
+          </div>
+          <nav class="flex flex-col mx-4 my-6 space-y-4">
+            <a href="all-users.html"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+           <img src="/assets/images/icons-nav/all-users.png" alt="" class="">
+              <span class="ml-2" x-show="menu">All Users</span>
+            </a>
+
+            <a href="add-user.html"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+           <img src="/assets/images/icons-nav/add-user.png" alt="" class="">
+              <span class="ml-2" x-show="menu">Add New User</span>
+            </a>
+          </nav>
+        </div>
+        <div class="dash-div">
+          <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+            <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/rea.png" alt=""></span><span x-show="menu">Resources</span> </h1>
+            <p class="ml-2 text-xs text-gray-50" x-show="menu">Help guides for your company.</p>
+          </div>
+          <nav class="flex flex-col mx-4 my-6 space-y-4">
+            <a href="#"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+           <img src="/assets/images/icons-nav/training-resources.png" alt="" class="">
+              <span class="ml-2" x-show="menu">Training Resources</span>
+            </a>
+
+            <a href="#"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+           <img src="/assets/images/icons-nav/FAQs.png" alt="" class="">
+              <span class="ml-2" x-show="menu">FAQs</span>
+            </a>
+
+          </nav>
+        </div>
+
+      </div>
+    </aside>
+    <!-- =========== side NavBar Section End ================ -->
+
+
+    <div class="flex-grow text-gray-800 relative overflow-y-auto bg-white">
+
+      <!-- ================= Header section ================= -->
+      <div class=" py-8 px-10 space-y-6 bg-white ">
+        <header class="flex items-center h-20  ">
+          <div class="mr-8 cursor-pointer" @click="menu = !menu">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path xmlns="http://www.w3.org/2000/svg"
+                d="M1.125 18C0.50368 18 0 17.4963 0 16.875C0 16.2537 0.50368 15.75 1.125 15.75H13.875C14.4963 15.75 15 16.2537 15 16.875C15 17.4963 14.4963 18 13.875 18H1.125ZM1.125 10.125C0.503679 10.125 0 9.62132 0 9C0 8.37868 0.50368 7.875 1.125 7.875H19.875C20.4963 7.875 21 8.37868 21 9C21 9.62132 20.4963 10.125 19.875 10.125H1.125ZM1.125 2.25C0.50368 2.25 0 1.74632 0 1.125C0 0.50368 0.50368 0 1.125 0H25.875C26.4963 0 27 0.50368 27 1.125C27 1.74632 26.4963 2.25 25.875 2.25H1.125Z"
+                fill="black" />
+            </svg>
+          </div>
+
+          <div class="flex flex-shrink-0 items-center ml-auto">
+            <div class=" pl-3 ml-3 space-x-1">
+              <button
+                class="relative p-2 hover:bg-gray-100 text-white hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
+                <span class="sr-only">Notifications</span>
+                <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
+                <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
+                <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+              </button>
+
+              <button
+                class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                </svg>
+              </button>
+              <button
+                class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
+                <span class="sr-only"></span>
+                <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="black" class="h-6 w-6">
+                  <path xmlns="http://www.w3.org/2000/svg"
+                    d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01805 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z"
+                    fill="black" />
+                </svg>
+              </button>
+              <button
+                class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
+                <span class="sr-only">Log out</span>
+                <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="black" class="h-6 w-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <!-- ================= Header section End ================= -->
+
+
+      <!-- ================ All User Table Section =================== -->
+
+      <main class="p-6 sm:p-10 space-y-6">
+        <!--
   This example requires Tailwind CSS v3.0+ 
   
   This example requires some changes to your config:
@@ -172,397 +206,664 @@
   }
   ```
 -->
-<div class="px-4 sm:px-6 lg:px-8 ">
-    <div class="sm:flex sm:items-center">
-      <div class="sm:flex-auto">
-        <h1 class="text-[40px] font-semibold text-gray-900 uppercase text-center">All Users</h1>
-      </div>
-    </div>
-    <div class="mt-8 flex flex-col drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] ">
-      <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-          <div class="relative overflow-hidden ring-1 ring-black ring-opacity-5 md:rounded-lg">
-            
-            <table class="min-w-full table-fixed ">
-              <thead class="bg-[#4169D7]">
-                <tr>
-                  <th scope="col" class="relative w-12 px-6 sm:w-16 sm:px-8">
-                    <input type="checkbox" class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6" >
-                  </th>
-                  <th scope="col" class="min-w-[8rem] py-5 pr-3 text-left text-sm font-semibold text-white">Name</th>
-                  <th scope="col" class="px-3 py-5 text-left text-sm font-semibold text-white">Email ID</th>
-                  <th scope="col" class="px-3 py-5 text-left text-sm font-semibold text-white">Status</th>
-                  <th scope="col" class="px-3 py-5 text-left text-sm font-semibold text-white">Registration Status</th>
-                  <th scope="col" class="px-3 py-5 text-left text-sm font-semibold text-white">Primary Role</th>
-                  <th scope="col" class="relative py-5 pl-3 pr-4 sm:pr-6 text-white text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                      <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd" />
-                    </svg>
-                    
-                  </th>
-                </tr>
-              </thead>
-              <tbody class=" bg-white">
-                <!-- Selected: "bg-gray-50" -->
-                <tr>
-                  <td class="relative w-12 px-6 sm:w-16 sm:px-8">
-                    <!-- Selected row marker, only show when row is selected. -->
-                    <!--  <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> --> 
-  
-                    <input type="checkbox" class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
-                  </td>
-                  <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                  <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Caseycharles@gmail.com</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700"><div class="flex items-center"><div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div><div class="ml-3 truncate text-[#00CA72]">Active</div></div></td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pending invite</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
-                  <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
-                    <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
-                        <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-                      </svg>                      
-                      </a>
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
-                        <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
-                      </svg>                      
-                      </a>
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DD1C1A" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008z" />
-                      </svg>
-                      
-                      </a>
-                      
-                  </td>
-                   
-                </tr>
-                <tr>
-                    <td class="relative w-12 px-6 sm:w-16 sm:px-8">
-                      <!-- Selected row marker, only show when row is selected. -->
-                      <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
-    
-                      <input type="checkbox" class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
-                    </td>
-                    <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                    <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Caseycharles@gmail.com</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700"><div class="flex items-center"><div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div><div class="ml-3 truncate text-[#00CA72]">Active</div></div></td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pending invite</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
-                    <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
-                          <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
-                          <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DD1C1A" class="w-6 h-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008z" />
-                        </svg>
-                        
-                        </a>
-                        
-                    </td>
-                     
-                  </tr>
-                  <tr>
-                    <td class="relative w-12 px-6 sm:w-16 sm:px-8">
-                      <!-- Selected row marker, only show when row is selected. -->
-                      <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
-    
-                      <input type="checkbox" class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
-                    </td>
-                    <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                    <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Alex Pretzy</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pretzyalex@gmail.com</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700"><div class="flex items-center"><div class="flex-0 w-2 h-2 rounded-full" style="background-color:#FB275D"></div><div class="ml-3 truncate text-[#FB275D]">Deactive</div></div></td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Registered</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Editor</td>
-                    <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
-                          <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
-                          <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DD1C1A" class="w-6 h-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008z" />
-                        </svg>
-                        
-                        </a>
-                        
-                    </td>
-                     
-                  </tr>
-                  <tr>
-                    <td class="relative w-12 px-6 sm:w-16 sm:px-8">
-                      <!-- Selected row marker, only show when row is selected. -->
-                      <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
-    
-                      <input type="checkbox" class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
-                    </td>
-                    <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                    <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Pretzy</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Rahul.pretzy@gmail.com</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700"><div class="flex items-center"><div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div><div class="ml-3 truncate text-[#00CA72]">Active</div></div></td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Registered </td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
-                    <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
-                          <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
-                          <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DD1C1A" class="w-6 h-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008z" />
-                        </svg>
-                        
-                        </a>
-                        
-                    </td>
-                     
-                  </tr>
-                  <tr>
-                    <td class="relative w-12 px-6 sm:w-16 sm:px-8">
-                      <!-- Selected row marker, only show when row is selected. -->
-                      <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
-    
-                      <input type="checkbox" class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
-                    </td>
-                    <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                    <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Pretzy Rahul </td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Ruhisharma@gmail.com</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700"><div class="flex items-center"><div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div><div class="ml-3 truncate text-[#00CA72]">Active</div></div></td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Registered</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Editor</td>
-                    <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
-                          <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
-                          <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DD1C1A" class="w-6 h-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008z" />
-                        </svg>
-                        
-                        </a>
-                        
-                    </td>
-                     
-                  </tr>
-                  <tr>
-                    <td class="relative w-12 px-6 sm:w-16 sm:px-8">
-                      <!-- Selected row marker, only show when row is selected. -->
-                      <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
-    
-                      <input type="checkbox" class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
-                    </td>
-                    <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                    <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Ruuhi Ruuhi</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Julietkansderson@gmail.com</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700"><div class="flex items-center"><div class="flex-0 w-2 h-2 rounded-full" style="background-color:#FB275D"></div><div class="ml-3 truncate text-[#FB275D]">Deactive</div></div></td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pending invite</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
-                    <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
-                          <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
-                          <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DD1C1A" class="w-6 h-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008z" />
-                        </svg>
-                        
-                        </a>
-                        
-                    </td>
-                     
-                  </tr>
-                  <tr>
-                    <td class="relative w-12 px-6 sm:w-16 sm:px-8">
-                      <!-- Selected row marker, only show when row is selected. -->
-                      <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
-    
-                      <input type="checkbox" class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
-                    </td>
-                    <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                    <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Caseycharles@gmail.com</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700"><div class="flex items-center"><div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div><div class="ml-3 truncate text-[#00CA72]">Active</div></div></td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pending invite</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
-                    <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
-                          <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
-                          <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
-                        </svg>                      
-                        </a>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DD1C1A" class="w-6 h-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008z" />
-                        </svg>
-                        
-                        </a>
-                        
-                    </td>
-                     
-                  </tr>
-                  <tr>
-                      <td class="relative w-12 px-6 sm:w-16 sm:px-8">
-                        <!-- Selected row marker, only show when row is selected. -->
-                        <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
-      
-                        <input type="checkbox" class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
-                      </td>
-                      <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                      <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
-                      <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Caseycharles@gmail.com</td>
-                      <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700"><div class="flex items-center"><div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div><div class="ml-3 truncate text-[#00CA72]">Active</div></div></td>
-                      <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pending invite</td>
-                      <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
-                      <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
-                            <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-                          </svg>                      
-                          </a>
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
-                            <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
-                          </svg>                      
-                          </a>
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DD1C1A" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008z" />
-                          </svg>
-                          
-                          </a>
-                          
-                      </td>
-                       
-                    </tr>
-                    <tr>
-                      <td class="relative w-12 px-6 sm:w-16 sm:px-8">
-                        <!-- Selected row marker, only show when row is selected. -->
-                        <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
-      
-                        <input type="checkbox" class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
-                      </td>
-                      <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                      <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Alex Pretzy</td>
-                      <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pretzyalex@gmail.com</td>
-                      <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700"><div class="flex items-center"><div class="flex-0 w-2 h-2 rounded-full" style="background-color:#FB275D"></div><div class="ml-3 truncate text-[#FB275D]">Deactive</div></div></td>
-                      <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Registered</td>
-                      <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Editor</td>
-                      <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
-                            <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-                          </svg>                      
-                          </a>
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
-                            <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
-                          </svg>                      
-                          </a>
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DD1C1A" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008z" />
-                          </svg>
-                          
-                          </a>
-                          
-                      </td>
-                       
-                    </tr>
-                      
-                <!-- More people... -->
-              </tbody>
-            </table>
-            <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="flex items-center justify-between  bg-[#4169D7] px-4 py-3 sm:px-3">
-  <div class="flex flex-1 justify-between sm:hidden">
-    <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
-    <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
-  </div>
-  <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
-    <div>
-      <p class="text-sm text-white">
-        Rows per page : 50
-        <span class="font-medium">1</span>
-        to
-        <span class="font-medium">10</span>
-        results
-      </p>
-    </div>
-    <div>
-      <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
-        <a href="#" class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
-          <span class="sr-only">Previous</span>
-          <!-- Heroicon name: mini/chevron-left -->
-          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
-          </svg>
-        </a>
-        <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
-        <a href="#" aria-current="page" class="relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 focus:z-20">1</a>
-        <a href="#" class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">2</a>
-        <a href="#" class="relative hidden items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 md:inline-flex">3</a>
-        <span class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700">...</span>
-        <a href="#" class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">10</a>
-        <a href="#" class="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
-          <span class="sr-only">Next</span>
-          <!-- Heroicon name: mini/chevron-right -->
-          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </nav>
-    </div>
-  </div>
-</div>
-
+        <div class="px-4 sm:px-6 lg:px-8 ">
+          <div class="sm:flex sm:items-center">
+            <div class="sm:flex-auto">
+              <h1 class="text-[40px] font-semibold text-gray-900 uppercase text-center">All Users</h1>
+            </div>
           </div>
-          
+          <div class="mt-8 flex flex-col drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] ">
+            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                <div class="relative overflow-hidden ring-1 ring-black ring-opacity-5 md:rounded-lg">
+
+                  <table class="min-w-full table-fixed ">
+                    <thead class="bg-[#4169D7]">
+                      <tr>
+                        <th scope="col" class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <input type="checkbox"
+                            class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
+                        </th>
+                        <th scope="col" class="min-w-[8rem] py-5 pr-3 text-left text-sm font-semibold text-white">Name
+                        </th>
+                        <th scope="col" class="px-3 py-5 text-left text-sm font-semibold text-white">Email ID</th>
+                        <th scope="col" class="px-3 py-5 text-left text-sm font-semibold text-white">Status</th>
+                        <th scope="col" class="px-3 py-5 text-left text-sm font-semibold text-white">Registration Status
+                        </th>
+                        <th scope="col" class="px-3 py-5 text-left text-sm font-semibold text-white">Primary Role</th>
+                        <th scope="col" class="relative py-5 pl-3 pr-4 sm:pr-6 text-white text-right">
+                          <div x-data="{ open: false }" class="relative">
+                            <button x-on:click="open = true"
+                              class="flex items-center text-white  font-semibold focus:outline-none"
+                              type="button">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                              class="w-6 h-6">
+                              <path fill-rule="evenodd"
+                                d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                clip-rule="evenodd" />
+                            </svg>
+                            </button>
+                            <ul x-show="open" x-on:click.away="open = false"
+                              class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-1 right-0 text-left" style="min-width:15rem">
+                              <li>
+                                <a onclick="toggleModal()" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4 text-gray-400 font-normal ">
+                                  Invite 
+                                </a>
+                              </li>
+                              <li>
+                                <a onclick="toggleModals()" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4 text-gray-400 font-normal">
+                                  Activate
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4 text-gray-400 font-normal">
+                                  De-activate
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4 text-gray-400 font-normal">
+                                  Import
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4 text-gray-400 font-normal">
+                                  Export
+                                </a>
+                              </li> 
+                            </ul>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class=" bg-white">
+                      <!-- Selected: "bg-gray-50" -->
+                      <tr>
+                        <td class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <!-- Selected row marker, only show when row is selected. -->
+                          <!--  <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
+
+                          <input type="checkbox"
+                            class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
+                        </td>
+                        <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
+                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Caseycharles@gmail.com
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
+                          <div class="flex items-center">
+                            <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
+                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                          </div>
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pending invite</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
+                        <td
+                          class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                              <path
+                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              <path fill-rule="evenodd"
+                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="#DD1C1A" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.867 19.125h.008v.008h-.008v-.008z" />
+                            </svg>
+
+                          </a>
+
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <!-- Selected row marker, only show when row is selected. -->
+                          <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
+
+                          <input type="checkbox"
+                            class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
+                        </td>
+                        <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
+                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Caseycharles@gmail.com
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
+                          <div class="flex items-center">
+                            <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
+                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                          </div>
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pending invite</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
+                        <td
+                          class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                              <path
+                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              <path fill-rule="evenodd"
+                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="#DD1C1A" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.867 19.125h.008v.008h-.008v-.008z" />
+                            </svg>
+
+                          </a>
+
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <!-- Selected row marker, only show when row is selected. -->
+                          <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
+
+                          <input type="checkbox"
+                            class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
+                        </td>
+                        <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
+                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Alex Pretzy</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pretzyalex@gmail.com
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
+                          <div class="flex items-center">
+                            <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#FB275D"></div>
+                            <div class="ml-3 truncate text-[#FB275D]">Deactive</div>
+                          </div>
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Registered</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Editor</td>
+                        <td
+                          class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                              <path
+                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              <path fill-rule="evenodd"
+                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="#DD1C1A" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.867 19.125h.008v.008h-.008v-.008z" />
+                            </svg>
+
+                          </a>
+
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <!-- Selected row marker, only show when row is selected. -->
+                          <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
+
+                          <input type="checkbox"
+                            class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
+                        </td>
+                        <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
+                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Pretzy</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Rahul.pretzy@gmail.com
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
+                          <div class="flex items-center">
+                            <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
+                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                          </div>
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Registered </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
+                        <td
+                          class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                              <path
+                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              <path fill-rule="evenodd"
+                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="#DD1C1A" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.867 19.125h.008v.008h-.008v-.008z" />
+                            </svg>
+
+                          </a>
+
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <!-- Selected row marker, only show when row is selected. -->
+                          <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
+
+                          <input type="checkbox"
+                            class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
+                        </td>
+                        <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
+                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Pretzy Rahul </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Ruhisharma@gmail.com
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
+                          <div class="flex items-center">
+                            <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
+                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                          </div>
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Registered</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Editor</td>
+                        <td
+                          class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                              <path
+                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              <path fill-rule="evenodd"
+                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="#DD1C1A" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.867 19.125h.008v.008h-.008v-.008z" />
+                            </svg>
+
+                          </a>
+
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <!-- Selected row marker, only show when row is selected. -->
+                          <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
+
+                          <input type="checkbox"
+                            class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
+                        </td>
+                        <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
+                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Ruuhi Ruuhi</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
+                          Julietkansderson@gmail.com</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
+                          <div class="flex items-center">
+                            <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#FB275D"></div>
+                            <div class="ml-3 truncate text-[#FB275D]">Deactive</div>
+                          </div>
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pending invite</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
+                        <td
+                          class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                              <path
+                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              <path fill-rule="evenodd"
+                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="#DD1C1A" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.867 19.125h.008v.008h-.008v-.008z" />
+                            </svg>
+
+                          </a>
+
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <!-- Selected row marker, only show when row is selected. -->
+                          <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
+
+                          <input type="checkbox"
+                            class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
+                        </td>
+                        <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
+                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Caseycharles@gmail.com
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
+                          <div class="flex items-center">
+                            <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
+                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                          </div>
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pending invite</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
+                        <td
+                          class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                              <path
+                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              <path fill-rule="evenodd"
+                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="#DD1C1A" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.867 19.125h.008v.008h-.008v-.008z" />
+                            </svg>
+
+                          </a>
+
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <!-- Selected row marker, only show when row is selected. -->
+                          <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
+
+                          <input type="checkbox"
+                            class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
+                        </td>
+                        <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
+                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Caseycharles@gmail.com
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
+                          <div class="flex items-center">
+                            <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
+                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                          </div>
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pending invite</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Viewer</td>
+                        <td
+                          class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                              <path
+                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              <path fill-rule="evenodd"
+                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="#DD1C1A" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.867 19.125h.008v.008h-.008v-.008z" />
+                            </svg>
+
+                          </a>
+
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <!-- Selected row marker, only show when row is selected. -->
+                          <!-- <div class="absolute inset-y-0 left-0 w-0.5 bg-indigo-600"></div> -->
+
+                          <input type="checkbox"
+                            class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
+                        </td>
+                        <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
+                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Alex Pretzy</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Pretzyalex@gmail.com
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
+                          <div class="flex items-center">
+                            <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#FB275D"></div>
+                            <div class="ml-3 truncate text-[#FB275D]">Deactive</div>
+                          </div>
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Registered</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Editor</td>
+                        <td
+                          class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                              <path
+                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              <path fill-rule="evenodd"
+                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="#DD1C1A" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.867 19.125h.008v.008h-.008v-.008z" />
+                            </svg>
+
+                          </a>
+
+                        </td>
+
+                      </tr>
+
+                      <!-- More people... -->
+                    </tbody>
+                  </table>
+                  <!-- This example requires Tailwind CSS v2.0+ -->
+                  <div class="flex items-center justify-between  bg-[#4169D7] px-4 py-3 sm:px-3">
+                    <div class="flex flex-1 justify-between sm:hidden">
+                      <a href="#"
+                        class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+                      <a href="#"
+                        class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+                    </div>
+                    <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                      <div>
+                        <p class="text-sm text-white">
+                          Rows per page : 50
+                          <span class="font-medium">1</span>
+                          to
+                          <span class="font-medium">10</span>
+                          results
+                        </p>
+                      </div>
+                      <div>
+                        <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                          <a href="#"
+                            class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
+                            <span class="sr-only">Previous</span>
+                            <!-- Heroicon name: mini/chevron-left -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                              fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd"
+                                d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+                          <a href="#" aria-current="page"
+                            class="relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 focus:z-20">1</a>
+                          <a href="#"
+                            class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">2</a>
+                          <a href="#"
+                            class="relative hidden items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 md:inline-flex">3</a>
+                          <span
+                            class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700">...</span>
+                          <a href="#"
+                            class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">10</a>
+                          <a href="#"
+                            class="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
+                            <span class="sr-only">Next</span>
+                            <!-- Heroicon name: mini/chevron-right -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                              fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+      <!-- ================ All User Table Section End =================== -->
+    </div>
+  </div>
+  <!-- Popup Invite start -->
+  <div class="relative z-10 hidden " aria-labelledby="modal-title" role="dialog" aria-modal="true" id="modal">
+
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+    <div class="fixed inset-0 z-10 overflow-y-auto ">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+
+        <div
+          class="ma relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl sm:p-6 relative">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 absolute right-[20px]" onclick="toggleModal()">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+
+          <div>
+            <div class="mx-auto flex items-center justify-center">
+              <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_QvaxYS.json"
+                background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+            </div>
+            <div class="mt-3 text-center sm:mt-5">
+              <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Selected users have been invited.</h3>
+              <div class="mt-2">
+                <p class="text-lg text-gray-500 font-medium px-5">Invited users:  21 Users have been invited.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
-       
-    </main>
+  <!-- End Popup -->
+  <!-- Active Popup -->
+  <div class="relative z-10 hidden " aria-labelledby="modal-title" role="dialog" aria-modal="true" id="modals">
+
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+    <div class="fixed inset-0 z-10 overflow-y-auto ">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+
+        <div
+          class="ma relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl sm:p-6 relative">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 absolute right-[20px]" onclick="toggleModals()">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+
+          <div>
+            <div class="mx-auto flex items-center justify-center">
+              <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_bdnjxekx.json"
+                background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+            </div>
+            <div class="mt-3 text-center sm:mt-5">
+              <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">404 Error</h3>
+              <div class="mt-2">
+                <p class="text-lg text-gray-500 font-medium px-5">Due to some errors the  users have not been activated. 
+                  Please try again after some time.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-     <!-- ====== About Section End -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-     <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio,forms,line-clamp,typography"></script>
-     <!-- <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.5.0/dist/alpine.min.js"></script> -->
-     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-     <script src="/assets/js/main.js"></script>
+  <!-- End Popup -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio,forms,line-clamp,typography"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.5.0/dist/alpine.min.js"></script> -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
+
 </html>
