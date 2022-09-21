@@ -118,3 +118,9 @@ position: relative;
   #customLegend1 li:nth-child(2) span{
     background-color: #436AD6 !important;
   }
+
+  @media screen and (max-width:1280px) {
+    #panels .tab-content .filters>div {
+      margin-right: 5px;
+    }
+  }

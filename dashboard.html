@@ -208,7 +208,7 @@
 
             <!-- =========== Filter Section =============== -->
             <div class=" p-0 flex filters">
-              <div x-data="{ open: false }" class="relative mr-5">
+              <div x-data="{ open: false }" class="relative mr-3 xl:mr-5 ">
                 <button x-on:click="open = true"
                   class="flex items-center bg-white focus:bg-gray-400 text-gray-700 focus:text-gray-900 font-semibold rounded focus:outline-none focus:shadow-inner py-3 px-4 lg:text-md"
                   type="button">
@@ -388,7 +388,7 @@
                           Select Date
                         </a>
                         <template x-if="open">
-                          <div class="flex items-center justify-center w-[900px] absolute right-[30%]" @click.away="open = false">
+                          <div class="flex items-center w-[900px] absolute left-[-130%] m-auto" @click.away="open = false">
                             <div class="flex bg-white shadow-xl rounded-xl">
                               
                               <div class="flex flex-col">
@@ -863,7 +863,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="py-6 border-r border-gray-300">
+                              <div class="py-6 border-l border-gray-300 w-40">
                                 <ul class="flex flex-col text-xs" >
                                   <li>
                                     <button
