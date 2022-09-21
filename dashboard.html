@@ -207,7 +207,7 @@
           <div class="panel-1 tab-content active py-5">
 
             <!-- =========== Filter Section =============== -->
-            <div class=" p-0 flex ">
+            <div class=" p-0 flex filters">
               <div x-data="{ open: false }" class="relative mr-5">
                 <button x-on:click="open = true"
                   class="flex items-center bg-white focus:bg-gray-400 text-gray-700 focus:text-gray-900 font-semibold rounded focus:outline-none focus:shadow-inner py-3 px-4 lg:text-md"
@@ -362,9 +362,9 @@
             </div>
             <!-- =========== Filter Section End =============== -->
 
-            <section class="grid md:grid-cols-2 xl:grid-cols-2 xl:grid-rows-2 xl:grid-flow-col gap-6 mt-10">
+            <section class="flex gap-6 mt-10">
 
-              <div class="flex flex-col md:col-span-2 md:row-span-2 ">
+              <div class="flex flex-col w-[65%] " x-data="{ open: false }">
 
                 <!-- ==================== Menu Items Section ==================  -->
                 <div class=" flex items-center justify-between py-5">
@@ -382,11 +382,557 @@
                     <ul x-show="open" x-on:click.away="open = false"
                       class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-1 right-0"
                       style="min-width:15rem">
-                      <li>
-                        <a href="#"
+                      <li  x-data="{ open: false }">
+                        <a  @click="open = true"
                           class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4 text-[#a1a0a0] font-semibold tracking-normal">
                           Select Date
                         </a>
+                        <template x-if="open">
+                          <div class="flex items-center justify-center w-[900px] absolute right-[30%]" @click.away="open = false">
+                            <div class="flex bg-white shadow-xl rounded-xl">
+                              
+                              <div class="flex flex-col">
+                                <div class="flex divide-x">
+                                  <div class="flex flex-col px-6 pt-5 pb-6 border-b border-gray-100">
+                                    <div class="flex items-center justify-between">
+                                      <button
+                                        class="flex items-center justify-center p-2 rounded-xl hover:bg-blue-100"
+                                      >
+                                        <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
+                                          <path
+                                            d="M13.25 8.75L9.75 12l3.5 3.25"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </svg>
+                                      </button>
+                                      <div class="text-sm font-semibold">February</div>
+                                      <button
+                                        class="flex items-center justify-center p-2 rounded-xl hover:bg-blue-100"
+                                      >
+                                        <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
+                                          <path
+                                            d="M10.75 8.75l3.5 3.25-3.5 3.25"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <div class="grid grid-cols-7 text-xs text-center text-gray-900">
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Mo
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Tu
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        We
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Th
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Fri
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Sa
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Su
+                                      </span>
+                        
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        1
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        2
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        3
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        4
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        5
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        6
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        7
+                                      </span>
+                        
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">8</span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg bg-gray-50"
+                                      >
+                                        9
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        10
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        11
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        12
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        13
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        14
+                                      </span>
+                        
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        15
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        16
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        17
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-white bg-blue-600 rounded-full"
+                                      >
+                                        18
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        19
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        20
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold text-blue-600 rounded-none rounded-tr-lg bg-gray-50"
+                                      >
+                                        21
+                                      </span>
+                        
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold text-blue-600 rounded-none rounded-l-lg bg-gray-50"
+                                      >
+                                        22
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        23
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        24
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        25
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        26
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        27
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold text-blue-600 rounded-none rounded-br-lg bg-gray-50"
+                                      >
+                                        28
+                                      </span>
+                        
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        1
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        2
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        3
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        4
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        5
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        6
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        7
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="flex flex-col px-6 pt-5 pb-6 border-b border-gray-100">
+                                    <div class="flex items-center justify-between">
+                                      <button
+                                        class="flex items-center justify-center p-2 rounded-xl hover:bg-blue-100"
+                                      >
+                                        <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
+                                          <path
+                                            d="M13.25 8.75L9.75 12l3.5 3.25"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </svg>
+                                      </button>
+                                      <div class="text-sm font-semibold">March</div>
+                                      <button
+                                        class="flex items-center justify-center p-2 rounded-xl hover:bg-blue-100"
+                                      >
+                                        <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
+                                          <path
+                                            d="M10.75 8.75l3.5 3.25-3.5 3.25"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <div class="grid grid-cols-7 text-xs text-center text-gray-900">
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Mo
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Tu
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        We
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Th
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Fri
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Sa
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 font-semibold rounded-lg"
+                                      >
+                                        Su
+                                      </span>
+                        
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-blue-600 rounded-none rounded-tl-lg bg-gray-50"
+                                      >
+                                        1
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        2
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        3
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        4
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        5
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        6
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        7
+                                      </span>
+                        
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-blue-600 rounded-none rounded-bl-lg bg-gray-50"
+                                      >
+                                        8
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        9
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-blue-600 rounded-none bg-gray-50"
+                                      >
+                                        10
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-white bg-blue-600 rounded-full"
+                                      >
+                                        11
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        12
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        13
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        14
+                                      </span>
+                        
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        15
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        16
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        17
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        18
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        19
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        20
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        21
+                                      </span>
+                        
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        22
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        23
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        24
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        25
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        26
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        27
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        28
+                                      </span>
+                        
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        29
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        30
+                                      </span>
+                                      <span class="flex items-center justify-center w-10 h-10 rounded-lg">
+                                        31
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        1
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        2
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        3
+                                      </span>
+                                      <span
+                                        class="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg"
+                                      >
+                                        4
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="flex items-center justify-between px-6 py-4">
+                                  <div class="flex items-center">
+                                    <input
+                                      type="text"
+                                      class="flex items-center w-32 px-4 py-2 text-sm text-gray-900 rounded-lg bg-gray-50 focus:bg-white focus:ring-1 focus:ring-blue-600 focus:outline-none"
+                                      placeholder="18 / 02 / 2021"
+                                    />
+                                    <div class="p-1">
+                                      <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
+                                        <path
+                                          d="M6.738 12.012h10.5m-4.476 4.25l4.5-4.25-4.5-4.25"
+                                          stroke-width="1.5"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                      </svg>
+                                    </div>
+                                    <input
+                                      type="text"
+                                      class="flex items-center w-32 px-4 py-2 text-sm text-gray-900 rounded-lg bg-gray-50 focus:bg-white focus:ring-1 focus:ring-blue-600 focus:outline-none"
+                                      placeholder="11 / 03 / 2021"
+                                    />
+                                  </div>
+                                  <div class="flex items-center space-x-2">
+                                    <button
+                                      class="px-4 py-2 text-sm font-600 rounded-lg bg-gray-50 focus:outline-none focus:ring-1 focus:ring-blue-600 hover:bg-gray-100"
+                                    >
+                                      Cancel
+                                    </button>
+                                    <button
+                                      class="px-4 py-2 text-sm text-white bg-blue-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600 hover:bg-blue-700"
+                                    >
+                                      Apply
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="py-6 border-r border-gray-300">
+                                <ul class="flex flex-col text-xs" >
+                                  <li>
+                                    <button
+                                      class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left shadow-0"
+                                    >
+                                      Last 7 days
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left"
+                                    >
+                                      Last 14 days
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left"
+                                    >
+                                      Last 30 days
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left"
+                                    >
+                                      Last 3 months
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left"
+                                    >
+                                      Last 12 months
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left"
+                                    >
+                                      Month to date
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left"
+                                    >
+                                      Quarter to date
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left"
+                                    >
+                                      All time
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left"
+                                    >
+                                      Custom
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
                       </li>
                       <li>
                         <a href="#"
@@ -397,6 +943,7 @@
                     </ul>
                   </div>
                 </div>
+               
                 <!-- ==================== Menu Items Section End ==================  -->
 
                 <!-- ==================== Line Chart Section ================ -->
@@ -408,7 +955,7 @@
                 </div>
                 <!-- ==================== Line Chart Section End ================ -->
               </div>
-              <div class="flex flex-col md:col-span-2 md:row-span-2 ">
+              <div class="flex flex-col w-[35%]">
                 <!-- ==================== Menu Items Section ==================  -->
                 <div class=" flex items-center justify-between py-5">
                   <h2 class="text-2xl font-semibold">Primary Text</h2>
@@ -446,7 +993,7 @@
                 <!-- ==================== Pie Chart Section ================ -->
                 <div class="row-span-2 bg-white rounded-lg shadow-xl py-5 px-5 w-full">
                   <div class="chart-inner">
-                    <canvas id="BA-chart-job-error" width="400" height="400" style="margin:auto;"></canvas>
+                    <canvas id="BA-chart-job-error" width="300" height="300" style="margin:auto;"></canvas>
                     <div id='customLegend1' class='customLegend'></div>
                   </div>
                 </div>
@@ -463,8 +1010,8 @@
   <!-- =========== Dashboard Section End ============= -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio,forms,line-clamp,typography"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.5.0/dist/alpine.min.js"></script> -->
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+  <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
   <script

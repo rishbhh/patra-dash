@@ -231,7 +231,7 @@
 
 
               <!-- Step Content -->
-              <div class="py-6 ">
+              <div class="py-6 relative z-10">
                 <div x-show.transition.in="step === 1" class="">
                   <form action="#" method="POST">
                     <div class="overflow-hidden drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] sm:rounded-md">
@@ -331,7 +331,7 @@
                 <div class="max-w-3xl mx-auto px-4">
                   <div class="flex justify-evenly">
                     <div class="">
-                      <a href=""
+                      <a onclick="toggleModal()"
                         class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-xl text-center text-white bg-[#00CA72] tracking-[0.125em] hover:bg-transparent hover:text-[#00CA72] hover:border-[#00CA72] border-2 transition ease-in-out duration-500 font-medium uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)]"><svg
                           class="w-10 h-10 mr-4" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -359,13 +359,47 @@
 
         </div>
     </div>
+  </div>
+  <div class="relative z-10 hidden " aria-labelledby="modal-title" role="dialog" aria-modal="true" id="modal">
 
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+    <div class="fixed inset-0 z-10 overflow-y-auto ">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+
+        <div
+          class="ma relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl sm:p-6 relative">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 absolute right-[20px]" onclick="toggleModal()">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+
+          <div>
+            <div class="mx-auto flex items-center justify-center">
+              <lottie-player src="/assets/save.json" background="transparent" speed="1"
+                style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+            </div>
+            <div class="mt-3 text-center sm:mt-5">
+              <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">User Info saved</h3>
+              <div class="mt-2">
+                <p class="text-lg text-gray-500 font-medium px-5">User information have been saved, move to the
+                  next step or go back.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
     </main>
 
     <!-- ======================= Add New User Section ========================== -->
   </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio,forms,line-clamp,typography"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
   <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
