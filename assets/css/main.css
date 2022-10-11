@@ -130,6 +130,7 @@ position: relative;
     color: #000;
     margin-right: 25px;
     margin-top: 15px;
+      font-family: 'Inter', sans-serif;
   }
   .customLegend li span {
     display: inline-block;
