@@ -16,60 +16,60 @@
   <div class="flex bg-gray-100 h-[100vh] overflow-hidden" x-data="{panel:false, menu:true}"
     :class="{'justify-start': menu, 'justify-center': menu == false}">
     <!-- =========== side NavBar Section ================ -->
-    <aside class="flex flex-col  bg-white side-main px-5 overflow-y-auto"
-      :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768}">
-      <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-5" x-show="menu">
+      <aside class="flex flex-col  bg-[#fafafa] side-main px-5 overflow-y-auto"
+      :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768, }">
+      <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-10" x-show="menu">
         <img class="w-[150px]" src="./assets/images/logo.png" alt="logo" />
 
       </a>
       <div class="w-full text-center cont-h ">
-        <h1 x-show="menu">John Doe</h1>
-        <p x-show="menu">Johndoe@gmail.com</p>
+        <h1 x-show="menu" class="font-600 mon-font text-[36px]">John Doe</h1>
+        <p x-show="menu"  class="font-400 pop-font text-xl">Johndoe@gmail.com</p>
       </div>
-      <div class="flex-grow flex flex-col justify-between text-gray-500 bg-white w-1s">
+      <div class="flex-grow flex flex-col justify-between text-gray-500 bg-[#fafafa] w-1s">
 
 
         <div class="dash-div">
-          <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2"
+          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
-            <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/dashboard.png" alt=""></span><span x-show="menu">Dashboard</span> </h1>
+            <h1 class=" uppercase flex items-center " :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/dashboard.png" alt=""></span><span x-show="menu">Dashboard</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">View and export company reports in real time.</p>
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4 mt-10">
             <a href="core-kpis.html"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
              <img src="/assets/images/icons-nav/core-kpi.png" alt="" class="">
               <span class="ml-2" x-show="menu">Core KPIs</span>
             </a>
 
             <a href="cutomer-transaction-kpi.html"
-            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
             :class="{'justify-start': menu, 'justify-center': menu == false}">
            <img src="/assets/images/icons-nav/Customer-Transaction.png" alt="" class="">
               <span class="ml-2" x-show="menu">Customer Transaction KPI
                 Summary</span>
             </a>
             <a href="received-work.html"
-            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
             :class="{'justify-start': menu, 'justify-center': menu == false}">
            <img src="/assets/images/icons-nav/received-work-orders.png" alt="" class="">
               <span class="ml-2" x-show="menu">Received Work Orders</span>
             </a>
             <a href="scatter.html"
-            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
             :class="{'justify-start': menu, 'justify-center': menu == false}">
            <img src="/assets/images/icons-nav/aht-trans.png" alt="" class="">
               <span class="ml-2" x-show="menu">AHT and Transaction Scatter</span>
             </a>
             <a href="transaction-bar.html"
-            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
             :class="{'justify-start': menu, 'justify-center': menu == false}">
            <img src="/assets/images/icons-nav/aht-transction-bar.png" alt="" class="">
               <span class="ml-2" x-show="menu">AHT vs. Transaction Bar</span>
             </a>
             <a href="work-order.html"
-            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
             :class="{'justify-start': menu, 'justify-center': menu == false}">
            <img src="/assets/images/icons-nav/received-work-orders.png" alt="" class="">
               <span class="ml-2" x-show="menu">Work Order Status</span>
@@ -77,21 +77,21 @@
           </nav>
         </div>
         <div class="dash-div">
-          <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2"
+          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.png" alt=""></span><span x-show="menu">ADMIN</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">Add and Modify User profiles.</p>
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4">
             <a href="all-users.html"
-            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
             :class="{'justify-start': menu, 'justify-center': menu == false}">
            <img src="/assets/images/icons-nav/all-users.png" alt="" class="">
               <span class="ml-2" x-show="menu">All Users</span>
             </a>
 
             <a href="add-user.html"
-            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
             :class="{'justify-start': menu, 'justify-center': menu == false}">
            <img src="/assets/images/icons-nav/add-user.png" alt="" class="">
               <span class="ml-2" x-show="menu">Add New User</span>
@@ -99,21 +99,21 @@
           </nav>
         </div>
         <div class="dash-div">
-          <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2"
+          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/rea.png" alt=""></span><span x-show="menu">Resources</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">Help guides for your company.</p>
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4">
             <a href="#"
-            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
             :class="{'justify-start': menu, 'justify-center': menu == false}">
            <img src="/assets/images/icons-nav/training-resources.png" alt="" class="">
               <span class="ml-2" x-show="menu">Training Resources</span>
             </a>
 
             <a href="#"
-            class="inline-flex items-center py-3 hover:text-black hover:bg-white hover:shadow-lg rounded-lg px-2 font-600"
+            class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
             :class="{'justify-start': menu, 'justify-center': menu == false}">
            <img src="/assets/images/icons-nav/FAQs.png" alt="" class="">
               <span class="ml-2" x-show="menu">FAQs</span>
@@ -131,7 +131,7 @@
       <div class=" py-8 px-10 space-y-6 bg-white ">
         <header class="flex items-center h-20  ">
           <div class="mr-8 cursor-pointer" @click="menu = !menu">
-            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path xmlns="http://www.w3.org/2000/svg"
                 d="M1.125 18C0.50368 18 0 17.4963 0 16.875C0 16.2537 0.50368 15.75 1.125 15.75H13.875C14.4963 15.75 15 16.2537 15 16.875C15 17.4963 14.4963 18 13.875 18H1.125ZM1.125 10.125C0.503679 10.125 0 9.62132 0 9C0 8.37868 0.50368 7.875 1.125 7.875H19.875C20.4963 7.875 21 8.37868 21 9C21 9.62132 20.4963 10.125 19.875 10.125H1.125ZM1.125 2.25C0.50368 2.25 0 1.74632 0 1.125C0 0.50368 0.50368 0 1.125 0H25.875C26.4963 0 27 0.50368 27 1.125C27 1.74632 26.4963 2.25 25.875 2.25H1.125Z"
                 fill="black" />
@@ -139,43 +139,42 @@
           </div>
 
           <div class="flex flex-shrink-0 items-center ml-auto">
-            <div class=" pl-3 ml-3 space-x-1">
+            <div class=" pl-3 ml-3 space-x-6">
               <button
-                class="relative p-2 hover:bg-gray-100 text-white hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
-                <span class="sr-only">Notifications</span>
-                <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
-                <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
-                <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                </svg>
-              </button>
+              class="relative p-2 bg-white shadow-xl text-white focus:text-gray-600 rounded">
+              <span class="sr-only">Notifications</span>
+              <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
+              <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="none" class="h-5 w-5">
+                <path d="M24 22.6667V24H0V22.6667L2.66667 20V12C2.66667 7.86667 5.37333 4.22667 9.33333 3.05333V2.66667C9.33333 1.95942 9.61429 1.28115 10.1144 0.781048C10.6145 0.280951 11.2928 0 12 0C12.7072 0 13.3855 0.280951 13.8856 0.781048C14.3857 1.28115 14.6667 1.95942 14.6667 2.66667V3.05333C18.6267 4.22667 21.3333 7.86667 21.3333 12V20L24 22.6667ZM14.6667 25.3333C14.6667 26.0406 14.3857 26.7189 13.8856 27.219C13.3855 27.719 12.7072 28 12 28C11.2928 28 10.6145 27.719 10.1144 27.219C9.61429 26.7189 9.33333 26.0406 9.33333 25.3333" fill="#444"/></svg>
+            </button>
 
-              <button
-                class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-                </svg>
-              </button>
-              <button
-                class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
-                <span class="sr-only"></span>
-                <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="black" class="h-6 w-6">
-                  <path xmlns="http://www.w3.org/2000/svg"
-                    d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01805 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z"
-                    fill="black" />
-                </svg>
-              </button>
-              <button
-                class="relative p-2 text-white hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full drop-shadow-xl bg-white">
-                <span class="sr-only">Log out</span>
-                <svg aria-hidden="true" fill="black" viewBox="0 0 24 24" stroke="black" class="h-6 w-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                </svg>
-              </button>
+            <button
+              class="relative p-2 text-white bg-white shadow-xl  focus:text-gray-600 rounded">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#444" viewBox="0 0 24 24" 
+                class="w-6 h-6">
+                <path
+                  d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01806 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z" />
+              </svg>
+              
+            </button>
+            <button
+              class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded">
+              <span class="sr-only">Log out</span>
+              <svg aria-hidden="true" fill="#444" viewBox="0 0 24 24" stroke="#444" class="h-6 w-6">
+                <path xmlns="http://www.w3.org/2000/svg"
+                fill-rule="evenodd" clip-rule="evenodd" d="M21.034 16.253C19.1116 19.6823 15.4418 21.9999 11.2308 21.9999C5.0282 21.9999 -7.41858e-07 16.9717 -4.70734e-07 10.7691C-2.48165e-07 5.67735 3.38848 1.37699 8.03348 3.51155e-07C7.12428 1.62184 6.6059 3.49233 6.6059 5.48389C6.6059 11.6865 11.6341 16.7147 17.8367 16.7147C18.9475 16.7147 20.0207 16.5534 21.034 16.253Z"
+                  fill="#444" />
+              </svg>
+            </button>
+            <button
+              class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded">
+              <span class="sr-only">Log out</span>
+              <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="#444" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              </svg>
+            </button>
             </div>
           </div>
         </header>
@@ -188,7 +187,7 @@
         <div class="px-4 sm:px-6 lg:px-8 ">
           <div class="sm:flex sm:items-center">
             <div class="sm:flex-auto relative items-center">
-              <h1 class="text-[40px] font-semibold text-gray-900 uppercase text-center">Configure User</h1>
+              <h1 class="text-[40px] font-semibold text-[#444] uppercase text-center mon-font">Configure User</h1>
             </div>
           </div>
           <div>
@@ -198,24 +197,24 @@
                   <div class="flex justify-evenly">
                     <div class="w-32 text-center py-4 px-6 bg-[rgba(0,202,114,0.09)]">
                       <img class="m-auto" src="/assets/images/Assign-Company.svg" alt="">
-                      <p class="mt-4 font-medium tracking-normal text-gray-4-600 text-sm">Assign
+                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-sm ">Assign
                         Company</p>
                     </div>
 
                     <div class="w-32 text-center py-4 px-6 ">
                       <img class="m-auto" src="/assets/images/Assign-Services.svg" alt="">
-                      <p class="mt-4 font-medium tracking-normal text-gray-4-600 text-sm">Assign
+                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-sm">Assign
                         Services</p>
                     </div>
 
                     <div class="w-32 text-center py-4 px-6 ">
                       <img class="m-auto" src="/assets/images/Assign-Department.svg" alt="">
-                      <p class="mt-4 font-medium tracking-normal text-gray-4-600 text-sm">Assign
+                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-sm">Assign
                         Department</p>
                     </div>
-                    <div class="w-32 text-center py-4 px-2 ">
+                    <div class="w-40 text-center py-4 px-2 ">
                       <img class="m-auto" src="/assets/images/Assign-Branch.svg" alt="">
-                      <p class="mt-4 font-medium tracking-normal text-gray-4-600 text-sm">Assign Branch
+                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-sm">Assign Branch
                         Offices</p>
                     </div>
 
@@ -229,16 +228,16 @@
                 <div class="">
                   <form action="#" method="POST">
                     <div class=" drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] sm:rounded-md">
-                      <div class="bg-white py-16 px-20">
+                      <div class="bg-white py-16 px-20 rounded-[20px]">
                         <div class="grid grid-cols-6 gap-6 mt-10">
 
                           <div class="col-span-8 sm:col-span-6">
                             <div>
-                              <label id="listbox-label" class="block text-lg font-medium text-gray-400 "> Assign
+                              <label id="listbox-label" class="block text-lg font-400 text-[#5f5f5f] "> Assign
                                 Company*</label>
                               <div class="relative mt-1" x-data="{ open: false }">
                                 <button type="button" @click="open = true"
-                                  class="relative w-full cursor-default rounded-md py-4 pl-3 pr-10 text-left bg-gray-100 focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                                  class="relative w-full cursor-default rounded-md py-4 pl-3 pr-10 text-left bg-[#f8f8f8] focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
                                   aria-labelledby="listbox-label">
                                   <span class="block truncate text-lg font-medium text-gray-400 ">Assign Company</span>
                                   <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -266,7 +265,7 @@
                                     <li
                                       class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2"
                                       id="listbox-option-0" role="option">
-                                      <div class="flex items-center">
+                                      <div class="flex items-center hover:bg-[#f4f4f4] py-1 px-1">
                                         <input type="text"
                                           class="w-full rounded-md border-0 bg-gray-100 px-4 py-2.5 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"
                                           placeholder="search reports" role="combobox" aria-expanded="false"
@@ -276,7 +275,7 @@
                                     <li
                                       class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2"
                                       id="listbox-option-0" role="option">
-                                      <div class="flex items-center">
+                                      <div class="flex items-center hover:bg-[#f4f4f4] py-1 px-1">
                                         <input id="filter-mobile-category-0" name="category[]" value="new-arrivals"
                                           type="checkbox"
                                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
@@ -287,7 +286,7 @@
                                     <li
                                       class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2"
                                       id="listbox-option-0" role="option">
-                                      <div class="flex items-center">
+                                      <div class="flex items-center hover:bg-[#f4f4f4] py-1 px-1">
                                         <input id="filter-mobile-category-0" name="category[]" value="new-arrivals"
                                           type="checkbox"
                                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
@@ -298,7 +297,7 @@
                                     <li
                                       class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2"
                                       id="listbox-option-0" role="option">
-                                      <div class="flex items-center">
+                                      <div class="flex items-center hover:bg-[#f4f4f4] py-1 px-1">
                                         <input id="filter-mobile-category-0" name="category[]" value="new-arrivals"
                                           type="checkbox"
                                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
@@ -309,7 +308,7 @@
                                     <li
                                       class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2"
                                       id="listbox-option-0" role="option">
-                                      <div class="flex items-center">
+                                      <div class="flex items-center hover:bg-[#f4f4f4] py-1 px-1">
                                         <input id="filter-mobile-category-0" name="category[]" value="new-arrivals"
                                           type="checkbox"
                                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
@@ -320,7 +319,7 @@
                                     <li
                                       class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-8 pr-2"
                                       id="listbox-option-0" role="option">
-                                      <div class="flex items-center">
+                                      <div class="flex items-center hover:bg-[#f4f4f4] py-1 px-1">
                                         <input id="filter-mobile-category-0" name="category[]" value="new-arrivals"
                                           type="checkbox"
                                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
@@ -347,7 +346,7 @@
                   <div class="flex justify-evenly">
                     <div class="">
                       <a onclick="toggleModal()"
-                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-xl text-center text-white bg-[#00CA72] tracking-[0.125em] hover:bg-transparent hover:text-[#00CA72] hover:border-[#00CA72] border-2 transition ease-in-out duration-500 font-medium uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)]"><svg
+                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-xl text-center text-white bg-[#00CA72] tracking-[0.125em] hover:bg-transparent hover:text-[#00CA72] hover:border-[#00CA72] border-2 transition ease-in-out duration-500 font-semibold uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] mon-font"><svg
                           class="w-10 h-10 mr-4" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M13.125 11.5625C12.7106 11.5625 12.3132 11.7271 12.0201 12.0201C11.7271 12.3132 11.5625 12.7106 11.5625 13.125V31.875C11.5625 32.2894 11.7271 32.6868 12.0201 32.9799C12.3132 33.2729 12.7106 33.4375 13.125 33.4375H31.875C32.2894 33.4375 32.6868 33.2729 32.9799 32.9799C33.2729 32.6868 33.4375 32.2894 33.4375 31.875V13.125C33.4375 12.7106 33.2729 12.3132 32.9799 12.0201C32.6868 11.7271 32.2894 11.5625 31.875 11.5625H24.8438C24.4293 11.5625 24.0319 11.7271 23.7389 12.0201C23.4459 12.3132 23.2812 12.7106 23.2812 13.125V24.5203L27.4156 20.3844C27.5623 20.2377 27.7613 20.1553 27.9688 20.1553C28.1762 20.1553 28.3752 20.2377 28.5219 20.3844C28.6686 20.5311 28.751 20.73 28.751 20.9375C28.751 21.145 28.6686 21.3439 28.5219 21.4906L23.0531 26.9594C22.9806 27.0321 22.8943 27.0899 22.7994 27.1292C22.7045 27.1686 22.6028 27.1889 22.5 27.1889C22.3972 27.1889 22.2955 27.1686 22.2006 27.1292C22.1057 27.0899 22.0194 27.0321 21.9469 26.9594L16.4781 21.4906C16.4055 21.418 16.3479 21.3318 16.3086 21.2368C16.2692 21.1419 16.249 21.0402 16.249 20.9375C16.249 20.8348 16.2692 20.7331 16.3086 20.6382C16.3479 20.5432 16.4055 20.457 16.4781 20.3844C16.5508 20.3117 16.637 20.2541 16.7319 20.2148C16.8268 20.1755 16.9285 20.1553 17.0312 20.1553C17.134 20.1553 17.2357 20.1755 17.3306 20.2148C17.4255 20.2541 17.5117 20.3117 17.5844 20.3844L21.7188 24.5203V13.125C21.7188 12.2962 22.048 11.5013 22.634 10.9153C23.2201 10.3292 24.0149 10 24.8438 10H31.875C32.7038 10 33.4987 10.3292 34.0847 10.9153C34.6708 11.5013 35 12.2962 35 13.125V31.875C35 32.7038 34.6708 33.4987 34.0847 34.0847C33.4987 34.6708 32.7038 35 31.875 35H13.125C12.2962 35 11.5013 34.6708 10.9153 34.0847C10.3292 33.4987 10 32.7038 10 31.875V13.125C10 12.2962 10.3292 11.5013 10.9153 10.9153C11.5013 10.3292 12.2962 10 13.125 10H17.0312C17.2385 10 17.4372 10.0823 17.5837 10.2288C17.7302 10.3753 17.8125 10.574 17.8125 10.7812C17.8125 10.9885 17.7302 11.1872 17.5837 11.3337C17.4372 11.4802 17.2385 11.5625 17.0312 11.5625H13.125Z"
@@ -357,7 +356,7 @@
                     </div>
                     <div class="">
                       <a href="assign-services.html"
-                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-xl text-center text-white bg-[#4169D7] tracking-[0.125em] font-medium uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] transition ease-in-out duration-500 hover:bg-transparent hover:border-[#4169D7] border-2 hover:text-[#4169D7]"><svg
+                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-xl text-center text-white bg-[#4169D7] tracking-[0.125em] font-semibold uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] transition ease-in-out duration-500 hover:bg-transparent hover:border-[#4169D7] border-2 hover:text-[#4169D7] mon-font"><svg
                           class="w-10 h-10 mr-4" viewBox="0 0 43 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M19.4687 28.4687L28.125 19.8125L26.7812 18.4688L19.4687 25.7812L15.6875 22L14.375 23.3125L19.4687 28.4687ZM11.875 35C11.3542 35 10.9115 34.8177 10.5469 34.4531C10.1823 34.0885 10 33.6458 10 33.125V14.375C10 13.8542 10.1823 13.4115 10.5469 13.0469C10.9115 12.6823 11.3542 12.5 11.875 12.5H18.2812C18.3854 11.7708 18.7188 11.1719 19.2813 10.7031C19.8438 10.2344 20.5 10 21.25 10C22 10 22.6562 10.2344 23.2187 10.7031C23.7812 11.1719 24.1146 11.7708 24.2188 12.5H30.625C31.1458 12.5 31.5885 12.6823 31.9531 13.0469C32.3177 13.4115 32.5 13.8542 32.5 14.375V33.125C32.5 33.6458 32.3177 34.0885 31.9531 34.4531C31.5885 34.8177 31.1458 35 30.625 35H11.875ZM11.875 33.125H30.625V14.375H11.875V33.125ZM21.25 13.8437C21.5417 13.8437 21.7969 13.7344 22.0156 13.5156C22.2344 13.2969 22.3438 13.0417 22.3438 12.75C22.3438 12.4583 22.2344 12.2031 22.0156 11.9844C21.7969 11.7656 21.5417 11.6563 21.25 11.6563C20.9583 11.6563 20.7031 11.7656 20.4844 11.9844C20.2656 12.2031 20.1562 12.4583 20.1562 12.75C20.1562 13.0417 20.2656 13.2969 20.4844 13.5156C20.7031 13.7344 20.9583 13.8437 21.25 13.8437ZM11.875 33.125V14.375V33.125Z"
@@ -373,13 +372,13 @@
 
 
         </div>
-        <div class="px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 py-10">
           <div class=" drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] sm:rounded-md">
-            <div class="bg-white py-20 px-20 text-center">
-              <h5 class="text-gray-400 font-medium text-2xl mb-10">Companies assigned : </h5>
+            <div class="bg-white py-20 px-20 text-center rounded-[20px]">
+              <h5 class="text-[#848484] font-medium text-2xl mb-10">Companies assigned : </h5>
               <div class="">
                 <span
-                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5 text-xl font-normal text-gray-400 mr-5">
+                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5  font-400 text-[#848484] mr-5 text-[18px]">
                   Report 2
                   <button type="button"
                     class="ml-2 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-gray-400 focus:outline-none">
@@ -390,7 +389,7 @@
                   </button>
                 </span>
                 <span
-                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5 text-xl font-normal text-gray-400 mr-5">
+                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5  font-400 text-[#848484] mr-5 text-[18px]">
                   Report 3
                   <button type="button"
                     class="ml-2 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-gray-400 focus:outline-none">
@@ -401,7 +400,7 @@
                   </button>
                 </span>
                 <span
-                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5 text-xl font-normal text-gray-400">
+                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5  font-400 text-[#848484] mr-5 text-[18px]">
                   Report 5
                   <button type="button"
                     class="ml-2 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-gray-400 focus:outline-none">
