@@ -1,0 +1,46 @@
+<div class="form1 row">
+  <div class="col-lg-12">
+    <label>Name</label>
+    [text* frmname id:frmname placeholder "Name"]</div>
+  <div class="col-lg-12">
+    <label>Business Email</label>
+    [email* frmemail id:frmemail placeholder "Business Email"]
+  </div>
+  <div class="col-lg-12">
+    <label>Company Name</label>
+    [text* frmcname id:frmcname placeholder "Company Name"]
+  </div>
+  <div class="col-lg-12">
+    <label>Mobile Number</label>
+    [text* frmmobile id:frmmobile placeholder "Mobile Number"]
+  </div>
+  <p class="simple-reg-terms">
+    <label>
+      <span class="checkbox">[acceptance acceptance-993]</span>
+      <span title="Please tick">I agree to the </span>
+      <a
+        target="_blank"
+        href="https://www.patronum.io/privacy-policy/"
+        title="Opens in a new tab"
+        >Privacy Policy</a
+      >
+    </label>
+  </p>
+  <div class="col-lg-12 col-sm-12 col-12 align-items-center">
+    [cf7sr-simple-recaptcha]<input
+      type="hidden"
+      name="pageurl"
+      id="pageurl"
+    /><input type="hidden" name="modalrequest" id="modalrequest" /><button
+      class="btn-style-thirteen submit-request"
+      style="
+        padding: 11px 30px 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      "
+    >
+      Submit
+    </button>
+  </div>
+</div>
+ 
