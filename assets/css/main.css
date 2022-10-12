@@ -51,6 +51,13 @@ font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   line-height: 1.5;
 }
+.back{
+  transform: translateX(-25px);
+  transition: 0.3s all ease-in-out;
+}
+.back:hover{
+  transform: translateX(-28px);
+}
 nav a{
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
