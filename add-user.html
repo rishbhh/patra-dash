@@ -19,63 +19,129 @@
       <aside class="flex flex-col  bg-[#fafafa] side-main px-5 overflow-y-auto"
       :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768, }">
       <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-10" x-show="menu">
-        <img class="w-[150px]" src="./assets/images/logo.png" alt="logo" />
+        <img class="w-[120px]" src="./assets/images/logo.png" alt="logo" />
 
       </a>
       <div class="w-full text-center cont-h ">
-        <h1 x-show="menu" class="font-600 mon-font text-[36px]">John Doe</h1>
-        <p x-show="menu"  class="font-400 pop-font text-xl">Johndoe@gmail.com</p>
+        <h1 x-show="menu" class="font-600 mon-font text-[28px]">John Doe</h1>
+        <p x-show="menu" class="font-400 pop-font text-xl">Johndoe@gmail.com</p>
       </div>
+
+
+      <!-- ===================== Dashboard Section ======================== -->
       <div class="flex-grow flex flex-col justify-between text-gray-500 bg-[#fafafa] w-1s">
-
-
         <div class="dash-div">
           <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
-            <h1 class=" uppercase flex items-center " :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/dashboard.png" alt=""></span><span x-show="menu">Dashboard</span> </h1>
+            <h1 class=" uppercase flex items-center " :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}">
+              <span class="" :class="{'hidden': menu, 'block': menu == false}"><img
+                  src="/assets/images/icons-nav/dashboard.png" alt=""></span><span x-show="menu">Dashboard</span>
+            </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">View and export company reports in real time.</p>
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4 mt-10">
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/core-kpi.png" alt="" class="">
               <span class="ml-2" x-show="menu">Core KPIs</span>
             </a>
 
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/Customer-Transaction.png" alt="" class="">
               <span class="ml-2" x-show="menu">Customer Transaction KPI
                 Summary</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
-              <img src="/assets/images/icons-nav/received-work-orders.png" alt="" class="">
+              <img src="/assets/images/icons-nav/work-order-status.png" alt="" class="">
               <span class="ml-2" x-show="menu">Received Work Orders</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/aht-trans.png" alt="" class="">
               <span class="ml-2" x-show="menu">AHT and Transaction Scatter</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/aht-transction-bar.png" alt="" class="">
               <span class="ml-2" x-show="menu">AHT vs. Transaction Bar</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/received-work-orders.png" alt="" class="">
               <span class="ml-2" x-show="menu">Work Order Status</span>
             </a>
           </nav>
         </div>
+
+        <!-- ===================== Dashboard Section END ======================== -->
+
+
+        <!-- ===================== Admin Section ======================== -->
+
+        <div class="dash-div">
+          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+            <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
+                class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.png"
+                  alt=""></span><span x-show="menu">ADMIN</span> </h1>
+            <p class="ml-2 text-xs text-gray-50" x-show="menu">Add and Modify User profiles.</p>
+          </div>
+          <nav class="flex flex-col mx-4 my-6 space-y-4">
+            <a href="all-users.html"
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              :class="{'justify-start': menu, 'justify-center': menu == false}">
+              <img src="/assets/images/icons-nav/all-users.png" alt="" class="">
+              <span class="ml-2" x-show="menu">All Users</span>
+            </a>
+
+            <a href="add-user.html"
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              :class="{'justify-start': menu, 'justify-center': menu == false}">
+              <img src="/assets/images/icons-nav/add-user.png" alt="" class="">
+              <span class="ml-2" x-show="menu">Add New User</span>
+            </a>
+          </nav>
+        </div>
+
+        <!-- ===================== Admin Section END ======================== -->
+
+        <!-- ===================== Resources Section END ======================== -->
+
+        <div class="dash-div">
+          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+            :class="{'justify-start': menu, 'justify-center': menu == false}">
+            <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
+                class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/rea.png"
+                  alt=""></span><span x-show="menu">Resources</span> </h1>
+            <p class="ml-2 text-xs text-gray-50" x-show="menu">Help guides for your company.</p>
+          </div>
+          <nav class="flex flex-col mx-4 my-6 space-y-4">
+            <a href="#"
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              :class="{'justify-start': menu, 'justify-center': menu == false}">
+              <img src="/assets/images/icons-nav/training-resources.png" alt="" class="">
+              <span class="ml-2" x-show="menu">Training Resources</span>
+            </a>
+
+            <a href="#"
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              :class="{'justify-start': menu, 'justify-center': menu == false}">
+              <img src="/assets/images/icons-nav/FAQs.png" alt="" class="">
+              <span class="ml-2" x-show="menu">FAQs</span>
+            </a>
+
+          </nav>
+        </div>
+
+        <!-- ===================== Resources Section END ======================== -->
 
       </div>
     </aside>

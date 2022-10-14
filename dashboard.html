@@ -22,11 +22,11 @@
     <aside class="flex flex-col  bg-[#fafafa] side-main px-5 overflow-y-auto"
       :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768, }">
       <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-10" x-show="menu">
-        <img class="w-[150px]" src="./assets/images/logo.png" alt="logo" />
+        <img class="w-[120px]" src="./assets/images/logo.png" alt="logo" />
 
       </a>
       <div class="w-full text-center cont-h ">
-        <h1 x-show="menu" class="font-600 mon-font text-[36px]">John Doe</h1>
+        <h1 x-show="menu" class="font-600 mon-font text-[28px]">John Doe</h1>
         <p x-show="menu" class="font-400 pop-font text-xl">Johndoe@gmail.com</p>
       </div>
 
@@ -44,39 +44,39 @@
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4 mt-10">
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/core-kpi.png" alt="" class="">
               <span class="ml-2" x-show="menu">Core KPIs</span>
             </a>
 
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/Customer-Transaction.png" alt="" class="">
               <span class="ml-2" x-show="menu">Customer Transaction KPI
                 Summary</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
-              <img src="/assets/images/icons-nav/received-work-orders.png" alt="" class="">
+              <img src="/assets/images/icons-nav/work-order-status.png" alt="" class="">
               <span class="ml-2" x-show="menu">Received Work Orders</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/aht-trans.png" alt="" class="">
               <span class="ml-2" x-show="menu">AHT and Transaction Scatter</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/aht-transction-bar.png" alt="" class="">
               <span class="ml-2" x-show="menu">AHT vs. Transaction Bar</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/received-work-orders.png" alt="" class="">
               <span class="ml-2" x-show="menu">Work Order Status</span>
@@ -99,14 +99,14 @@
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4">
             <a href="all-users.html"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/all-users.png" alt="" class="">
               <span class="ml-2" x-show="menu">All Users</span>
             </a>
 
             <a href="add-user.html"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/add-user.png" alt="" class="">
               <span class="ml-2" x-show="menu">Add New User</span>
@@ -128,14 +128,14 @@
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4">
             <a href="#"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/training-resources.png" alt="" class="">
               <span class="ml-2" x-show="menu">Training Resources</span>
             </a>
 
             <a href="#"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[18px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/FAQs.png" alt="" class="">
               <span class="ml-2" x-show="menu">FAQs</span>
@@ -180,7 +180,7 @@
                 <span class="sr-only">Notifications</span>
                 <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
                 <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="none" class="h-5 w-5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="none" class="h-4 w-4">
                   <path
                     d="M24 22.6667V24H0V22.6667L2.66667 20V12C2.66667 7.86667 5.37333 4.22667 9.33333 3.05333V2.66667C9.33333 1.95942 9.61429 1.28115 10.1144 0.781048C10.6145 0.280951 11.2928 0 12 0C12.7072 0 13.3855 0.280951 13.8856 0.781048C14.3857 1.28115 14.6667 1.95942 14.6667 2.66667V3.05333C18.6267 4.22667 21.3333 7.86667 21.3333 12V20L24 22.6667ZM14.6667 25.3333C14.6667 26.0406 14.3857 26.7189 13.8856 27.219C13.3855 27.719 12.7072 28 12 28C11.2928 28 10.6145 27.719 10.1144 27.219C9.61429 26.7189 9.33333 26.0406 9.33333 25.3333"
                     fill="currentColor" />
@@ -194,7 +194,7 @@
 
               <button
                 class="relative p-2 text-white rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
                   <path
                     d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01806 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z" />
                 </svg>
@@ -209,7 +209,7 @@
               <button
                 class="relative p-2 text-white rounded-full">
                 <span class="sr-only">Log out</span>
-                <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4">
                   <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.034 16.253C19.1116 19.6823 15.4418 21.9999 11.2308 21.9999C5.0282 21.9999 -7.41858e-07 16.9717 -4.70734e-07 10.7691C-2.48165e-07 5.67735 3.38848 1.37699 8.03348 3.51155e-07C7.12428 1.62184 6.6059 3.49233 6.6059 5.48389C6.6059 11.6865 11.6341 16.7147 17.8367 16.7147C18.9475 16.7147 20.0207 16.5534 21.034 16.253Z"
                     fill="currentColor" />
@@ -224,7 +224,7 @@
               <button
                 class="relative text-white rounded-full" x-on:click="open = true">
                 <span class="sr-only">Log out</span>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 36 36" fill="none">
+                <svg  width="28" height="28" viewBox="0 0 36 36" fill="none">
                   <g clip-path="url(#clip0_1_4)">
                   <mask id="mask0_1_4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
                   <path d="M36 0H0V36H36V0Z" fill="url(#pattern0)"/>
@@ -246,17 +246,21 @@
               </button>
               
               <ul x-show="open" x-on:click.away="open = false"
-              class="bg-white text-gray-700 rounded shadow-lg absolute py-4 mt-3 right-0 px-6" style="min-width:15rem">
+              class="bg-white text-gray-700 rounded shadow-lg absolute py-4 mt-3 right-0 px-0" style="min-width:15rem">
               <li>
-                <a href="#" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <a href="logout.html" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4 mr-3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
                   </svg>                  
                   Logout
                 </a>
               </li>
               <li>
-                <a href="#" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex">
+                <a href="reset-password.html" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 220 60" style="enable-background:new 0 0 220 60;" xml:space="preserve">
+                    <image style="overflow:visible;" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAE7UlE QVR4nO2dTWhdRRTHf7dpazFRwW5sikK1NFTF7GzVNmgXunLRhV+ItAFFV27rwoW4KCgubCEW8QPB jRZFqqALSYx2o7goUoMfqaCpFmoKGqvoE5PnYu7T+LxzP8+Zmfs6P/hvXh7nzPzf3Hnnzp15gUgk EolEIhEXJL4bUMAW4A5gN7AduAq4FFgEvgROAyeBj1Mt+2lmO1kD3A0cB1aAbkmdA6aA69w3uX3s AeYob26WVoCjwDWO294KNmBGYxOD+/Ub8CjhT4/O2IiZXyVNXq3XMR/kBc1G4HP0TO5pGrjYUZ+C YwPlRvK3wCHgdmAMGE41hqlIDqXvKYrzNjDkpGeBUTQnfwfsw1QhRQwB+4GFgphPivagBewh35Cj 1LvUh4E3cuL+Bexo2PbWMER+Cfc0zSqFBHgmJ/6nDeO3hnuwm/AmMiYkwGs5ee4UyBE8x7HPyZKV wTD2OXtGME+QbMF+W71PId+kJdcycKVCvmB4BHsJV6a6qMoQ5krJyvmQQj4rGp3LY7fl9WOYkS7N MqZ+rtIWFVwbvd3y+ruKOW2xr1XM6Z1zZF/G2xRzjllyLirm9E6H7E6PKOYcseTsKOb8H64L967l de12+Mr7D67n6AuWaLQj1vpuQA7jmAWgG4DrgVHgslQAS6l+wKxpnwQ+AT5z3tIAsa099JgAnqN4 ubNoeXWK/9bJRXkHDluHJ4ETOX+vqxPYb8OdGh1K1eGLWHUMGtFoR7g0OsSnGgM3dSTAYUe5qvA8 A3RVJ5gOSVcUUjpCmFdbZZ7Av5lFelyt947YS7Udob60gtnB2ko2Az/h38SyWqKlzxHfw795VfU+ LZuv78e/aXV1r4IfKqwDTuHfsLqaT/sQPA/j36ymcroVoS5Nj0aEoC8IfK6ewL9JUrpZ0hjp28/9 wvF8Mum7ATYS4Az+R6KUziA4fUiO6HFgk2A832xC8MyipNG7BGP18wfmrMoOzIaYEWAnZkVQcyPM hGLs2hxB5xI+jXkSbmM8fY9G7qkGfqjxIfId/Z18k3uMY0a9dP4PajmhzDfId/TZCvkPK+Q/VdED Jywi39EbK+TfqZD/x4oeWJG8++kA6wXjAVwC/FryvSPAeeH8HYSON4f+vKzK4o70hyyKpNHSowns JwSy0NjBL9an0I2uckuvcfv/i0LMxswi/2X0J+UO9dyE/TRBE03XciIDyRH9lWCsHusw58JvyXnP LuAtdObor6UCSe6PnhOMtZorMDcONiNn0HsiItYnyRH9kWCsfvKM1HzsNKsYuzYJOjctPdnQyneW QJdJu8A7gvF8c4z8D9grt6E3wkYz8m1WzOf0CHNV1qCzuNQFDmTke0wp1zyBP5wFve0GHYzZo6kO oFM7d2nJdoOLgO/Ru6S1tUDg6yareQD/htVVa7aE9ZjBv2lVNUsL5uZ+tmK2wvo2r6x+Bq5WccIB d+HfwLK6T8kDZzyFfxOLdFCt9w5JgJfwb6ZNr9LCednGWuAV/Jvar5cJ+xceapEQ1jRykAEayVns xe8hoiVaWCvXZSt+6uxpWlzC1SXBHCrS2je3WgsMQPnWlPWYRRyNA0bzwIO0aO3CBQlmm+yLmKcb dc09C7yQxgrmyy6YhvSRYH6w6lbMxphtmP8qdDn//hjhecyX6gLmafUcZq2id1gpEolEIpFIJBKJ RCJl+BtqQ/N6YasldwAAAABJRU5ErkJggg==">
+                    </image>
+                    </svg>
                   Reset Password
                 </a>
               </li>
@@ -275,7 +279,7 @@
 
           <!-- ==================== Header Heading Text =================== -->
           <div class="mr-6">
-            <h1 class="text-[36px] text-white font-600 mb-5">Welcome back, John</h1>
+            <h1 class="text-[30px] text-white font-600 mb-5">Welcome back, John</h1>
           </div>
           <!-- ==================== Header Heading Text END =================== -->
 
@@ -304,19 +308,19 @@
                   </svg>
                 </button>
                 <ul x-show="open" x-on:click.away="open = false"
-                  class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
+                  class="bg-white text-gray-500 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Department 1
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Department 2
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Department 3
                     </a>
                   </li>
@@ -338,19 +342,19 @@
                   </svg>
                 </button>
                 <ul x-show="open" x-on:click.away="open = false"
-                  class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
+                  class="bg-white text-gray-500 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Company Group A
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Company Group B
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Company Group C
                     </a>
                   </li>
@@ -372,19 +376,19 @@
                   </svg>
                 </button>
                 <ul x-show="open" x-on:click.away="open = false"
-                  class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
+                  class="bg-white text-gray-500 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Company Name 1
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Company Name 2
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Company Name 3
                     </a>
                   </li>
@@ -398,7 +402,7 @@
 
               <div x-data="{ open: false }" class="relative mr-5 ">
                 <button x-on:click="open = true"
-                  class="flex items-center bg-white text-gray-700 focus:text-gray-900 font-400 rounded focus:outline-none focus:shadow-inner py-3 px-4 lg:text-[11px] xl:text-[14px] 2xl:text-[17px]
+                  class="flex items-center bg-white text-gray-500 focus:text-gray-900 font-400 rounded focus:outline-none focus:shadow-inner py-3 px-4 lg:text-[11px] xl:text-[14px] 2xl:text-[17px]
                   "
                   type="button">
                   <span class="mr-1">Transaction Type</span>
@@ -410,17 +414,17 @@
                 <ul x-show="open" x-on:click.away="open = false"
                   class="bg-white text-gray-500 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Transaction Type 1
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Transaction Type 2
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Transaction Type 3
                     </a>
                   </li>
@@ -444,17 +448,17 @@
                 <ul x-show="open" x-on:click.away="open = false"
                   class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Mont Blanc
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Monte Rosa
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
                       Dom <span class="text-gray-400">(no good)</span>
                     </a>
                   </li>
@@ -473,15 +477,15 @@
 
                 <!-- ==================== Menu Items Section ==================  -->
                 <div class=" flex items-center justify-between py-5">
-                  <h2 class="text-2xl font-semibold text-[#444]">Primary Text</h2>
+                  <h2 class="text-[18px] font-[500] text-[#444]">Primary Text</h2>
                   <div x-data="{ open: false }" class="relative">
 
                     <!-- ======================= Option-1 Dropdown =================== -->
 
                     <button x-on:click="open = true"
-                      class="flex items-center bg-white text-[#444444] focus:text-gray-900 font-semibold rounded-full focus:outline-none shadow-lg py-3 px-5"
+                      class="flex items-center bg-white text-[#444444] focus:text-gray-900 font-semibold rounded-full focus:outline-none shadow-lg py-2 px-4"
                       type="button">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="4" height="20" viewBox="0 0 4 20" fill="none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="3" height="20" viewBox="0 0 4 20" fill="none">
                         <ellipse cx="1.93601" cy="1.90476" rx="1.93601" ry="1.90476" fill="#444444" />
                         <ellipse cx="1.93601" cy="9.5239" rx="1.93601" ry="1.90476" fill="#444444" />
                         <ellipse cx="1.93601" cy="17.1428" rx="1.93601" ry="1.90476" fill="#444444" />
@@ -496,7 +500,7 @@
                       style="min-width:15rem">
                       <li x-data="{ open: false }">
                         <a @click="open = true"
-                          class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-gray-500 font-400 tracking-normal">
+                          class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm text-gray-500 font-400 tracking-normal">
                           Select Date
                         </a>
                         <template x-if="open">
@@ -919,7 +923,7 @@
                       </li>
                       <li>
                         <a href="#"
-                          class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-gray-500 font-400 tracking-normal">
+                          class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm text-gray-500 font-400 tracking-normal">
                           Fullscreen
                         </a>
                       </li>
@@ -942,12 +946,12 @@
               <div class="flex flex-col w-[35%]">
                 <!-- ==================== Menu Items Section ==================  -->
                 <div class=" flex items-center justify-between py-5">
-                  <h2 class="text-[24px] font-semibold text-[#444]">Primary Text</h2>
+                  <h2 class="text-[18px] font-[500] text-[#444]">Primary Text</h2>
                   <div x-data="{ open: false }" class="relative">
                     <button x-on:click="open = true"
-                      class="flex items-center bg-white text-[#444444] focus:text-gray-900 font-semibold rounded-full focus:outline-none py-3 px-5 shadow-lg"
+                      class="flex items-center bg-white text-[#444444] focus:text-gray-900 font-semibold rounded-full focus:outline-none shadow-lg py-2 px-4"
                       type="button">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="4" height="20" viewBox="0 0 4 20" fill="none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="3" height="20" viewBox="0 0 4 20" fill="none">
                         <ellipse cx="1.93601" cy="1.90476" rx="1.93601" ry="1.90476" fill="#444444" />
                         <ellipse cx="1.93601" cy="9.5239" rx="1.93601" ry="1.90476" fill="#444444" />
                         <ellipse cx="1.93601" cy="17.1428" rx="1.93601" ry="1.90476" fill="#444444" />
@@ -958,13 +962,13 @@
                       style="min-width:15rem">
                       <li>
                         <a href="#"
-                          class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-gray-500 font-400 tracking-normal">
+                          class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm text-gray-500 font-400 tracking-normal">
                           Select Date
                         </a>
                       </li>
                       <li>
                         <a href="#"
-                          class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-gray-500 font-400 tracking-normal">
+                          class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm text-gray-500 font-400 tracking-normal">
                           Fullscreen
                         </a>
                       </li>
