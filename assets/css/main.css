@@ -48,7 +48,7 @@ font-family: 'Montserrat', sans-serif;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
 }
 .back{
@@ -115,6 +115,18 @@ color: rgba(68, 68, 68, 0.75);
 /* .w-1s{
     width: 90%;
 } */
+.tost{
+  position: relative;
+  overflow: hidden;
+}
+.tost::before{
+  position: absolute;
+  content: '';
+  width: 10px;
+  background: #FA375B;
+  left: 0;
+  height: 100px;
+}
 button:focus{
     outline: none;
 }

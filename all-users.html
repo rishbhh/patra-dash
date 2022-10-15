@@ -32,7 +32,7 @@
       <!-- ===================== Dashboard Section ======================== -->
       <div class="flex-grow flex flex-col justify-between text-gray-500 bg-[#fafafa] w-1s">
         <div class="dash-div">
-          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center " :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}">
               <span class="" :class="{'hidden': menu, 'block': menu == false}"><img
@@ -40,41 +40,41 @@
             </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">View and export company reports in real time.</p>
           </div>
-          <nav class="flex flex-col mx-4 my-6 space-y-4 mt-10">
+          <nav class="flex flex-col mx-0 my-6 space-y-4 mt-10">
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
+              class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/core-kpi.png" alt="" class="">
               <span class="ml-2" x-show="menu">Core KPIs</span>
             </a>
 
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
+              class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/Customer-Transaction.png" alt="" class="">
               <span class="ml-2" x-show="menu">Customer Transaction KPI
                 Summary</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
+              class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/work-order-status.png" alt="" class="">
               <span class="ml-2" x-show="menu">Received Work Orders</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
+              class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/aht-trans.png" alt="" class="">
               <span class="ml-2" x-show="menu">AHT and Transaction Scatter</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/aht-transction-bar.png" alt="" class="">
               <span class="ml-2" x-show="menu">AHT vs. Transaction Bar</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
+              class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/received-work-orders.png" alt="" class="">
               <span class="ml-2" x-show="menu">Work Order Status</span>
@@ -88,7 +88,7 @@
         <!-- ===================== Admin Section ======================== -->
 
         <div class="dash-div">
-          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
                 class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.png"
@@ -97,14 +97,14 @@
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4">
             <a href="all-users.html"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/all-users.png" alt="" class="">
               <span class="ml-2" x-show="menu">All Users</span>
             </a>
 
             <a href="add-user.html"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/add-user.png" alt="" class="">
               <span class="ml-2" x-show="menu">Add New User</span>
@@ -117,7 +117,7 @@
         <!-- ===================== Resources Section END ======================== -->
 
         <div class="dash-div">
-          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
                 class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/rea.png"
@@ -126,14 +126,14 @@
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4">
             <a href="#"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/training-resources.png" alt="" class="">
               <span class="ml-2" x-show="menu">Training Resources</span>
             </a>
 
             <a href="#"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/FAQs.png" alt="" class="">
               <span class="ml-2" x-show="menu">FAQs</span>
@@ -150,13 +150,13 @@
     <!-- =========== side NavBar Section End ================ -->
 
 
-    <div class="flex-grow text-gray-800 relative overflow-y-auto bg-white">
+    <div class="flex-grow text-gray-800 relative overflow-y-auto bg-white w-[100%]">
 
       <!-- ================= Header section ================= -->
       <div class=" py-8 px-10 space-y-6 bg-white ">
         <header class="flex items-center h-20  ">
           <div class="mr-8 cursor-pointer" @click="menu = !menu">
-            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path xmlns="http://www.w3.org/2000/svg"
                 d="M1.125 18C0.50368 18 0 17.4963 0 16.875C0 16.2537 0.50368 15.75 1.125 15.75H13.875C14.4963 15.75 15 16.2537 15 16.875C15 17.4963 14.4963 18 13.875 18H1.125ZM1.125 10.125C0.503679 10.125 0 9.62132 0 9C0 8.37868 0.50368 7.875 1.125 7.875H19.875C20.4963 7.875 21 8.37868 21 9C21 9.62132 20.4963 10.125 19.875 10.125H1.125ZM1.125 2.25C0.50368 2.25 0 1.74632 0 1.125C0 0.50368 0.50368 0 1.125 0H25.875C26.4963 0 27 0.50368 27 1.125C27 1.74632 26.4963 2.25 25.875 2.25H1.125Z"
                 fill="black" />
@@ -164,7 +164,7 @@
           </div>
 
           <div class="flex flex-shrink-0 items-center ml-auto">
-            <div class=" pl-3 ml-3 space-x-6">
+            <div class=" pl-3 ml-3 space-x-6 flex">
               <button
               class="relative p-2 bg-white shadow-xl text-white focus:text-gray-600 rounded">
               <span class="sr-only">Notifications</span>
@@ -177,7 +177,7 @@
             <button
               class="relative p-2 text-white bg-white shadow-xl  focus:text-gray-600 rounded">
               <svg xmlns="http://www.w3.org/2000/svg" fill="#444" viewBox="0 0 24 24" 
-                class="w-6 h-6">
+                class="w-5 h-5">
                 <path
                   d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01806 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z" />
               </svg>
@@ -192,14 +192,51 @@
                   fill="#444" />
               </svg>
             </button>
+            <div x-data="{ open: false }" class="relative">
             <button
-              class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded">
+              class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded" x-on:click="open = true">
               <span class="sr-only">Log out</span>
-              <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="#444" class="h-6 w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-              </svg>
+              <svg  width="28" height="28" viewBox="0 0 36 36" fill="none">
+                <g clip-path="url(#clip0_1_4)">
+                <mask id="mask0_1_4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
+                <path d="M36 0H0V36H36V0Z" fill="url(#pattern0)"/>
+                </mask>
+                <g mask="url(#mask0_1_4)">
+                <path d="M36 0H0V36H36V0Z" fill="#444"/>
+                </g>
+                </g>
+                <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_1_4" transform="scale(0.0111111)"/>
+                </pattern>
+                <clipPath id="clip0_1_4">
+                <rect width="36" height="36" fill="white"/>
+                </clipPath>
+                <image id="image0_1_4" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAG+ElEQVR4nO2db4xdRR2Gn6F0odJKW0VtJApWqRIFtcRioJa0JRICCX+KWATUSDFGE4IG4yejMeoHEqNFauI3NTFggJiYWFJRUQEVSetWQ6Bq/RNr0bq2i7VQWPbxw9yV7dreO+eemXN2m/MkTb/Mfc87b869Z87Mb2aho6Ojo6Ojo6Ojo6NjlhLaNjATdR7wduAcYAVwFvA64BRgSe9/gP8A+3v/7waeBHYBo8COEMILzTrvz6wIWj0d2ACsA94FvLSm5DjwU+CHwD0hhD019eYu6gL1BvUH6guWY0Ldpl6vntx2vxtDXajeou4pGO6x+If6GfXUtnMohjpfvU0dayHgmYypn1Dnt51LVtTV6m/azfaoPKGubzuf2qgnq3eqk+3m2ZdJdbN6Usksio061DOAu4BVpa6Rme3AtSGE35cQLxK08et4L/WHaU0zDlwVQvhRbuETcguqVwLfY+6FDHAqsFW9Nrdw1qDVm4F7gLk8Xh0Bvq1uyima7adDvYIY8rxcmi0zCWwMIXwnh1iWoNW1wPeBok/uFngOuDyEsK2uUO2g1TcAjzE3f5NTGAdWhhD+UEek1m90b+x5F8dvyBAfkHfXHWfXfRh+iTilWZKdwOeIs3rLgYXEqdI3A58C9ha+PsBK4PYGrvP/qGss+8a3W70qwcdS9eGCPqaYVC9sItvpnZuv/rZgp36hLq7gZ6lxLmWioCfVneqJJbOd2bHbCnbmcXWo33x1sfp5y37Tbs2d57E6s8hyU50T6jszePxoIX+q+9SFVT0N8zD8CLB0iM+l8N0Qws/rioQQ7gQezODnaLwc+HAh7Yhx+empgnfLuzN6vaygz79ZcVms6h19DfDKip9J5RBxMTUX24CDGfWmswwYOCKaTtWgb6jYvgo7QggTucRCCM8BO3LpHYUbqzRODtpYErC2sp10niyg+bsCmlOsV5elNq5yR2+o2L4qBwpojhXQnGIecHVq4yrBravupRLPFNB8voDmdJIzSQra+Da0emg7aZw2RzSns8ZYwjaQ1Dv6bcRZrJK8pYDm2QU0p7MEeGtKw9SgzxneSzIr1SW5xIxzJefl0utDUjapQa+oYSSVEfJOuZ5HMys+SdnMpqAfCiFke2EJITwAPJxLrw9Zgz6jhpFUHp8jmjNJyiY16CaqL5cX0Hx9Ac2ZJGWTGnTlacEhWGWFyf5BqEuBd+TS68OilEapQSeJ1WQhsCVH2L3RyxZe3IZRkqRsmluWSWMjcBj4YE2drwDZy7rqkHpH/7uoiyO5xBrrcr3PZpvXTiApm9SgS83rHo1XUe+O3gS8IpOXFLIGPV7DyDB8tvcwq4T6MuDTBfz0Iymb1KD/WMPIMCwDvpE6YQP/25/4TeI3okmSskkNelcNI8NyGXBHhfZfBS4t5KUfSdmkBl1i9SOFN1Vo+8ZiLvrzREqj1KB31jByvJOUTWrQ2ymz1DTXOUDcez6QpKB7G9h/VsfRkFSpFG2iqnQmP07d3F9lzTBnzUUKh4AvVGj/xd5nmiR/JuqrLV+tOcVuhyiRNe7Q3d2Qx+fVMkNJ4ykBpTik3qduUEdqeBxRr+5pHSrod2vObGd24vrMZv+pblEvVRcU8PuSnvbXetfKyXW5/U43vkDdm8HkQ+oV1rhzh/A+ol7Zu3Zd9lj67A/rFaGPqe8tajCtD9dZr8b7402YHLYQ/U9qE4u8Sagrep6qsk9tYkEBjIeKVGFcrfI63Qjq2erTFftyS5MG51vtoJMPNWauIupNFfrxa5vcLNQzuNq0TTnb1ZJVqLVQT1B3JPRjUr2gLZObEwy+vxVzFVA/kNCPL7dp8CT1sQEGm1jyr4W6akAfHrXBoeixTC5XD/QxOaae36rJPqgXqP/q43+/embbPgFQL1Kf6WP2WfWmtn3ORL1ZPdzH92H14rZ9HoF6jYNPZPyWQyy6FvB6mnr3AK8TavLWiUZRNyWEvVfd0JK/oG40nug4KORZ9w08AuMcRr+fkSl+qV7eoK/16q8SfD2rvqcpX7VQ19r/ATmdB41zD9knaYyzdzeqjyR62a9elNtHUYyjkUFDv5md3GI8B2ToM0ONQ8616teNr/6pPGrB0UXR86ONx+PcDnys4rUOAo8QF4V3An8B/kw8lHuqBGsRsQL1NcBrgXOJJ8WcT7UqUoHNwCd7u23nLuqF6miFu6spRm3rtboU6onqrcZpxrbZZzzDeraVLedDPaXXyb+2EPDfjQd1H8+nmh2J8cjj96n3W3Z1fULdaqGRTSqz5Y8pLCNuYF8HrCHuSK3DfuAnwAPAvSGEp2rq1WZWBD0dY/ntucStv2f1/p1JPMRwMS9uXDpILMl6mlg6u4tYjDkKjM62Pw/S0dHR0dHR0dHR0dExa/kvJOs1jaezOLIAAAAASUVORK5CYII="/>
+                </defs>
+                </svg> 
             </button>
+            <ul x-show="open" x-on:click.away="open = false"
+              class="bg-white text-gray-700 rounded shadow-lg absolute py-4 mt-3 right-0 px-0" style="min-width:15rem">
+              <li>
+                <a href="logout.html" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4 mr-3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
+                  </svg>                  
+                  Logout
+                </a>
+              </li>
+              <li>
+                <a href="reset-password.html" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 220 60" style="enable-background:new 0 0 220 60;" xml:space="preserve">
+                    <image style="overflow:visible;" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAE7UlE QVR4nO2dTWhdRRTHf7dpazFRwW5sikK1NFTF7GzVNmgXunLRhV+ItAFFV27rwoW4KCgubCEW8QPB jRZFqqALSYx2o7goUoMfqaCpFmoKGqvoE5PnYu7T+LxzP8+Zmfs6P/hvXh7nzPzf3Hnnzp15gUgk EolEIhEXJL4bUMAW4A5gN7AduAq4FFgEvgROAyeBj1Mt+2lmO1kD3A0cB1aAbkmdA6aA69w3uX3s AeYob26WVoCjwDWO294KNmBGYxOD+/Ub8CjhT4/O2IiZXyVNXq3XMR/kBc1G4HP0TO5pGrjYUZ+C YwPlRvK3wCHgdmAMGE41hqlIDqXvKYrzNjDkpGeBUTQnfwfsw1QhRQwB+4GFgphPivagBewh35Cj 1LvUh4E3cuL+Bexo2PbWMER+Cfc0zSqFBHgmJ/6nDeO3hnuwm/AmMiYkwGs5ee4UyBE8x7HPyZKV wTD2OXtGME+QbMF+W71PId+kJdcycKVCvmB4BHsJV6a6qMoQ5krJyvmQQj4rGp3LY7fl9WOYkS7N MqZ+rtIWFVwbvd3y+ruKOW2xr1XM6Z1zZF/G2xRzjllyLirm9E6H7E6PKOYcseTsKOb8H64L967l de12+Mr7D67n6AuWaLQj1vpuQA7jmAWgG4DrgVHgslQAS6l+wKxpnwQ+AT5z3tIAsa099JgAnqN4 ubNoeXWK/9bJRXkHDluHJ4ETOX+vqxPYb8OdGh1K1eGLWHUMGtFoR7g0OsSnGgM3dSTAYUe5qvA8 A3RVJ5gOSVcUUjpCmFdbZZ7Av5lFelyt947YS7Udob60gtnB2ko2Az/h38SyWqKlzxHfw795VfU+ LZuv78e/aXV1r4IfKqwDTuHfsLqaT/sQPA/j36ymcroVoS5Nj0aEoC8IfK6ewL9JUrpZ0hjp28/9 wvF8Mum7ATYS4Az+R6KUziA4fUiO6HFgk2A832xC8MyipNG7BGP18wfmrMoOzIaYEWAnZkVQcyPM hGLs2hxB5xI+jXkSbmM8fY9G7qkGfqjxIfId/Z18k3uMY0a9dP4PajmhzDfId/TZCvkPK+Q/VdED Jywi39EbK+TfqZD/x4oeWJG8++kA6wXjAVwC/FryvSPAeeH8HYSON4f+vKzK4o70hyyKpNHSowns JwSy0NjBL9an0I2uckuvcfv/i0LMxswi/2X0J+UO9dyE/TRBE03XciIDyRH9lWCsHusw58JvyXnP LuAtdObor6UCSe6PnhOMtZorMDcONiNn0HsiItYnyRH9kWCsfvKM1HzsNKsYuzYJOjctPdnQyneW QJdJu8A7gvF8c4z8D9grt6E3wkYz8m1WzOf0CHNV1qCzuNQFDmTke0wp1zyBP5wFve0GHYzZo6kO oFM7d2nJdoOLgO/Ru6S1tUDg6yareQD/htVVa7aE9ZjBv2lVNUsL5uZ+tmK2wvo2r6x+Bq5WccIB d+HfwLK6T8kDZzyFfxOLdFCt9w5JgJfwb6ZNr9LCednGWuAV/Jvar5cJ+xceapEQ1jRykAEayVns xe8hoiVaWCvXZSt+6uxpWlzC1SXBHCrS2je3WgsMQPnWlPWYRRyNA0bzwIO0aO3CBQlmm+yLmKcb dc09C7yQxgrmyy6YhvSRYH6w6lbMxphtmP8qdDn//hjhecyX6gLmafUcZq2id1gpEolEIpFIJBKJ RCJl+BtqQ/N6YasldwAAAABJRU5ErkJggg==">
+                    </image>
+                    </svg>
+                  Reset Password
+                </a>
+              </li>
+            </ul>
+            </div>
             </div>
           </div>
         </header>
@@ -214,7 +251,7 @@
         <div class="px-4 sm:px-6 lg:px-8 ">
           <div class="sm:flex sm:items-center">
             <div class="sm:flex-auto">
-              <h1 class="text-[40px] font-semibold text-[#444] uppercase text-center mon-font">All Users</h1>
+              <h1 class="text-[30px] font-semibold text-[#444] uppercase text-center mon-font">All Users</h1>
             </div>
           </div>
           <div class="mt-8 flex flex-col drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] ">
@@ -242,7 +279,7 @@
                               class="flex items-center text-white  font-semibold focus:outline-none float-right"
                               type="button">
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                              class="w-6 h-6">
+                              class="w-5 h-5">
                               <path fill-rule="evenodd"
                                 d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
                                 clip-rule="evenodd" />
@@ -291,27 +328,27 @@
                             class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
                         </td>
                         <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Caseycharles@gmail.com
+                        <td class="whitespace-nowrap py-4 pr-3 text-[12px] font-medium text-gray-900">Charles Casey</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Caseycharles@gmail.com
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
                           <div class="flex items-center">
                             <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
-                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                            <div class="ml-2 truncate text-[#00CA72]">Active</div>
                           </div>
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Pending invite</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Viewer</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Pending invite</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Viewer</td>
                         <td
                           class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
                           <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-5 h-5">
                               <path
                                 d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
                             </svg>
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-5 h-5">
                               <path fill-rule="evenodd"
                                 d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
                                 clip-rule="evenodd" />
@@ -319,7 +356,7 @@
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
                               xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="#DD1C1A" class="w-6 h-6">
+                              stroke="#DD1C1A" class="w-5 h-5">
                               <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
                               <path stroke-linecap="round" stroke-linejoin="round"
@@ -340,27 +377,27 @@
                             class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
                         </td>
                         <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Caseycharles@gmail.com
+                        <td class="whitespace-nowrap py-4 pr-3 text-[12px] font-medium text-gray-900">Charles Casey</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Caseycharles@gmail.com
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
                           <div class="flex items-center">
                             <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
-                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                            <div class="ml-2 truncate text-[#00CA72]">Active</div>
                           </div>
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Pending invite</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Viewer</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Pending invite</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Viewer</td>
                         <td
                           class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
                           <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-5 h-5">
                               <path
                                 d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
                             </svg>
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-5 h-5">
                               <path fill-rule="evenodd"
                                 d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
                                 clip-rule="evenodd" />
@@ -368,7 +405,7 @@
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
                               xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="#DD1C1A" class="w-6 h-6">
+                              stroke="#DD1C1A" class="w-5 h-5">
                               <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
                               <path stroke-linecap="round" stroke-linejoin="round"
@@ -389,27 +426,27 @@
                             class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
                         </td>
                         <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Alex Pretzy</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Pretzyalex@gmail.com
+                        <td class="whitespace-nowrap py-4 pr-3 text-[12px] font-medium text-gray-900">Alex Pretzy</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Pretzyalex@gmail.com
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
                           <div class="flex items-center">
                             <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#FB275D"></div>
                             <div class="ml-3 truncate text-[#FB275D]">Deactive</div>
                           </div>
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Registered</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Editor</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Registered</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Editor</td>
                         <td
                           class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-500 sm:pr-6 flex justify-between">
                           <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-5 h-5">
                               <path
                                 d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
                             </svg>
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-5 h-5">
                               <path fill-rule="evenodd"
                                 d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
                                 clip-rule="evenodd" />
@@ -417,7 +454,7 @@
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
                               xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="#DD1C1A" class="w-6 h-6">
+                              stroke="#DD1C1A" class="w-5 h-5">
                               <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
                               <path stroke-linecap="round" stroke-linejoin="round"
@@ -438,27 +475,27 @@
                             class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
                         </td>
                         <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Pretzy</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Rahul.pretzy@gmail.com
+                        <td class="whitespace-nowrap py-4 pr-3 text-[12px] font-medium text-gray-900">Pretzy</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Rahul.pretzy@gmail.com
                         </td>
                         <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">
                           <div class="flex items-center">
                             <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
-                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                            <div class="ml-2 truncate text-[#00CA72]">Active</div>
                           </div>
                         </td>
                         <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">Registered </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Viewer</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Viewer</td>
                         <td
                           class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
                           <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-5 h-5">
                               <path
                                 d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
                             </svg>
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-5 h-5">
                               <path fill-rule="evenodd"
                                 d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
                                 clip-rule="evenodd" />
@@ -466,7 +503,7 @@
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
                               xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="#DD1C1A" class="w-6 h-6">
+                              stroke="#DD1C1A" class="w-5 h-5">
                               <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
                               <path stroke-linecap="round" stroke-linejoin="round"
@@ -487,27 +524,27 @@
                             class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
                         </td>
                         <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Pretzy Rahul </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Ruhisharma@gmail.com
+                        <td class="whitespace-nowrap py-4 pr-3 text-[12px] font-medium text-gray-900">Pretzy Rahul </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Ruhisharma@gmail.com
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
                           <div class="flex items-center">
                             <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
-                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                            <div class="ml-2 truncate text-[#00CA72]">Active</div>
                           </div>
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Registered</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Editor</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Registered</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Editor</td>
                         <td
                           class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
                           <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-5 h-5">
                               <path
                                 d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
                             </svg>
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-5 h-5">
                               <path fill-rule="evenodd"
                                 d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
                                 clip-rule="evenodd" />
@@ -515,7 +552,7 @@
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
                               xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="#DD1C1A" class="w-6 h-6">
+                              stroke="#DD1C1A" class="w-5 h-5">
                               <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
                               <path stroke-linecap="round" stroke-linejoin="round"
@@ -536,27 +573,27 @@
                             class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
                         </td>
                         <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Ruuhi Ruuhi</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">
+                        <td class="whitespace-nowrap py-4 pr-3 text-[12px] font-medium text-gray-900">Ruuhi Ruuhi</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
                           Julietkansderson@gmail.com</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
                           <div class="flex items-center">
                             <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#FB275D"></div>
                             <div class="ml-3 truncate text-[#FB275D]">Deactive</div>
                           </div>
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Pending invite</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Viewer</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Pending invite</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Viewer</td>
                         <td
                           class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
                           <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-5 h-5">
                               <path
                                 d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
                             </svg>
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-5 h-5">
                               <path fill-rule="evenodd"
                                 d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
                                 clip-rule="evenodd" />
@@ -564,7 +601,7 @@
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
                               xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="#DD1C1A" class="w-6 h-6">
+                              stroke="#DD1C1A" class="w-5 h-5">
                               <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
                               <path stroke-linecap="round" stroke-linejoin="round"
@@ -585,27 +622,27 @@
                             class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
                         </td>
                         <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Caseycharles@gmail.com
+                        <td class="whitespace-nowrap py-4 pr-3 text-[12px] font-medium text-gray-900">Charles Casey</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Caseycharles@gmail.com
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
                           <div class="flex items-center">
                             <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
-                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                            <div class="ml-2 truncate text-[#00CA72]">Active</div>
                           </div>
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Pending invite</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Viewer</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Pending invite</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Viewer</td>
                         <td
                           class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
                           <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-5 h-5">
                               <path
                                 d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
                             </svg>
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-5 h-5">
                               <path fill-rule="evenodd"
                                 d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
                                 clip-rule="evenodd" />
@@ -613,7 +650,7 @@
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
                               xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="#DD1C1A" class="w-6 h-6">
+                              stroke="#DD1C1A" class="w-5 h-5">
                               <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
                               <path stroke-linecap="round" stroke-linejoin="round"
@@ -634,27 +671,27 @@
                             class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
                         </td>
                         <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Charles Casey</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Caseycharles@gmail.com
+                        <td class="whitespace-nowrap py-4 pr-3 text-[12px] font-medium text-gray-900">Charles Casey</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Caseycharles@gmail.com
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
                           <div class="flex items-center">
                             <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
-                            <div class="ml-3 truncate text-[#00CA72]">Active</div>
+                            <div class="ml-2 truncate text-[#00CA72]">Active</div>
                           </div>
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Pending invite</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Viewer</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Pending invite</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Viewer</td>
                         <td
                           class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
                           <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-5 h-5">
                               <path
                                 d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
                             </svg>
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-5 h-5">
                               <path fill-rule="evenodd"
                                 d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
                                 clip-rule="evenodd" />
@@ -662,7 +699,7 @@
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
                               xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="#DD1C1A" class="w-6 h-6">
+                              stroke="#DD1C1A" class="w-5 h-5">
                               <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
                               <path stroke-linecap="round" stroke-linejoin="round"
@@ -683,27 +720,27 @@
                             class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6">
                         </td>
                         <!-- Selected: "text-indigo-600", Not Selected: "text-gray-900" -->
-                        <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">Alex Pretzy</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Pretzyalex@gmail.com
+                        <td class="whitespace-nowrap py-4 pr-3 text-[12px] font-medium text-gray-900">Alex Pretzy</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Pretzyalex@gmail.com
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
                           <div class="flex items-center">
                             <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#FB275D"></div>
                             <div class="ml-3 truncate text-[#FB275D]">Deactive</div>
                           </div>
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Registered</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-sm font-500 text-gray-700">Editor</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Registered</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Editor</td>
                         <td
                           class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
                           <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-5 h-5">
                               <path
                                 d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
                             </svg>
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-6 h-6">
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-5 h-5">
                               <path fill-rule="evenodd"
                                 d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
                                 clip-rule="evenodd" />
@@ -711,7 +748,7 @@
                           </a>
                           <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
                               xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="#DD1C1A" class="w-6 h-6">
+                              stroke="#DD1C1A" class="w-5 h-5">
                               <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
                               <path stroke-linecap="round" stroke-linejoin="round"

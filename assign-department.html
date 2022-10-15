@@ -31,7 +31,7 @@
       <!-- ===================== Dashboard Section ======================== -->
       <div class="flex-grow flex flex-col justify-between text-gray-500 bg-[#fafafa] w-1s">
         <div class="dash-div">
-          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center " :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}">
               <span class="" :class="{'hidden': menu, 'block': menu == false}"><img
@@ -39,41 +39,41 @@
             </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">View and export company reports in real time.</p>
           </div>
-          <nav class="flex flex-col mx-4 my-6 space-y-4 mt-10">
+          <nav class="flex flex-col mx-0 my-6 space-y-4 mt-10">
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
+              class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/core-kpi.png" alt="" class="">
               <span class="ml-2" x-show="menu">Core KPIs</span>
             </a>
 
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
+              class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/Customer-Transaction.png" alt="" class="">
               <span class="ml-2" x-show="menu">Customer Transaction KPI
                 Summary</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
+              class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/work-order-status.png" alt="" class="">
               <span class="ml-2" x-show="menu">Received Work Orders</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
+              class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/aht-trans.png" alt="" class="">
               <span class="ml-2" x-show="menu">AHT and Transaction Scatter</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/aht-transction-bar.png" alt="" class="">
               <span class="ml-2" x-show="menu">AHT vs. Transaction Bar</span>
             </a>
             <a href=""
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-600 text-[16px] "
+              class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/received-work-orders.png" alt="" class="">
               <span class="ml-2" x-show="menu">Work Order Status</span>
@@ -87,7 +87,7 @@
         <!-- ===================== Admin Section ======================== -->
 
         <div class="dash-div">
-          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
                 class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.png"
@@ -96,14 +96,14 @@
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4">
             <a href="all-users.html"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/all-users.png" alt="" class="">
               <span class="ml-2" x-show="menu">All Users</span>
             </a>
 
             <a href="add-user.html"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/add-user.png" alt="" class="">
               <span class="ml-2" x-show="menu">Add New User</span>
@@ -116,7 +116,7 @@
         <!-- ===================== Resources Section END ======================== -->
 
         <div class="dash-div">
-          <div class="mt-10 items-center py-6 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
                 class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/rea.png"
@@ -125,14 +125,14 @@
           </div>
           <nav class="flex flex-col mx-4 my-6 space-y-4">
             <a href="#"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/training-resources.png" alt="" class="">
               <span class="ml-2" x-show="menu">Training Resources</span>
             </a>
 
             <a href="#"
-              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[16px] "
+              class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/FAQs.png" alt="" class="">
               <span class="ml-2" x-show="menu">FAQs</span>
@@ -146,13 +146,13 @@
       </div>
     </aside>
     <!-- =========== side NavBar Section End ================ -->
-    <div class="flex-grow text-gray-800 relative overflow-y-auto bg-white">
+    <div class="flex-grow text-gray-800 relative overflow-y-auto bg-white w-[100%]">
 
       <!-- ================= Header Section ==================== -->
       <div class=" py-8 px-10 space-y-6 bg-white ">
         <header class="flex items-center h-20  ">
           <div class="mr-8 cursor-pointer" @click="menu = !menu">
-            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path xmlns="http://www.w3.org/2000/svg"
                 d="M1.125 18C0.50368 18 0 17.4963 0 16.875C0 16.2537 0.50368 15.75 1.125 15.75H13.875C14.4963 15.75 15 16.2537 15 16.875C15 17.4963 14.4963 18 13.875 18H1.125ZM1.125 10.125C0.503679 10.125 0 9.62132 0 9C0 8.37868 0.50368 7.875 1.125 7.875H19.875C20.4963 7.875 21 8.37868 21 9C21 9.62132 20.4963 10.125 19.875 10.125H1.125ZM1.125 2.25C0.50368 2.25 0 1.74632 0 1.125C0 0.50368 0.50368 0 1.125 0H25.875C26.4963 0 27 0.50368 27 1.125C27 1.74632 26.4963 2.25 25.875 2.25H1.125Z"
                 fill="black" />
@@ -160,7 +160,7 @@
           </div>
 
           <div class="flex flex-shrink-0 items-center ml-auto">
-            <div class=" pl-3 ml-3 space-x-6">
+            <div class=" pl-3 ml-3 space-x-6 flex">
               <button
               class="relative p-2 bg-white shadow-xl text-white focus:text-gray-600 rounded">
               <span class="sr-only">Notifications</span>
@@ -173,7 +173,7 @@
             <button
               class="relative p-2 text-white bg-white shadow-xl  focus:text-gray-600 rounded">
               <svg xmlns="http://www.w3.org/2000/svg" fill="#444" viewBox="0 0 24 24" 
-                class="w-6 h-6">
+                class="w-5 h-5">
                 <path
                   d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01806 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z" />
               </svg>
@@ -188,14 +188,51 @@
                   fill="#444" />
               </svg>
             </button>
+            <div x-data="{ open: false }" class="relative">
             <button
-              class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded">
+              class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded" x-on:click="open = true">
               <span class="sr-only">Log out</span>
-              <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="#444" class="h-6 w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-              </svg>
+              <svg  width="28" height="28" viewBox="0 0 36 36" fill="none">
+                <g clip-path="url(#clip0_1_4)">
+                <mask id="mask0_1_4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
+                <path d="M36 0H0V36H36V0Z" fill="url(#pattern0)"/>
+                </mask>
+                <g mask="url(#mask0_1_4)">
+                <path d="M36 0H0V36H36V0Z" fill="#444"/>
+                </g>
+                </g>
+                <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_1_4" transform="scale(0.0111111)"/>
+                </pattern>
+                <clipPath id="clip0_1_4">
+                <rect width="36" height="36" fill="white"/>
+                </clipPath>
+                <image id="image0_1_4" width="90" height="90" xlink:href="data:image/png;base64,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"/>
+                </defs>
+                </svg> 
             </button>
+            <ul x-show="open" x-on:click.away="open = false"
+              class="bg-white text-gray-700 rounded shadow-lg absolute py-4 mt-3 right-0 px-0" style="min-width:15rem">
+              <li>
+                <a href="logout.html" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4 mr-3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
+                  </svg>                  
+                  Logout
+                </a>
+              </li>
+              <li>
+                <a href="reset-password.html" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 220 60" style="enable-background:new 0 0 220 60;" xml:space="preserve">
+                    <image style="overflow:visible;" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAE7UlE QVR4nO2dTWhdRRTHf7dpazFRwW5sikK1NFTF7GzVNmgXunLRhV+ItAFFV27rwoW4KCgubCEW8QPB jRZFqqALSYx2o7goUoMfqaCpFmoKGqvoE5PnYu7T+LxzP8+Zmfs6P/hvXh7nzPzf3Hnnzp15gUgk EolEIhEXJL4bUMAW4A5gN7AduAq4FFgEvgROAyeBj1Mt+2lmO1kD3A0cB1aAbkmdA6aA69w3uX3s AeYob26WVoCjwDWO294KNmBGYxOD+/Ub8CjhT4/O2IiZXyVNXq3XMR/kBc1G4HP0TO5pGrjYUZ+C YwPlRvK3wCHgdmAMGE41hqlIDqXvKYrzNjDkpGeBUTQnfwfsw1QhRQwB+4GFgphPivagBewh35Cj 1LvUh4E3cuL+Bexo2PbWMER+Cfc0zSqFBHgmJ/6nDeO3hnuwm/AmMiYkwGs5ee4UyBE8x7HPyZKV wTD2OXtGME+QbMF+W71PId+kJdcycKVCvmB4BHsJV6a6qMoQ5krJyvmQQj4rGp3LY7fl9WOYkS7N MqZ+rtIWFVwbvd3y+ruKOW2xr1XM6Z1zZF/G2xRzjllyLirm9E6H7E6PKOYcseTsKOb8H64L967l de12+Mr7D67n6AuWaLQj1vpuQA7jmAWgG4DrgVHgslQAS6l+wKxpnwQ+AT5z3tIAsa099JgAnqN4 ubNoeXWK/9bJRXkHDluHJ4ETOX+vqxPYb8OdGh1K1eGLWHUMGtFoR7g0OsSnGgM3dSTAYUe5qvA8 A3RVJ5gOSVcUUjpCmFdbZZ7Av5lFelyt947YS7Udob60gtnB2ko2Az/h38SyWqKlzxHfw795VfU+ LZuv78e/aXV1r4IfKqwDTuHfsLqaT/sQPA/j36ymcroVoS5Nj0aEoC8IfK6ewL9JUrpZ0hjp28/9 wvF8Mum7ATYS4Az+R6KUziA4fUiO6HFgk2A832xC8MyipNG7BGP18wfmrMoOzIaYEWAnZkVQcyPM hGLs2hxB5xI+jXkSbmM8fY9G7qkGfqjxIfId/Z18k3uMY0a9dP4PajmhzDfId/TZCvkPK+Q/VdED Jywi39EbK+TfqZD/x4oeWJG8++kA6wXjAVwC/FryvSPAeeH8HYSON4f+vKzK4o70hyyKpNHSowns JwSy0NjBL9an0I2uckuvcfv/i0LMxswi/2X0J+UO9dyE/TRBE03XciIDyRH9lWCsHusw58JvyXnP LuAtdObor6UCSe6PnhOMtZorMDcONiNn0HsiItYnyRH9kWCsfvKM1HzsNKsYuzYJOjctPdnQyneW QJdJu8A7gvF8c4z8D9grt6E3wkYz8m1WzOf0CHNV1qCzuNQFDmTke0wp1zyBP5wFve0GHYzZo6kO oFM7d2nJdoOLgO/Ru6S1tUDg6yareQD/htVVa7aE9ZjBv2lVNUsL5uZ+tmK2wvo2r6x+Bq5WccIB d+HfwLK6T8kDZzyFfxOLdFCt9w5JgJfwb6ZNr9LCednGWuAV/Jvar5cJ+xceapEQ1jRykAEayVns xe8hoiVaWCvXZSt+6uxpWlzC1SXBHCrS2je3WgsMQPnWlPWYRRyNA0bzwIO0aO3CBQlmm+yLmKcb dc09C7yQxgrmyy6YhvSRYH6w6lbMxphtmP8qdDn//hjhecyX6gLmafUcZq2id1gpEolEIpFIJBKJ RCJl+BtqQ/N6YasldwAAAABJRU5ErkJggg==">
+                    </image>
+                    </svg>
+                  Reset Password
+                </a>
+              </li>
+            </ul>
+            </div>
             </div>
           </div>
         </header>
@@ -209,7 +246,7 @@
         <div class="px-4 sm:px-6 lg:px-8 ">
           <div class="sm:flex sm:items-center">
             <div class="sm:flex-auto relative items-center">
-              <h1 class="text-[40px] font-semibold text-[#444] uppercase text-center mon-font">Configure User</h1>
+              <h1 class="text-[30px] font-semibold text-[#444] uppercase text-center mon-font">Configure User</h1>
               <a href="assign-department.html">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="#4169D7"
@@ -266,7 +303,7 @@
                             @click="selected !== 1 ? selected = 1 : selected = null">
                             <div class="flex items-center justify-between">
                               <div class="w-56">
-                                <h5 class="font-[400] text-2xl text-gray-500">Company 2</h5>
+                                <h5 class="font-[400] text-xl text-gray-500">Company 2</h5>
                               </div>
                               <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                   viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -340,7 +377,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 1</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 1</label>
                                                 </div>
                                               </li>
                                               <li
@@ -351,7 +388,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 2</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 2</label>
                                                 </div>
                                               </li>
                                               <li
@@ -362,7 +399,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 3</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 3</label>
                                                 </div>
                                               </li>
                                               <li
@@ -373,7 +410,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 4</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 4</label>
                                                 </div>
                                               </li>
 
@@ -399,7 +436,7 @@
                             @click="selected !== 2 ? selected = 2 : selected = null">
                             <div class="flex items-center justify-between">
                               <div class="w-56">
-                                <h5 class="font-[400] text-2xl text-gray-500">Company 2</h5>
+                                <h5 class="font-[400] text-xl text-gray-500">Company 2</h5>
                               </div>
                               <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                   viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -473,7 +510,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 1</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 1</label>
                                                 </div>
                                               </li>
                                               <li
@@ -484,7 +521,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 2</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 2</label>
                                                 </div>
                                               </li>
                                               <li
@@ -495,7 +532,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 3</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 3</label>
                                                 </div>
                                               </li>
                                               <li
@@ -506,7 +543,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 4</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 4</label>
                                                 </div>
                                               </li>
 
@@ -532,7 +569,7 @@
                             @click="selected !== 3 ? selected = 3 : selected = null">
                             <div class="flex items-center justify-between">
                               <div class="w-56">
-                                <h5 class="font-[400] text-2xl text-gray-500">Company 2</h5>
+                                <h5 class="font-[400] text-xl text-gray-500">Company 2</h5>
                               </div>
                               <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                   viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -607,7 +644,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 1</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 1</label>
                                                 </div>
                                               </li>
                                               <li
@@ -618,7 +655,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 2</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 2</label>
                                                 </div>
                                               </li>
                                               <li
@@ -629,7 +666,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 3</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 3</label>
                                                 </div>
                                               </li>
                                               <li
@@ -640,7 +677,7 @@
                                                     value="new-arrivals" type="checkbox"
                                                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                   <label for="filter-mobile-category-0"
-                                                    class="ml-3 text-xl text-gray-500 font-medium">Department 4</label>
+                                                    class="ml-3 text-sm text-gray-500 font-medium">Department 4</label>
                                                 </div>
                                               </li>
 
@@ -670,7 +707,7 @@
                   <div class="flex justify-evenly">
                     <div class="">
                       <a onclick="toggleModal()"
-                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-xl text-center text-white bg-[#00CA72] tracking-[0.125em] hover:bg-transparent hover:text-[#00CA72] hover:border-[#00CA72] border-2 transition ease-in-out duration-500 font-medium uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] mon-font"><svg
+                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-lg text-center text-white bg-[#00CA72] tracking-[0.125em] hover:bg-transparent hover:text-[#00CA72] hover:border-[#00CA72] border-2 transition ease-in-out duration-500 font-medium uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] mon-font"><svg
                           class="w-10 h-10 mr-4" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M13.125 11.5625C12.7106 11.5625 12.3132 11.7271 12.0201 12.0201C11.7271 12.3132 11.5625 12.7106 11.5625 13.125V31.875C11.5625 32.2894 11.7271 32.6868 12.0201 32.9799C12.3132 33.2729 12.7106 33.4375 13.125 33.4375H31.875C32.2894 33.4375 32.6868 33.2729 32.9799 32.9799C33.2729 32.6868 33.4375 32.2894 33.4375 31.875V13.125C33.4375 12.7106 33.2729 12.3132 32.9799 12.0201C32.6868 11.7271 32.2894 11.5625 31.875 11.5625H24.8438C24.4293 11.5625 24.0319 11.7271 23.7389 12.0201C23.4459 12.3132 23.2812 12.7106 23.2812 13.125V24.5203L27.4156 20.3844C27.5623 20.2377 27.7613 20.1553 27.9688 20.1553C28.1762 20.1553 28.3752 20.2377 28.5219 20.3844C28.6686 20.5311 28.751 20.73 28.751 20.9375C28.751 21.145 28.6686 21.3439 28.5219 21.4906L23.0531 26.9594C22.9806 27.0321 22.8943 27.0899 22.7994 27.1292C22.7045 27.1686 22.6028 27.1889 22.5 27.1889C22.3972 27.1889 22.2955 27.1686 22.2006 27.1292C22.1057 27.0899 22.0194 27.0321 21.9469 26.9594L16.4781 21.4906C16.4055 21.418 16.3479 21.3318 16.3086 21.2368C16.2692 21.1419 16.249 21.0402 16.249 20.9375C16.249 20.8348 16.2692 20.7331 16.3086 20.6382C16.3479 20.5432 16.4055 20.457 16.4781 20.3844C16.5508 20.3117 16.637 20.2541 16.7319 20.2148C16.8268 20.1755 16.9285 20.1553 17.0312 20.1553C17.134 20.1553 17.2357 20.1755 17.3306 20.2148C17.4255 20.2541 17.5117 20.3117 17.5844 20.3844L21.7188 24.5203V13.125C21.7188 12.2962 22.048 11.5013 22.634 10.9153C23.2201 10.3292 24.0149 10 24.8438 10H31.875C32.7038 10 33.4987 10.3292 34.0847 10.9153C34.6708 11.5013 35 12.2962 35 13.125V31.875C35 32.7038 34.6708 33.4987 34.0847 34.0847C33.4987 34.6708 32.7038 35 31.875 35H13.125C12.2962 35 11.5013 34.6708 10.9153 34.0847C10.3292 33.4987 10 32.7038 10 31.875V13.125C10 12.2962 10.3292 11.5013 10.9153 10.9153C11.5013 10.3292 12.2962 10 13.125 10H17.0312C17.2385 10 17.4372 10.0823 17.5837 10.2288C17.7302 10.3753 17.8125 10.574 17.8125 10.7812C17.8125 10.9885 17.7302 11.1872 17.5837 11.3337C17.4372 11.4802 17.2385 11.5625 17.0312 11.5625H13.125Z"
@@ -680,7 +717,7 @@
                     </div>
                     <div class="">
                       <a href="assign-branch.html"
-                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-xl text-center text-white bg-[#4169D7] tracking-[0.125em] font-medium uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] transition ease-in-out duration-500 hover:bg-transparent hover:border-[#4169D7] border-2 hover:text-[#4169D7] mon-font"><svg
+                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-lg text-center text-white bg-[#4169D7] tracking-[0.125em] font-medium uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] transition ease-in-out duration-500 hover:bg-transparent hover:border-[#4169D7] border-2 hover:text-[#4169D7] mon-font"><svg
                           class="w-10 h-10 mr-4" viewBox="0 0 43 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M19.4687 28.4687L28.125 19.8125L26.7812 18.4688L19.4687 25.7812L15.6875 22L14.375 23.3125L19.4687 28.4687ZM11.875 35C11.3542 35 10.9115 34.8177 10.5469 34.4531C10.1823 34.0885 10 33.6458 10 33.125V14.375C10 13.8542 10.1823 13.4115 10.5469 13.0469C10.9115 12.6823 11.3542 12.5 11.875 12.5H18.2812C18.3854 11.7708 18.7188 11.1719 19.2813 10.7031C19.8438 10.2344 20.5 10 21.25 10C22 10 22.6562 10.2344 23.2187 10.7031C23.7812 11.1719 24.1146 11.7708 24.2188 12.5H30.625C31.1458 12.5 31.5885 12.6823 31.9531 13.0469C32.3177 13.4115 32.5 13.8542 32.5 14.375V33.125C32.5 33.6458 32.3177 34.0885 31.9531 34.4531C31.5885 34.8177 31.1458 35 30.625 35H11.875ZM11.875 33.125H30.625V14.375H11.875V33.125ZM21.25 13.8437C21.5417 13.8437 21.7969 13.7344 22.0156 13.5156C22.2344 13.2969 22.3438 13.0417 22.3438 12.75C22.3438 12.4583 22.2344 12.2031 22.0156 11.9844C21.7969 11.7656 21.5417 11.6563 21.25 11.6563C20.9583 11.6563 20.7031 11.7656 20.4844 11.9844C20.2656 12.2031 20.1562 12.4583 20.1562 12.75C20.1562 13.0417 20.2656 13.2969 20.4844 13.5156C20.7031 13.7344 20.9583 13.8437 21.25 13.8437ZM11.875 33.125V14.375V33.125Z"
@@ -699,7 +736,7 @@
         <div class="max-w-6xl mx-auto px-4 py-10 ">
           <div class=" drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] sm:rounded-md">
             <div class="bg-white py-20 px-20 text-center rounded-[20px]">
-              <h5 class="text-gray-600 font-medium text-xl mb-10">Departments assigned : </h5>
+              <h5 class="text-gray-600 font-medium text-lg mb-10">Departments assigned : </h5>
 
 
               <!-- Accordion -->
@@ -712,7 +749,7 @@
                       @click="selected !== 4 ? selected = 4 : selected = null">
                       <div class="flex items-center justify-between">
                         <span>
-                          <h5 class="font-[500] text-xl text-gray-400">Company 2</h5>
+                          <h5 class="font-[400] text-xl text-gray-500">Company 2</h5>
                         </span>
                         <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -771,7 +808,7 @@
                       @click="selected !== 5 ? selected = 5 : selected = null">
                       <div class="flex items-center justify-between">
                         <span>
-                          <h5 class="font-[500] text-xl text-gray-400">Company 4</h5>
+                          <h5 class="font-[400] text-xl text-gray-500">Company 4</h5>
                         </span>
                         <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -830,7 +867,7 @@
                       @click="selected !== 6 ? selected = 6 : selected = null">
                       <div class="flex items-center justify-between">
                         <span>
-                          <h5 class="font-[400] text-xl text-gray-400">Company 6</h5>
+                          <h5 class="font-[400] text-xl text-gray-500">Company 6</h5>
                         </span>
                         <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
