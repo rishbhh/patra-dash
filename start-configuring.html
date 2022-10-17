@@ -16,22 +16,22 @@
   <div class="flex bg-gray-100 h-[100vh] overflow-hidden" x-data="{panel:false, menu:true}"
     :class="{'justify-start': menu, 'justify-center': menu == false}">
     <!-- =========== side NavBar Section ================ -->
-    <aside class="flex flex-col  bg-[#fafafa] side-main px-5 overflow-y-auto"
+    <aside class="flex flex-col  bg-[#fafafa] side-main px-5 overflow-y-auto px-6"
       :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768, }">
-      <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-10" x-show="menu">
-        <img class="w-[120px]" src="./assets/images/logo.png" alt="logo" />
+      <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-10 mt-6" x-show="menu">
+        <img class="w-[110px]" src="./assets/images/logo.png" alt="logo" />
 
       </a>
       <div class="w-full text-center cont-h ">
-        <h1 x-show="menu" class="font-600 mon-font text-[28px]">John Doe</h1>
-        <p x-show="menu" class="font-400 pop-font text-xl">Johndoe@gmail.com</p>
+        <h1 x-show="menu" class="font-500 mon-font text-[25px]">John Doe</h1>
+        <p x-show="menu" class="font-400 pop-font text-lg">Johndoe@gmail.com</p>
       </div>
 
 
       <!-- ===================== Dashboard Section ======================== -->
       <div class="flex-grow flex flex-col justify-between text-gray-500 bg-[#fafafa] w-1s">
         <div class="dash-div">
-          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center " :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}">
               <span class="" :class="{'hidden': menu, 'block': menu == false}"><img
@@ -87,14 +87,14 @@
         <!-- ===================== Admin Section ======================== -->
 
         <div class="dash-div">
-          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-4 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
                 class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.png"
                   alt=""></span><span x-show="menu">ADMIN</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">Add and Modify User profiles.</p>
           </div>
-          <nav class="flex flex-col mx-4 my-6 space-y-4">
+          <nav class="flex flex-col mx-0 my-6 space-y-4">
             <a href="all-users.html"
               class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
@@ -116,14 +116,14 @@
         <!-- ===================== Resources Section END ======================== -->
 
         <div class="dash-div">
-          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-4 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
                 class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/rea.png"
                   alt=""></span><span x-show="menu">Resources</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">Help guides for your company.</p>
           </div>
-          <nav class="flex flex-col mx-4 my-6 space-y-4">
+          <nav class="flex flex-col mx-0 my-6 space-y-4">
             <a href="#"
               class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
@@ -149,7 +149,7 @@
 
     <div class="flex-grow text-gray-800 relative overflow-y-auto bg-white w-[100%]">
       <!-- ================= Header section ================= -->
-      <div class=" py-8 px-10 space-y-6 bg-white ">
+      <div class="px-8 space-y-6 bg-white ">
         <header class="flex items-center h-20  ">
           <div class="mr-8 cursor-pointer" @click="menu = !menu">
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -162,47 +162,48 @@
           <div class="flex flex-shrink-0 items-center ml-auto">
             <div class=" pl-3 ml-3 space-x-6 flex">
 
-              <!-- ===================== Notifications Button ========================= -->
-              <button class="relative p-2 bg-white shadow-xl text-white focus:text-gray-600 rounded">
+              <!-- ===================== Notifications Button ==================== -->
+              <button class="relative p-2 bg-white shadow-lg text-white focus:text-gray-600 rounded h-10">
                 <span class="sr-only">Notifications</span>
                 <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
                 <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="none" class="h-5 w-5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="none" class="h-4 w-4">
                   <path
                     d="M24 22.6667V24H0V22.6667L2.66667 20V12C2.66667 7.86667 5.37333 4.22667 9.33333 3.05333V2.66667C9.33333 1.95942 9.61429 1.28115 10.1144 0.781048C10.6145 0.280951 11.2928 0 12 0C12.7072 0 13.3855 0.280951 13.8856 0.781048C14.3857 1.28115 14.6667 1.95942 14.6667 2.66667V3.05333C18.6267 4.22667 21.3333 7.86667 21.3333 12V20L24 22.6667ZM14.6667 25.3333C14.6667 26.0406 14.3857 26.7189 13.8856 27.219C13.3855 27.719 12.7072 28 12 28C11.2928 28 10.6145 27.719 10.1144 27.219C9.61429 26.7189 9.33333 26.0406 9.33333 25.3333"
                     fill="#444" />
                 </svg>
               </button>
-              <!-- ===================== Notifications Button END ========================= -->
+              <!-- ===================== Notifications Button END ==================== -->
 
-              <!-- ===================== FullScreen Button ========================= -->
-              <button class="relative p-2 text-white bg-white shadow-xl  focus:text-gray-600 rounded">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="#444" viewBox="0 0 24 24" class="w-5 h-5">
+              <!--  ====================== FUll Screen Button ========================= -->
+
+              <button class="relative p-2 text-white bg-white shadow-xl  focus:text-gray-600 rounded h-10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#444" viewBox="0 0 24 24" class="w-4 h-4">
                   <path
                     d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01806 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z" />
                 </svg>
 
               </button>
-              <!-- ===================== FullScreen Button END ========================= -->
+              <!--  ====================== FUll Screen Button END ========================= -->
 
 
-              <!-- ===================== DarkMoon Button ========================= -->
-              <button class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded">
+              <!-- ========================= Dark Moon Button ============================ -->
+              <button class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded h-10">
                 <span class="sr-only">Log out</span>
-                <svg aria-hidden="true" fill="#444" viewBox="0 0 24 24" stroke="#444" class="h-6 w-6">
+                <svg aria-hidden="true" fill="#444" viewBox="0 0 24 24" stroke="#444" class="h-4 w-4">
                   <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.034 16.253C19.1116 19.6823 15.4418 21.9999 11.2308 21.9999C5.0282 21.9999 -7.41858e-07 16.9717 -4.70734e-07 10.7691C-2.48165e-07 5.67735 3.38848 1.37699 8.03348 3.51155e-07C7.12428 1.62184 6.6059 3.49233 6.6059 5.48389C6.6059 11.6865 11.6341 16.7147 17.8367 16.7147C18.9475 16.7147 20.0207 16.5534 21.034 16.253Z"
                     fill="#444" />
                 </svg>
               </button>
-              <!-- ===================== DarkMoon Button END ========================= -->
+              <!-- ========================= Dark Moon Button END ============================ -->
               <div x-data="{ open: false }" class="relative">
 
-                <!-- ===================== User Logout Button ========================= -->
-                <button class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded"
+                <!-- ========================= User Logout Button ============================ -->
+                <button class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded h-10"
                   x-on:click="open = true">
                   <span class="sr-only">Log out</span>
-                  <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+                  <svg width="28" height="26" viewBox="0 0 36 36" fill="none">
                     <g clip-path="url(#clip0_1_4)">
                       <mask id="mask0_1_4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36"
                         height="36">
@@ -224,13 +225,14 @@
                     </defs>
                   </svg>
                 </button>
-                <!-- ===================== User Logout Button END ========================= -->
+                <!-- ========================= User Logout Button END ============================ -->
+
                 <ul x-show="open" x-on:click.away="open = false"
-                  class="bg-white text-gray-700 rounded shadow-lg absolute py-4 mt-3 right-0 px-0"
-                  style="min-width:15rem">
+                  class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-3 right-0 px-0 z-[1]" 
+                  style="min-width:12rem">
                   <li>
                     <a href="logout.html"
-                      class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                      class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center text-sm">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
                         stroke="currentColor" class="w-4 h-4 mr-3">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
@@ -240,7 +242,7 @@
                   </li>
                   <li>
                     <a href="reset-password.html"
-                      class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                      class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center text-sm">
                       <?xml version="1.0" encoding="utf-8"?>
                       <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -298,18 +300,18 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
       <!-- ================= Header section End ================= -->
 
       <!-- ============= Configure User Section ==================  -->
-      <main class="p-6 sm:p-10 space-y-6">
+      <main class="py-1 px-20 space-y-1">
 
         <div class="px-4 sm:px-6 lg:px-8 ">
           <div class="sm:flex sm:items-center">
             <div class="sm:flex-auto relative items-center">
               <!-- ====================== Heading ============================ -->
-              <h1 class="text-[30px] font-semibold text-[#444] uppercase text-center mon-font">Configure User</h1>
+              <h1 class="text-[26px] font-semibold text-[#444] uppercase text-center mon-font">Configure User</h1>
               <!-- ====================== Heading END ============================ -->
             </div>
           </div>
           <div>
-            <div class="max-w-6xl mx-auto px-4 py-10 ">
+            <div class="max-w-6xl mx-auto px-4 py-1 ">
               <div class=" bottom-0 left-0 right-0 py-5">
                 <div class="max-w-4xl mx-auto px-16">
                   <div class="flex justify-evenly">
@@ -317,7 +319,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                     <!-- ====================== Assign Company ======================= -->
                     <div class="w-32 text-center py-4 px-6 bg-[rgba(0,202,114,0.09)]">
                       <img class="m-auto" src="/assets/images/Assign-Company.svg" alt="">
-                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-sm ">Assign
+                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-[11px] ">Assign
                         Company</p>
                     </div>
                     <!-- ====================== Assign Company END ======================= -->
@@ -325,7 +327,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                     <!-- ====================== Assign Services ======================= -->
                     <div class="w-32 text-center py-4 px-6 ">
                       <img class="m-auto" src="/assets/images/Assign-Services.svg" alt="">
-                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-sm">Assign
+                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-[11px]">Assign
                         Services</p>
                     </div>
                     <!-- ====================== Assign Services END ======================= -->
@@ -333,16 +335,16 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                     <!-- ====================== Assign Department ======================= -->
                     <div class="w-32 text-center py-4 px-6 ">
                       <img class="m-auto" src="/assets/images/Assign-Department.svg" alt="">
-                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-sm">Assign
+                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-[11px]">Assign
                         Department</p>
                     </div>
                     <!-- ====================== Assign Department END ======================= -->
 
 
                     <!-- ====================== Assign Branch ======================= -->
-                    <div class="w-40 text-center py-4 px-2 ">
+                    <div class="w-32 text-center py-4 px-2 ">
                       <img class="m-auto" src="/assets/images/Assign-Branch.svg" alt="">
-                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-sm">Assign Branch
+                      <p class="mt-4 font-medium tracking-[1px] text-[#444] text-[11px]">Assign Branch
                         Offices</p>
                     </div>
                     <!-- ====================== Assign Branch END ======================= -->
@@ -365,13 +367,13 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
 
                           <div class="col-span-8 sm:col-span-6">
                             <div>
-                              <label id="listbox-label" class="block text-[16px] font-400 text-[#5f5f5f] "> Assign
+                              <label id="listbox-label" class="block text-[13px] font-300 text-[#5f5f5f]"> Assign
                                 Company*</label>
                               <div class="relative mt-1" x-data="{ open: false }">
                                 <button type="button" @click="open = true"
-                                  class="relative w-full cursor-default rounded-md py-4 pl-3 pr-10 text-left bg-[#f8f8f8] focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                                  class="relative w-full cursor-default rounded-md py-3 pl-3 pr-10 text-left bg-[#f8f8f8] focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
                                   aria-labelledby="listbox-label">
-                                  <span class="block truncate text-[sm] font-medium text-gray-400 ">Assign
+                                  <span class="block truncate text-[13px] font-300 text-gray-400">Assign
                                     Company</span>
                                   <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                     <!-- Heroicon name: mini/chevron-up-down -->
@@ -413,7 +415,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                                           type="checkbox"
                                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                         <label for="filter-mobile-category-0"
-                                          class="ml-3 text-sm text-gray-500 font-medium">Company 1</label>
+                                          class="ml-3 text-[13px] text-gray-500 font-400">Company 1</label>
                                       </div>
                                     </li>
                                     <li
@@ -424,7 +426,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                                           type="checkbox"
                                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                         <label for="filter-mobile-category-0"
-                                          class="ml-3 text-sm text-gray-500 font-medium">Company 2</label>
+                                          class="ml-3 text-[13px] text-gray-500 font-400">Company 2</label>
                                       </div>
                                     </li>
                                     <li
@@ -435,7 +437,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                                           type="checkbox"
                                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                         <label for="filter-mobile-category-0"
-                                          class="ml-3 text-sm text-gray-500 font-medium">Company 3</label>
+                                          class="ml-3 text-[13px] text-gray-500 font-400">Company 3</label>
                                       </div>
                                     </li>
                                     <li
@@ -446,7 +448,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                                           type="checkbox"
                                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                         <label for="filter-mobile-category-0"
-                                          class="ml-3 text-sm text-gray-500 font-medium">Company 4</label>
+                                          class="ml-3 text-[13px] text-gray-500 font-400">Company 4</label>
                                       </div>
                                     </li>
                                     <li
@@ -457,7 +459,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                                           type="checkbox"
                                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                         <label for="filter-mobile-category-0"
-                                          class="ml-3 text-sm text-gray-500 font-medium">Company 5</label>
+                                          class="ml-3 text-[13px] text-gray-500 font-400">Company 5</label>
                                       </div>
                                     </li>
 
@@ -481,7 +483,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                     <!-- ================= Save User Button =========================== -->
                     <div class="">
                       <a onclick="toggleModal()"
-                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-lg text-center text-white bg-[#00CA72] tracking-[0.125em] hover:bg-transparent hover:text-[#00CA72] hover:border-[#00CA72] border-2 transition ease-in-out duration-500 font-semibold uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] mon-font"><svg
+                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-0.5 px-10 rounded-lg text-sm text-center text-white bg-[#00CA72] tracking-[0.125em] hover:bg-transparent hover:text-[#00CA72] hover:border-[#00CA72] border-2 transition ease-in-out duration-500 font-semibold uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] mon-font"><svg
                           class="w-10 h-10 mr-4" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M13.125 11.5625C12.7106 11.5625 12.3132 11.7271 12.0201 12.0201C11.7271 12.3132 11.5625 12.7106 11.5625 13.125V31.875C11.5625 32.2894 11.7271 32.6868 12.0201 32.9799C12.3132 33.2729 12.7106 33.4375 13.125 33.4375H31.875C32.2894 33.4375 32.6868 33.2729 32.9799 32.9799C33.2729 32.6868 33.4375 32.2894 33.4375 31.875V13.125C33.4375 12.7106 33.2729 12.3132 32.9799 12.0201C32.6868 11.7271 32.2894 11.5625 31.875 11.5625H24.8438C24.4293 11.5625 24.0319 11.7271 23.7389 12.0201C23.4459 12.3132 23.2812 12.7106 23.2812 13.125V24.5203L27.4156 20.3844C27.5623 20.2377 27.7613 20.1553 27.9688 20.1553C28.1762 20.1553 28.3752 20.2377 28.5219 20.3844C28.6686 20.5311 28.751 20.73 28.751 20.9375C28.751 21.145 28.6686 21.3439 28.5219 21.4906L23.0531 26.9594C22.9806 27.0321 22.8943 27.0899 22.7994 27.1292C22.7045 27.1686 22.6028 27.1889 22.5 27.1889C22.3972 27.1889 22.2955 27.1686 22.2006 27.1292C22.1057 27.0899 22.0194 27.0321 21.9469 26.9594L16.4781 21.4906C16.4055 21.418 16.3479 21.3318 16.3086 21.2368C16.2692 21.1419 16.249 21.0402 16.249 20.9375C16.249 20.8348 16.2692 20.7331 16.3086 20.6382C16.3479 20.5432 16.4055 20.457 16.4781 20.3844C16.5508 20.3117 16.637 20.2541 16.7319 20.2148C16.8268 20.1755 16.9285 20.1553 17.0312 20.1553C17.134 20.1553 17.2357 20.1755 17.3306 20.2148C17.4255 20.2541 17.5117 20.3117 17.5844 20.3844L21.7188 24.5203V13.125C21.7188 12.2962 22.048 11.5013 22.634 10.9153C23.2201 10.3292 24.0149 10 24.8438 10H31.875C32.7038 10 33.4987 10.3292 34.0847 10.9153C34.6708 11.5013 35 12.2962 35 13.125V31.875C35 32.7038 34.6708 33.4987 34.0847 34.0847C33.4987 34.6708 32.7038 35 31.875 35H13.125C12.2962 35 11.5013 34.6708 10.9153 34.0847C10.3292 33.4987 10 32.7038 10 31.875V13.125C10 12.2962 10.3292 11.5013 10.9153 10.9153C11.5013 10.3292 12.2962 10 13.125 10H17.0312C17.2385 10 17.4372 10.0823 17.5837 10.2288C17.7302 10.3753 17.8125 10.574 17.8125 10.7812C17.8125 10.9885 17.7302 11.1872 17.5837 11.3337C17.4372 11.4802 17.2385 11.5625 17.0312 11.5625H13.125Z"
@@ -495,7 +497,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                     <!-- ================= Assign Services Button =========================== -->
                     <div class="">
                       <a href="assign-services.html"
-                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-lg text-center text-white bg-[#4169D7] tracking-[0.125em] font-semibold uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] transition ease-in-out duration-500 hover:bg-transparent hover:border-[#4169D7] border-2 hover:text-[#4169D7] mon-font"><svg
+                        class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-0.5 px-10 rounded-lg text-sm text-center text-white bg-[#4169D7] tracking-[0.125em] font-semibold uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] transition ease-in-out duration-500 hover:bg-transparent hover:border-[#4169D7] border-2 hover:text-[#4169D7] mon-font"><svg
                           class="w-10 h-10 mr-4" viewBox="0 0 43 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M19.4687 28.4687L28.125 19.8125L26.7812 18.4688L19.4687 25.7812L15.6875 22L14.375 23.3125L19.4687 28.4687ZM11.875 35C11.3542 35 10.9115 34.8177 10.5469 34.4531C10.1823 34.0885 10 33.6458 10 33.125V14.375C10 13.8542 10.1823 13.4115 10.5469 13.0469C10.9115 12.6823 11.3542 12.5 11.875 12.5H18.2812C18.3854 11.7708 18.7188 11.1719 19.2813 10.7031C19.8438 10.2344 20.5 10 21.25 10C22 10 22.6562 10.2344 23.2187 10.7031C23.7812 11.1719 24.1146 11.7708 24.2188 12.5H30.625C31.1458 12.5 31.5885 12.6823 31.9531 13.0469C32.3177 13.4115 32.5 13.8542 32.5 14.375V33.125C32.5 33.6458 32.3177 34.0885 31.9531 34.4531C31.5885 34.8177 31.1458 35 30.625 35H11.875ZM11.875 33.125H30.625V14.375H11.875V33.125ZM21.25 13.8437C21.5417 13.8437 21.7969 13.7344 22.0156 13.5156C22.2344 13.2969 22.3438 13.0417 22.3438 12.75C22.3438 12.4583 22.2344 12.2031 22.0156 11.9844C21.7969 11.7656 21.5417 11.6563 21.25 11.6563C20.9583 11.6563 20.7031 11.7656 20.4844 11.9844C20.2656 12.2031 20.1562 12.4583 20.1562 12.75C20.1562 13.0417 20.2656 13.2969 20.4844 13.5156C20.7031 13.7344 20.9583 13.8437 21.25 13.8437ZM11.875 33.125V14.375V33.125Z"
@@ -516,41 +518,41 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
           <div class=" drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] sm:rounded-md">
             <div class="bg-white py-20 px-20 text-center rounded-[20px]">
               <!-- ====================== Heading ============================= -->
-              <h5 class="text-[#848484] font-medium text-lg mb-10">Companies assigned : </h5>
+              <h5 class="text-[#848484] font-400 text-sm mb-10">Companies assigned : </h5>
               <!-- ====================== Heading END ============================= -->
 
               <!-- ==================== Selection ========================= -->
 
               <div class="">
                 <span
-                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5  font-400 text-[#848484] mr-5 text-[18px]">
+                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5  font-400 text-[#848484] mr-5 text-[14px]">
                   Report 2
                   <button type="button"
                     class="ml-2 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-gray-400 focus:outline-none">
                     <span class="sr-only">Remove large option</span>
-                    <svg class="h-3 w-3" stroke="currentColor" fill="none" viewBox="0 0 8 8">
+                    <svg class="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
                       <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7" />
                     </svg>
                   </button>
                 </span>
                 <span
-                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5  font-400 text-[#848484] mr-5 text-[18px]">
+                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5  font-400 text-[#848484] mr-5 text-[14px]">
                   Report 3
                   <button type="button"
                     class="ml-2 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-gray-400 focus:outline-none">
                     <span class="sr-only">Remove large option</span>
-                    <svg class="h-3 w-3" stroke="currentColor" fill="none" viewBox="0 0 8 8">
+                    <svg class="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
                       <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7" />
                     </svg>
                   </button>
                 </span>
                 <span
-                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5  font-400 text-[#848484] mr-5 text-[18px]">
+                  class="inline-flex items-center rounded-full bg-white shadow-lg py-2 pl-5 pr-5  font-400 text-[#848484] mr-5 text-[14px]">
                   Report 5
                   <button type="button"
                     class="ml-2 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-gray-400 focus:outline-none">
                     <span class="sr-only">Remove large option</span>
-                    <svg class="h-3 w-3" stroke="currentColor" fill="none" viewBox="0 0 8 8">
+                    <svg class="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
                       <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7" />
                     </svg>
                   </button>

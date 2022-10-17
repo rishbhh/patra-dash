@@ -19,22 +19,22 @@
 
   <div class="flex bg-gray-100 h-[100vh] overflow-hidden" x-data="{panel:false, menu:true}"
     :class="{'justify-start': menu, 'justify-center': menu == false}">
-    <aside class="flex flex-col  bg-[#fafafa] side-main px-5 overflow-y-auto"
+    <aside class="flex flex-col  bg-[#fafafa] side-main px-5 overflow-y-auto px-6"
       :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768, }">
-      <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-10" x-show="menu">
-        <img class="w-[120px]" src="./assets/images/logo.png" alt="logo" />
+      <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-10 mt-6" x-show="menu">
+        <img class="w-[110px]" src="./assets/images/logo.png" alt="logo" />
 
       </a>
       <div class="w-full text-center cont-h ">
-        <h1 x-show="menu" class="font-600 mon-font text-[28px]">John Doe</h1>
-        <p x-show="menu" class="font-400 pop-font text-xl">Johndoe@gmail.com</p>
+        <h1 x-show="menu" class="font-500 mon-font text-[25px]">John Doe</h1>
+        <p x-show="menu" class="font-400 pop-font text-lg">Johndoe@gmail.com</p>
       </div>
 
 
       <!-- ===================== Dashboard Section ======================== -->
       <div class="flex-grow flex flex-col justify-between text-gray-500 bg-[#fafafa] w-1s">
         <div class="dash-div">
-          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-3 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center " :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}">
               <span class="" :class="{'hidden': menu, 'block': menu == false}"><img
@@ -90,14 +90,14 @@
         <!-- ===================== Admin Section ======================== -->
 
         <div class="dash-div">
-          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-4 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
                 class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.png"
                   alt=""></span><span x-show="menu">ADMIN</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">Add and Modify User profiles.</p>
           </div>
-          <nav class="flex flex-col mx-4 my-6 space-y-4">
+          <nav class="flex flex-col mx-0 my-6 space-y-4">
             <a href="all-users.html"
               class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
@@ -119,14 +119,14 @@
         <!-- ===================== Resources Section END ======================== -->
 
         <div class="dash-div">
-          <div class="mt-10 items-center py-5 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
+          <div class="mt-10 items-center py-4 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
                 class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/rea.png"
                   alt=""></span><span x-show="menu">Resources</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">Help guides for your company.</p>
           </div>
-          <nav class="flex flex-col mx-4 my-6 space-y-4">
+          <nav class="flex flex-col mx-0 my-6 space-y-4">
             <a href="#"
               class="inline-flex items-center py-3 hover:text-black hover:bg-white rounded-lg px-2 font-700 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
@@ -155,16 +155,16 @@
     <div class="flex-grow text-gray-800 relative overflow-y-auto bg-white w-[100%]">
 
       <!-- ================= Header Section Top IMG ============== -->
-      <img src="/assets/images/dash-header-bg.png" class="absolute top-0 right-[15em]" />
+      <img src="/assets/images/dash-header-bg.png" class="absolute top-0 right-[15em] w-72" />
       <!-- ================= Header Section Top IMG End ============== -->
 
 
-      <div class=" py-8 px-10 space-y-6 bg-[#436AD6] ">
+      <div class="px-8 space-y-6 bg-[#436AD6] ">
 
         <!-- =========== Header Section ============== -->
         <header class="flex items-center h-20  ">
           <div class="mr-8 cursor-pointer" @click="menu = !menu">
-            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path xmlns="http://www.w3.org/2000/svg"
                 d="M1.125 18C0.50368 18 0 17.4963 0 16.875C0 16.2537 0.50368 15.75 1.125 15.75H13.875C14.4963 15.75 15 16.2537 15 16.875C15 17.4963 14.4963 18 13.875 18H1.125ZM1.125 10.125C0.503679 10.125 0 9.62132 0 9C0 8.37868 0.50368 7.875 1.125 7.875H19.875C20.4963 7.875 21 8.37868 21 9C21 9.62132 20.4963 10.125 19.875 10.125H1.125ZM1.125 2.25C0.50368 2.25 0 1.74632 0 1.125C0 0.50368 0.50368 0 1.125 0H25.875C26.4963 0 27 0.50368 27 1.125C27 1.74632 26.4963 2.25 25.875 2.25H1.125Z"
                 fill="white" />
@@ -319,7 +319,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
 
           <!-- ==================== Header Heading Text =================== -->
           <div class="mr-6">
-            <h1 class="text-[30px] text-white font-600 mb-5">Welcome back, John</h1>
+            <h1 class="text-[26px] text-white font-600 mb-5">Welcome back, John</h1>
           </div>
           <!-- ==================== Header Heading Text END =================== -->
 
@@ -328,7 +328,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
 
 
 
-      <main class="p-6 sm:p-10 space-y-6">
+      <main class="p-6 sm:p-6 space-y-4">
         <div id="panels">
           <div class="panel-1 tab-content active py-5">
             <!-- =========== Filter Section =============== -->
@@ -348,19 +348,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                   </svg>
                 </button>
                 <ul x-show="open" x-on:click.away="open = false"
-                  class="bg-white text-gray-500 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
+                  class="bg-white text-gray-500 rounded shadow-lg absolute py-1 mt-3" style="min-width:15rem">
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Department 1
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Department 2
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Department 3
                     </a>
                   </li>
@@ -382,19 +382,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                   </svg>
                 </button>
                 <ul x-show="open" x-on:click.away="open = false"
-                  class="bg-white text-gray-500 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
+                  class="bg-white text-gray-500 rounded shadow-lg absolute py-1 mt-3" style="min-width:15rem">
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Company Group A
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Company Group B
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Company Group C
                     </a>
                   </li>
@@ -416,19 +416,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                   </svg>
                 </button>
                 <ul x-show="open" x-on:click.away="open = false"
-                  class="bg-white text-gray-500 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
+                  class="bg-white text-gray-500 rounded shadow-lg absolute py-1 mt-3" style="min-width:15rem">
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Company Name 1
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Company Name 2
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Company Name 3
                     </a>
                   </li>
@@ -452,19 +452,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                   </svg>
                 </button>
                 <ul x-show="open" x-on:click.away="open = false"
-                  class="bg-white text-gray-500 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
+                  class="bg-white text-gray-500 rounded shadow-lg absolute py-1 mt-3" style="min-width:15rem">
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Transaction Type 1
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Transaction Type 2
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Transaction Type 3
                     </a>
                   </li>
@@ -488,17 +488,17 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                 <ul x-show="open" x-on:click.away="open = false"
                   class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-3" style="min-width:15rem">
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Mont Blanc
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Monte Rosa
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-sm">
+                    <a href="#" class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[13px]">
                       Dom <span class="text-gray-400">(no good)</span>
                     </a>
                   </li>
@@ -517,7 +517,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
 
                 <!-- ==================== Menu Items Section ==================  -->
                 <div class=" flex items-center justify-between py-5">
-                  <h2 class="text-[18px] font-[500] text-[#444]">Primary Text</h2>
+                  <h2 class="text-[16px] font-[500] text-[#444]">Primary Text</h2>
                   <div x-data="{ open: false }" class="relative">
 
                     <!-- ======================= Option-1 Dropdown =================== -->
@@ -986,7 +986,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
               <div class="flex flex-col w-[35%]">
                 <!-- ==================== Menu Items Section ==================  -->
                 <div class=" flex items-center justify-between py-5">
-                  <h2 class="text-[18px] font-[500] text-[#444]">Primary Text</h2>
+                  <h2 class="text-[16px] font-[500] text-[#444]">Primary Text</h2>
                   <div x-data="{ open: false }" class="relative">
                     <button x-on:click="open = true"
                       class="flex items-center bg-white text-[#444444] focus:text-gray-900 font-semibold rounded-full focus:outline-none shadow-lg py-2 px-4"
