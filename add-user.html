@@ -16,16 +16,20 @@
   <div class="flex bg-gray-100 h-[100vh] overflow-hidden" x-data="{panel:false, menu:true}"
     :class="{'justify-start': menu, 'justify-center': menu == false}">
     <!-- =========== side NavBar Section ================ -->
-      <aside class="flex flex-col  bg-[#fafafa] side-main px-5 overflow-y-auto"
+    <aside class="flex flex-col  bg-[#fafafa] side-main px-5 overflow-y-auto"
       :class="{'hidden sm:flex sm:flex-col': window.outerWidth > 768, }">
+      <!-- ==================== Patra LOGO =================== -->
       <a href="#" class="inline-flex items-center justify-center h-20 w-full logo mb-10" x-show="menu">
         <img class="w-[120px]" src="./assets/images/logo.png" alt="logo" />
-
       </a>
+      <!-- ==================== Patra LOGO END =================== -->
+
+      <!-- ====================== Name Headings ================== -->
       <div class="w-full text-center cont-h ">
         <h1 x-show="menu" class="font-600 mon-font text-[28px]">John Doe</h1>
         <p x-show="menu" class="font-400 pop-font text-xl">Johndoe@gmail.com</p>
       </div>
+      <!-- ====================== Name Headings END ================== -->
 
 
       <!-- ===================== Dashboard Section ======================== -->
@@ -169,91 +173,128 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="none" class="h-5 w-5">
                 <path d="M24 22.6667V24H0V22.6667L2.66667 20V12C2.66667 7.86667 5.37333 4.22667 9.33333 3.05333V2.66667C9.33333 1.95942 9.61429 1.28115 10.1144 0.781048C10.6145 0.280951 11.2928 0 12 0C12.7072 0 13.3855 0.280951 13.8856 0.781048C14.3857 1.28115 14.6667 1.95942 14.6667 2.66667V3.05333C18.6267 4.22667 21.3333 7.86667 21.3333 12V20L24 22.6667ZM14.6667 25.3333C14.6667 26.0406 14.3857 26.7189 13.8856 27.219C13.3855 27.719 12.7072 28 12 28C11.2928 28 10.6145 27.719 10.1144 27.219C9.61429 26.7189 9.33333 26.0406 9.33333 25.3333" fill="#444"/></svg>
             </button> -->
-            <div x-data="{isShow: false}" class="">
-              <button
-              class="relative p-2 bg-white shadow-xl text-white focus:text-gray-600 rounded h-[100%]" x-on:click="isShow = true">
-              <span class="sr-only">Notifications</span>
-              <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
-              <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="none" class="h-5 w-5">
-                <path d="M24 22.6667V24H0V22.6667L2.66667 20V12C2.66667 7.86667 5.37333 4.22667 9.33333 3.05333V2.66667C9.33333 1.95942 9.61429 1.28115 10.1144 0.781048C10.6145 0.280951 11.2928 0 12 0C12.7072 0 13.3855 0.280951 13.8856 0.781048C14.3857 1.28115 14.6667 1.95942 14.6667 2.66667V3.05333C18.6267 4.22667 21.3333 7.86667 21.3333 12V20L24 22.6667ZM14.6667 25.3333C14.6667 26.0406 14.3857 26.7189 13.8856 27.219C13.3855 27.719 12.7072 28 12 28C11.2928 28 10.6145 27.719 10.1144 27.219C9.61429 26.7189 9.33333 26.0406 9.33333 25.3333" fill="#444"/></svg>
-            </button>
-              <div x-show="isShow" class="absolute top-[100px] right-0 m-3 w-2/3 md:w-1/3" x-transition:enter="transition transform ease-out duration-300" x-transition:enter-start="opacity-0 translate-x-1" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition transform ease-in duration-300" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-x-1">
-                <div class="bg-white p-3 flex items-center shadow-xl rounded-md space-x-2 tost">
-                  <svg class="flex-shrink-0 h-10 w-10 ml-3 text-[#FA375B]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clip-rule="evenodd" />
+              <div x-data="{isShow: false}" class="">
+
+
+
+                <!-- ====================== Notification Button ===================== -->
+                <button class="relative p-2 bg-white shadow-xl text-white focus:text-gray-600 rounded h-[100%]"
+                  x-on:click="isShow = true">
+                  <span class="sr-only">Notifications</span>
+                  <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
+                  <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="none" class="h-5 w-5">
+                    <path
+                      d="M24 22.6667V24H0V22.6667L2.66667 20V12C2.66667 7.86667 5.37333 4.22667 9.33333 3.05333V2.66667C9.33333 1.95942 9.61429 1.28115 10.1144 0.781048C10.6145 0.280951 11.2928 0 12 0C12.7072 0 13.3855 0.280951 13.8856 0.781048C14.3857 1.28115 14.6667 1.95942 14.6667 2.66667V3.05333C18.6267 4.22667 21.3333 7.86667 21.3333 12V20L24 22.6667ZM14.6667 25.3333C14.6667 26.0406 14.3857 26.7189 13.8856 27.219C13.3855 27.719 12.7072 28 12 28C11.2928 28 10.6145 27.719 10.1144 27.219C9.61429 26.7189 9.33333 26.0406 9.33333 25.3333"
+                      fill="#444" />
                   </svg>
-                  
-                  <div class="flex-1 space-y-1">
-                    <p class="text-base leading-4 font-semibold text-[#000]">Error</p>
-                    <p class="text-[12px] leading-5 text-gray-500">Error has occured while saving changes.
-                      Please try again.</p>
+                </button>
+                <!-- ====================== Notification Button END ===================== -->
+
+
+                <!-- ====================== Error Notify ===================== -->
+
+                <div x-show="isShow" class="absolute top-[100px] right-0 m-3 w-2/3 md:w-1/3"
+                  x-transition:enter="transition transform ease-out duration-300"
+                  x-transition:enter-start="opacity-0 translate-x-1" x-transition:enter-end="opacity-100 translate-x-0"
+                  x-transition:leave="transition transform ease-in duration-300"
+                  x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-x-1">
+                  <div class="bg-white p-3 flex items-center shadow-xl rounded-md space-x-2 tost">
+                    <svg class="flex-shrink-0 h-10 w-10 ml-3 text-[#FA375B]" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                      <path fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z"
+                        clip-rule="evenodd" />
+                    </svg>
+
+                    <div class="flex-1 space-y-1">
+                      <p class="text-base leading-4 font-semibold text-[#000]">Error</p>
+                      <p class="text-[12px] leading-5 text-gray-500">Error has occured while saving changes.
+                        Please try again.</p>
+                    </div>
+                    <svg class="flex-shrink-0 h-4 w-4 text-gray-400 cursor-pointer" x-on:click="isShow = false"
+                      stroke="currentColor" viewBox="0 0 20 20">
+                      <path stroke-width="1.2"
+                        d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
+                      </path>
+                    </svg>
                   </div>
-                  <svg class="flex-shrink-0 h-4 w-4 text-gray-400 cursor-pointer" x-on:click="isShow = false" stroke="currentColor" viewBox="0 0 20 20">
-                    <path stroke-width="1.2" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
-                  </svg>
                 </div>
+
+                <!-- ====================== Error Notify END ===================== -->
+
               </div>
-            </div>
-            <button
-              class="relative p-2 text-white bg-white shadow-xl  focus:text-gray-600 rounded">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="#444" viewBox="0 0 24 24" 
-                class="w-5 h-5">
-                <path
-                  d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01806 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z" />
-              </svg>
-              
-            </button>
-            <button
-              class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded">
-              <span class="sr-only">Log out</span>
-              <svg aria-hidden="true" fill="#444" viewBox="0 0 24 24" stroke="#444" class="h-6 w-6">
-                <path xmlns="http://www.w3.org/2000/svg"
-                fill-rule="evenodd" clip-rule="evenodd" d="M21.034 16.253C19.1116 19.6823 15.4418 21.9999 11.2308 21.9999C5.0282 21.9999 -7.41858e-07 16.9717 -4.70734e-07 10.7691C-2.48165e-07 5.67735 3.38848 1.37699 8.03348 3.51155e-07C7.12428 1.62184 6.6059 3.49233 6.6059 5.48389C6.6059 11.6865 11.6341 16.7147 17.8367 16.7147C18.9475 16.7147 20.0207 16.5534 21.034 16.253Z"
-                  fill="#444" />
-              </svg>
-            </button>
-            <div x-data="{ open: false }" class="relative">
-            <button
-              class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded" x-on:click="open = true">
-              <span class="sr-only">Log out</span>
-              <svg  width="28" height="28" viewBox="0 0 36 36" fill="none">
-                <g clip-path="url(#clip0_1_4)">
-                <mask id="mask0_1_4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
-                <path d="M36 0H0V36H36V0Z" fill="url(#pattern0)"/>
-                </mask>
-                <g mask="url(#mask0_1_4)">
-                <path d="M36 0H0V36H36V0Z" fill="#444"/>
-                </g>
-                </g>
-                <defs>
-                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                <use xlink:href="#image0_1_4" transform="scale(0.0111111)"/>
-                </pattern>
-                <clipPath id="clip0_1_4">
-                <rect width="36" height="36" fill="white"/>
-                </clipPath>
-                <image id="image0_1_4" width="90" height="90" xlink:href="data:image/png;base64,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"/>
-                </defs>
-                </svg> 
-            </button>
-            <ul x-show="open" x-on:click.away="open = false"
-              class="bg-white text-gray-700 rounded shadow-lg absolute py-4 mt-3 right-0 px-0" style="min-width:15rem">
-              <li>
-                <a href="logout.html" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4 mr-3">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
-                  </svg>                  
-                  Logout
-                </a>
-              </li>
-              <li>
-                <a href="reset-password.html" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
-                  <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"class="w-5 h-5 mr-2"
-	 viewBox="0 0 13.1 14" style="enable-background:new 0 0 13.1 14;" xml:space="preserve">
-<image style="overflow:visible;enable-background:new    ;" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAABiCAYAAACrpQYOAAAACXBIWXMAAEggAABIIAFxINBWAAAA
+
+              <!-- ============================ FullScreen Button ========================= -->
+              <button class="relative p-2 text-white bg-white shadow-xl  focus:text-gray-600 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#444" viewBox="0 0 24 24" class="w-5 h-5">
+                  <path
+                    d="M0 23V15.6528H1.91667V19.7097L6.64444 14.9819L8.01806 16.3556L3.29028 21.0833H7.34722V23H0ZM15.6528 23V21.0833H19.7097L15.0139 16.3875L16.3875 15.0139L21.0833 19.7097V15.6528H23V23H15.6528ZM6.6125 7.98611L1.91667 3.29028V7.34722H0V0H7.34722V1.91667H3.29028L7.98611 6.6125L6.6125 7.98611ZM16.3875 7.98611L15.0139 6.6125L19.7097 1.91667H15.6528V0H23V7.34722H21.0833V3.29028L16.3875 7.98611Z" />
+                </svg>
+
+              </button>
+              <!-- ============================ FullScreen Button END ========================= -->
+
+              <!-- =========================== Dark Moon Button ============================= -->
+              <button class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded">
+                <span class="sr-only">Log out</span>
+                <svg aria-hidden="true" fill="#444" viewBox="0 0 24 24" stroke="#444" class="h-6 w-6">
+                  <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M21.034 16.253C19.1116 19.6823 15.4418 21.9999 11.2308 21.9999C5.0282 21.9999 -7.41858e-07 16.9717 -4.70734e-07 10.7691C-2.48165e-07 5.67735 3.38848 1.37699 8.03348 3.51155e-07C7.12428 1.62184 6.6059 3.49233 6.6059 5.48389C6.6059 11.6865 11.6341 16.7147 17.8367 16.7147C18.9475 16.7147 20.0207 16.5534 21.034 16.253Z"
+                    fill="#444" />
+                </svg>
+              </button>
+              <!-- =========================== Dark Moon Button END ============================= -->
+              <div x-data="{ open: false }" class="relative">
+                <!-- ======================== Logout User ======================== -->
+                <button class="relative p-2 text-white bg-white shadow-xl focus:text-gray-600 rounded"
+                  x-on:click="open = true">
+                  <span class="sr-only">Log out</span>
+                  <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+                    <g clip-path="url(#clip0_1_4)">
+                      <mask id="mask0_1_4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36"
+                        height="36">
+                        <path d="M36 0H0V36H36V0Z" fill="url(#pattern0)" />
+                      </mask>
+                      <g mask="url(#mask0_1_4)">
+                        <path d="M36 0H0V36H36V0Z" fill="#444" />
+                      </g>
+                    </g>
+                    <defs>
+                      <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_1_4" transform="scale(0.0111111)" />
+                      </pattern>
+                      <clipPath id="clip0_1_4">
+                        <rect width="36" height="36" fill="white" />
+                      </clipPath>
+                      <image id="image0_1_4" width="90" height="90"
+                        xlink:href="data:image/png;base64,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" />
+                    </defs>
+                  </svg>
+                </button>
+                <!-- ======================== Logout User END ======================== -->
+                <ul x-show="open" x-on:click.away="open = false"
+                  class="bg-white text-gray-700 rounded shadow-lg absolute py-4 mt-3 right-0 px-0"
+                  style="min-width:15rem">
+                  <li>
+                    <a href="logout.html"
+                      class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                        stroke="currentColor" class="w-4 h-4 mr-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
+                      </svg>
+                      Logout
+                    </a>
+                  </li>
+                  <li>
+                    <a href="reset-password.html"
+                      class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                      <?xml version="1.0" encoding="utf-8"?>
+                      <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="w-5 h-5 mr-2" viewBox="0 0 13.1 14"
+                        style="enable-background:new 0 0 13.1 14;" xml:space="preserve">
+                        <image style="overflow:visible;enable-background:new    ;" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAABiCAYAAACrpQYOAAAACXBIWXMAAEggAABIIAFxINBWAAAA
 GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAB5JJREFUeNrsXWlvVFUYftsCre1o
 gRQKFZC1lbLIJmBc0BiDJGqMGo1+MEbjFxOj0YSf4Cf1g37BuJu4xCX6A4yiRhMkao2slU1CWYVS
 LNACpb5P7jNpHe+0U+acO/fMvE/ypMm0vfee+9xz3vWeETEYDAaDwWAwGAwGg8FgCB5VgV53nbJF
@@ -290,14 +331,14 @@ NG7jcoWZkt0Ey+XOk+e5DOGLn96T6Ct0dvuME0ZDmr/+DHYCRf/VJDoxFvGzKxHlIpc+CIB8F5KQ
 W/nZ5VIPNpTvoZvI4A9CzJeh9xOauHxlOHNqaHT7ZGhzRRT6UVVDeXMPheiU+M13TYgxIEMRWnKE
 qKMQ2V0ueykEvLLs9tNlt5+GwWAwGAwGg8FgMBgMBkOK8K8AAwDzZiuAxyLeNQAAAABJRU5ErkJg
 gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
-</image>
-</svg>
+                        </image>
+                      </svg>
 
-                  Reset Password
-                </a>
-              </li>
-            </ul>
-            </div>
+                      Reset Password
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </header>
@@ -326,41 +367,53 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
 -->
         <div class="px-4 sm:px-6 lg:px-6 ">
           <div class="sm:flex sm:items-center">
+            <!-- ============================ Add new User Heading ==================== -->
             <div class="sm:flex-auto">
               <h1 class="text-[30px] font-semibold text-[#444] uppercase text-center mon-font">Add New Users</h1>
             </div>
+            <!-- ============================ Add new User Heading END  ==================== -->
           </div>
           <div>
             <div class="max-w-6xl mx-auto px-4 py-10 ">
               <div class=" bottom-0 left-0 right-0 py-5">
                 <div class="max-w-2xl mx-auto px-16">
                   <div class="flex justify-evenly">
+
+                    <!-- ================== Input User Icon ================== -->
                     <div class="w-36 text-center py-4 px-0 bg-[rgba(255,204,0,0.09)]">
                       <img class="m-auto" src="/assets/images/input-users.svg" alt="">
                       <p class="mt-4 font-medium tracking-[1px] text-[#444] text-[14px]">Input User
                         Information</p>
                     </div>
+                    <!-- ================== Input User Icon END ================== -->
 
+
+                    <!-- ================== Assign User Roles & Rerports Icon ================== -->
                     <div class="w-40 text-center py-4 px-3">
                       <img class="m-auto" src="/assets/images/User-Roles-Rerports.svg" alt="">
                       <p class="mt-4 font-medium tracking-[1px] text-[#444] text-[14px]">Assign User
                         Roles & Rerports</p>
                     </div>
 
+                    <!-- ================== Assign User Roles & Rerports Icon END ================== -->
+
                   </div>
                 </div>
               </div>
 
 
+
               <!-- Step Content -->
+              <!-- =================== Form Fields ====================== -->
               <div class="py-6 relative z-10">
-                <div  class="">
+                <div class="">
                   <form action="#" method="POST">
                     <div class="overflow-hidden drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] rounded-[20px]">
                       <div class="bg-white py-16 px-16">
                         <div class="grid grid-cols-6 gap-6">
                           <div class="col-span-6 sm:col-span-3">
-                            <label for="first-name" class="block text-[16px] font-400 text-[#5f5f5f] ">First Name*</label>
+                            <label for="first-name" class="block text-[16px] font-400 text-[#5f5f5f] ">First
+                              Name*</label>
                             <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                               class="mt-1 block w-full border-0 rounded-md bg-[#f8f8f8]  focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm py-5"
                               placeholder="Input Your First Name">
@@ -448,11 +501,16 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                 </div>
               </div>
               <!-- / Step Content -->
+              <!-- =================== Form Fields END ====================== -->
+
+
               <!-- Bottom Navigation -->
-              <div class=" bottom-0 left-0 right-0 py-5" >
+              <div class=" bottom-0 left-0 right-0 py-5">
                 <div class="max-w-3xl mx-auto px-4">
                   <div class="flex justify-evenly">
                     <div class="">
+
+                      <!-- ===================== Save User Button ================== -->
                       <a onclick="toggleModal()"
                         class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-lg text-center text-white bg-[#00CA72] tracking-[0.125em] hover:bg-transparent hover:text-[#00CA72] hover:border-[#00CA72] border-2 transition ease-in-out duration-500 font-semibold uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] mon-font"><svg
                           class="w-10 h-10 mr-4" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -461,8 +519,10 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                             fill="currentColor" />
                         </svg>
                         save user</a>
+                      <!-- ===================== Save User Button END ================== -->
                     </div>
                     <div class="">
+                      <!-- ===================== Assign Roles Button ================== -->
                       <a href="roles-reports.html"
                         class="inline-flex items-center justify-center w-full focus:outline-none border border-transparent py-2 px-10 rounded-lg text-lg text-center text-white bg-[#4169D7] tracking-[0.125em] font-semibold uppercase drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] transition ease-in-out duration-500 hover:bg-transparent hover:border-[#4169D7] border-2 hover:text-[#4169D7] mon-font"><svg
                           class="w-10 h-10 mr-4" viewBox="0 0 43 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -470,6 +530,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                             d="M19.4687 28.4687L28.125 19.8125L26.7812 18.4688L19.4687 25.7812L15.6875 22L14.375 23.3125L19.4687 28.4687ZM11.875 35C11.3542 35 10.9115 34.8177 10.5469 34.4531C10.1823 34.0885 10 33.6458 10 33.125V14.375C10 13.8542 10.1823 13.4115 10.5469 13.0469C10.9115 12.6823 11.3542 12.5 11.875 12.5H18.2812C18.3854 11.7708 18.7188 11.1719 19.2813 10.7031C19.8438 10.2344 20.5 10 21.25 10C22 10 22.6562 10.2344 23.2187 10.7031C23.7812 11.1719 24.1146 11.7708 24.2188 12.5H30.625C31.1458 12.5 31.5885 12.6823 31.9531 13.0469C32.3177 13.4115 32.5 13.8542 32.5 14.375V33.125C32.5 33.6458 32.3177 34.0885 31.9531 34.4531C31.5885 34.8177 31.1458 35 30.625 35H11.875ZM11.875 33.125H30.625V14.375H11.875V33.125ZM21.25 13.8437C21.5417 13.8437 21.7969 13.7344 22.0156 13.5156C22.2344 13.2969 22.3438 13.0417 22.3438 12.75C22.3438 12.4583 22.2344 12.2031 22.0156 11.9844C21.7969 11.7656 21.5417 11.6563 21.25 11.6563C20.9583 11.6563 20.7031 11.7656 20.4844 11.9844C20.2656 12.2031 20.1562 12.4583 20.1562 12.75C20.1562 13.0417 20.2656 13.2969 20.4844 13.5156C20.7031 13.7344 20.9583 13.8437 21.25 13.8437ZM11.875 33.125V14.375V33.125Z"
                             fill="currentColor" />
                         </svg> Assign roles</a>
+                      <!-- ===================== Assign Roles Button END ================== -->
                     </div>
                   </div>
                 </div>
@@ -514,13 +575,13 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
       </div>
     </div>
   </div>
-    </main>
+  </main>
 
-    <!-- ======================= Add New User Section ========================== -->
+  <!-- ======================= Add New User Section ========================== -->
   </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
+
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio,forms,line-clamp,typography"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
