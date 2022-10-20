@@ -59,3 +59,35 @@ function toggleModal() {
   function toggleModals() {
     document.getElementById('modals').classList.toggle('hidden')
     }
+
+    anychart.onDocumentLoad(function(){
+      var dataSet = anychart.data.set([
+        ['11/03/2022', 100, 101, 140],
+        ['11/04/2022', 105, 140, 144],
+        ['11/05/2022', 120, 80, 160],
+        ['11/06/2022', 90, 79, 162],
+        ['11/07/2022', 118, 99, 137],
+        ['11/08/2022', 100, 101, 140],
+        ['11/09/2022', 105, 140, 144],
+        ['11/10/2022', 120, 80, 160],
+        ['11/11/2022', 90, 79, 162],
+        ['11/12/2022', 118, 99, 137],
+        ['11/13/2022', 105, 140, 144],
+        ['11/14/2022', 120, 80, 160],
+        ['11/15/2022', 90, 79, 16],
+        ['11/16/2022', 90, 79, 16],
+        
+      ]);
+    
+      var chart = anychart.column();
+      
+      chart.column(dataSet.mapAs({value:1,x:0})).name('Product A');  chart.column(dataSet.mapAs({value:2,x:0})).name('Product B');
+      chart.column(dataSet.mapAs({value:3,x:0})).name('Product C');
+      
+      chart.legend(true);
+      chart.title('Compare sales strategy');
+      chart.yScale().stackMode('value');
+      chart.container('container');
+      chart.draw();
+    });
+    
