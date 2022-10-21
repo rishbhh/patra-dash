@@ -248,7 +248,7 @@
               <ul x-show="open" x-on:click.away="open = false"
               class="bg-white text-gray-700 rounded shadow-lg absolute py-4 mt-3 right-0 px-0" style="min-width:15rem">
               <li>
-                <a href="logout.html" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                <a href="logout.html" class="  whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4 mr-3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
                   </svg>                  
@@ -256,7 +256,7 @@
                 </a>
               </li>
               <li>
-                <a href="reset-password.html" class=" hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
+                <a href="reset-password.html" class="  whitespace-no-wrap py-2 px-4 text-[#444] flex items-center">
                   <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"class="w-5 h-5 mr-2"
@@ -328,571 +328,579 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
 
 
 
-      <main class="p-6 sm:p-1 space-y-6">
-        <div id="panels">
-          <div class="panel-1 tab-content active py-5">
-            
-            <section class="flex gap-6 mt-[10%]">
+      <main class="p-6 sm:p-0 space-y-6">
 
-              <div class="px-4 sm:px-6 lg:px-12 w-full ">
+<!-- ADD -->
+<div x-data="{ sidebarOpen: true }" class="flex overflow-x-hidden h-screen">
+  <div class="flex-1">
+    <header class="py-2 text-semibold text-white text-end">
+      <button class="p-1 bg-[#FF005C] rounded-tl-md rounded-bl-md" @click="sidebarOpen = !sidebarOpen">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+        </svg>        
+      </button>
+    </header>
+    <main class="p-6 sm:p-1 space-y-6 bg-white">
+      <div id="panels">
+        <div class="panel-1 tab-content active py-5">
+          
+          <section class="flex gap-6">
+            <div class="px-4 sm:px-6 lg:px-12 w-full ">
+              <!-- ==================== Menu Items Section ==================  -->
+              <div class=" flex items-center justify-between py-5">
+                <h2 class="text-[16px] font-[500] text-[#444]">Chart Name </h2>
+                <div x-data="{ open: false }" class="relative">
+                  <!-- ======================= Option-1 Dropdown =================== -->
+                  <button @click="open = true"
+                    class="flex items-center bg-white text-gray-500 focus:text-gray-900 font-300 rounded-lg focus:outline-none shadow-lg py-2 px-4 text-[14px]" 
+                    type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                    </svg>                      
+                    Select Date
+                  </button>
+                  <!-- ======================= Option-1 Dropdown END =================== -->
 
-                <!-- ==================== Menu Items Section ==================  -->
-                <div class=" flex items-center justify-between py-5">
-                  <h2 class="text-[16px] font-[500] text-[#444]">Chart Name </h2>
-                  <div x-data="{ open: false }" class="relative">
+                  <!-- ======================= Option-1 Dropdown Data =================== -->
+                  <template x-if="open">
+                    <div class="flex items-center w-[200px] absolute right-[390%] m-auto z-[1]"
+                      @click.away="open = false">
+                      <div class="flex bg-white shadow-xl rounded-xl">
 
-                    <!-- ======================= Option-1 Dropdown =================== -->
+                        <div class="flex flex-col">
 
-                    <button @click="open = true"
-                      class="flex items-center bg-white text-gray-500 focus:text-gray-900 font-300 rounded-lg focus:outline-none shadow-lg py-2 px-4 text-[14px]" 
-                      type="button">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
-                      </svg>                      
-                      Select Date
-                    </button>
-                    <!-- ======================= Option-1 Dropdown END =================== -->
-
-                    <!-- ======================= Option-1 Dropdown Data =================== -->
-                    <template x-if="open">
-                      <div class="flex items-center w-[200px] absolute right-[390%] m-auto"
-                        @click.away="open = false">
-                        <div class="flex bg-white shadow-xl rounded-xl">
-
-                          <div class="flex flex-col">
-
-                            <div class="flex items-center justify-between px-2 py-2">
-                              <div class="flex items-center">
-                                <input type="text"
-                                  class="flex items-center w-32 px-4 py-2 text-sm text-gray-900 rounded-lg bg-gray-50 focus:bg-white focus:ring-1 focus:ring-blue-600 focus:outline-none"
-                                  placeholder="18 / 02 / 2021" />
-                                <div class="p-1">
+                          <div class="flex items-center justify-between px-2 py-2">
+                            <div class="flex items-center">
+                              <input type="text"
+                                class="flex items-center w-32 px-4 py-2 text-sm text-gray-900 rounded-lg bg-gray-50 focus:bg-white focus:ring-1 focus:ring-blue-600 focus:outline-none"
+                                placeholder="18 / 02 / 2021" />
+                              <div class="p-1">
+                                <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
+                                  <path d="M6.738 12.012h10.5m-4.476 4.25l4.5-4.25-4.5-4.25" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <input type="text"
+                                class="flex items-center w-32 px-4 py-2 text-sm text-gray-900 rounded-lg bg-gray-50 focus:bg-white focus:ring-1 focus:ring-blue-600 focus:outline-none"
+                                placeholder="11 / 03 / 2021" />
+                            </div>
+                          </div>
+                          <div class="flex divide-x">
+                            <div class="flex flex-col px-2 pt-5 pb-6 border-b border-gray-100">
+                              <div class="flex items-center justify-between">
+                                <button class="flex items-center justify-center p-1">
                                   <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
-                                    <path d="M6.738 12.012h10.5m-4.476 4.25l4.5-4.25-4.5-4.25" stroke-width="1.5"
+                                    <path d="M13.25 8.75L9.75 12l3.5 3.25" stroke-width="1.5"
                                       stroke-linecap="round" stroke-linejoin="round" />
                                   </svg>
-                                </div>
-                                <input type="text"
-                                  class="flex items-center w-32 px-4 py-2 text-sm text-gray-900 rounded-lg bg-gray-50 focus:bg-white focus:ring-1 focus:ring-blue-600 focus:outline-none"
-                                  placeholder="11 / 03 / 2021" />
+                                </button>
+                                <div class="text-[12px] font-[400]">February</div>
+                                <button class="flex items-center justify-center p-2 rounded-xl hover:bg-blue-100">
+                                  <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
+                                    <path d="M10.75 8.75l3.5 3.25-3.5 3.25" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="grid grid-cols-7 text-[10px] text-center text-gray-900">
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Mo
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Tu
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  We
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Th
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Fri
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Sa
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Su
+                                </span>
+
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  1
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  2
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  3
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  4
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  5
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  6
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  7
+                                </span>
+
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">8</span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6   ">
+                                  9
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  10
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  11
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  12
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  13
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  14
+                                </span>
+
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  15
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  16
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  17
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-white bg-blue-600 rounded-full">
+                                  18
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
+                                  19
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
+                                  20
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-none rounded-tr-lg bg-gray-50">
+                                  21
+                                </span>
+
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-none rounded-l-lg bg-gray-50">
+                                  22
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
+                                  23
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
+                                  24
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
+                                  25
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
+                                  26
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
+                                  27
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-none rounded-br-lg bg-gray-50">
+                                  28
+                                </span>
+
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  1
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  2
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  3
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  4
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  5
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  6
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  7
+                                </span>
                               </div>
                             </div>
-                            <div class="flex divide-x">
-                              <div class="flex flex-col px-2 pt-5 pb-6 border-b border-gray-100">
-                                <div class="flex items-center justify-between">
-                                  <button class="flex items-center justify-center p-1">
-                                    <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
-                                      <path d="M13.25 8.75L9.75 12l3.5 3.25" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                  </button>
-                                  <div class="text-[12px] font-[400]">February</div>
-                                  <button class="flex items-center justify-center p-2 rounded-xl hover:bg-blue-100">
-                                    <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
-                                      <path d="M10.75 8.75l3.5 3.25-3.5 3.25" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                  </button>
-                                </div>
-                                <div class="grid grid-cols-7 text-[10px] text-center text-gray-900">
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Mo
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Tu
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    We
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Th
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Fri
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Sa
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Su
-                                  </span>
-
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    1
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    2
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    3
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    4
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    5
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    6
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    7
-                                  </span>
-
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">8</span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6   ">
-                                    9
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    10
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    11
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    12
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    13
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    14
-                                  </span>
-
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    15
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    16
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    17
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-white bg-blue-600 rounded-full">
-                                    18
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
-                                    19
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
-                                    20
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-none rounded-tr-lg bg-gray-50">
-                                    21
-                                  </span>
-
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-none rounded-l-lg bg-gray-50">
-                                    22
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
-                                    23
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
-                                    24
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
-                                    25
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
-                                    26
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-full bg-blue-100">
-                                    27
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 font-semibold text-blue-600 rounded-none rounded-br-lg bg-gray-50">
-                                    28
-                                  </span>
-
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    1
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    2
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    3
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    4
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    5
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    6
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    7
-                                  </span>
-                                </div>
-                              </div>
-                              <div class="flex flex-col px-2 pt-5 pb-6 border-b border-gray-100">
-                                <div class="flex items-center justify-between">
-                                  <button class="flex items-center justify-center p-2 rounded-xl hover:bg-blue-100">
-                                    <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
-                                      <path d="M13.25 8.75L9.75 12l3.5 3.25" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                  </button>
-                                  <div class="text-sm font-[400]">March</div>
-                                  <button class="flex items-center justify-center p-2 rounded-xl hover:bg-blue-100">
-                                    <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
-                                      <path d="M10.75 8.75l3.5 3.25-3.5 3.25" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                  </button>
-                                </div>
-                                <div class="grid grid-cols-7 text-[10px] text-center text-gray-900">
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Mo
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Tu
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    We
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Th
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Fri
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Sa
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
-                                    Su
-                                  </span>
-
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-none rounded-tl-lg bg-gray-50">
-                                    1
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
-                                    2
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
-                                    3
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
-                                    4
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
-                                    5
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
-                                    6
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
-                                    7
-                                  </span>
-
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-none rounded-bl-lg bg-gray-50">
-                                    8
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
-                                    9
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
-                                    10
-                                  </span>
-                                  <span
-                                    class="flex items-center justify-center w-6 h-6 text-white bg-blue-600 rounded-full">
-                                    11
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    12
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    13
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    14
-                                  </span>
-
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    15
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    16
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    17
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    18
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    19
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    20
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    21
-                                  </span>
-
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    22
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    23
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    24
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    25
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    26
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    27
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    28
-                                  </span>
-
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    29
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    30
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 rounded-lg">
-                                    31
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    1
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    2
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    3
-                                  </span>
-                                  <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
-                                    4
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="flex items-center justify-between px-6 py-4">
-                              <div class="flex items-center space-x-2">
-                                <button
-                                  class="px-4 py-2 text-sm font-600 rounded-lg bg-gray-50 focus:outline-none focus:ring-1 focus:ring-blue-600 hover:bg-gray-100">
-                                  Cancel
+                            <div class="flex flex-col px-2 pt-5 pb-6 border-b border-gray-100">
+                              <div class="flex items-center justify-between">
+                                <button class="flex items-center justify-center p-2 rounded-xl hover:bg-blue-100">
+                                  <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
+                                    <path d="M13.25 8.75L9.75 12l3.5 3.25" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
                                 </button>
-                                <button
-                                  class="px-4 py-2 text-sm text-white bg-blue-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600 hover:bg-blue-700">
-                                  Apply
+                                <div class="text-sm font-[400]">March</div>
+                                <button class="flex items-center justify-center p-2 rounded-xl hover:bg-blue-100">
+                                  <svg class="w-6 h-6 text-gray-900 stroke-current" fill="none">
+                                    <path d="M10.75 8.75l3.5 3.25-3.5 3.25" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
                                 </button>
+                              </div>
+                              <div class="grid grid-cols-7 text-[10px] text-center text-gray-900">
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Mo
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Tu
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  We
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Th
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Fri
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Sa
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 font-300 rounded-lg">
+                                  Su
+                                </span>
+
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-none rounded-tl-lg bg-gray-50">
+                                  1
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
+                                  2
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
+                                  3
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
+                                  4
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
+                                  5
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
+                                  6
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
+                                  7
+                                </span>
+
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-none rounded-bl-lg bg-gray-50">
+                                  8
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
+                                  9
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-blue-600 rounded-full bg-blue-100">
+                                  10
+                                </span>
+                                <span
+                                  class="flex items-center justify-center w-6 h-6 text-white bg-blue-600 rounded-full">
+                                  11
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  12
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  13
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  14
+                                </span>
+
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  15
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  16
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  17
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  18
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  19
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  20
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  21
+                                </span>
+
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  22
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  23
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  24
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  25
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  26
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  27
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  28
+                                </span>
+
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  29
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  30
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 rounded-lg">
+                                  31
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  1
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  2
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  3
+                                </span>
+                                <span class="flex items-center justify-center w-6 h-6 text-gray-700 rounded-lg">
+                                  4
+                                </span>
                               </div>
                             </div>
                           </div>
-                          <div class="py-6 border-l border-gray-300 w-40">
-                            <ul class="flex flex-col text-xs">
-                              <li>
-                                <button
-                                  class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left shadow-0">
-                                  Last 7 days
-                                </button>
-                              </li>
-                              <li>
-                                <button
-                                  class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
-                                  Last 14 days
-                                </button>
-                              </li>
-                              <li>
-                                <button
-                                  class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
-                                  Last 30 days
-                                </button>
-                              </li>
-                              <li>
-                                <button
-                                  class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
-                                  Last 3 months
-                                </button>
-                              </li>
-                              <li>
-                                <button
-                                  class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
-                                  Last 12 months
-                                </button>
-                              </li>
-                              <li>
-                                <button
-                                  class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
-                                  Month to date
-                                </button>
-                              </li>
-                              <li>
-                                <button
-                                  class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
-                                  Quarter to date
-                                </button>
-                              </li>
-                              <li>
-                                <button
-                                  class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
-                                  All time
-                                </button>
-                              </li>
-                              <li>
-                                <button
-                                  class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
-                                  Custom
-                                </button>
-                              </li>
-                            </ul>
+                          <div class="flex items-center justify-between px-6 py-4">
+                            <div class="flex items-center space-x-2">
+                              <button
+                                class="px-4 py-2 text-sm font-600 rounded-lg bg-gray-50 focus:outline-none focus:ring-1 focus:ring-blue-600 hover:bg-gray-100">
+                                Cancel
+                              </button>
+                              <button
+                                class="px-4 py-2 text-sm text-white bg-blue-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600 hover:bg-blue-700">
+                                Apply
+                              </button>
+                            </div>
                           </div>
                         </div>
+                        <div class="py-6 border-l border-gray-300 w-40">
+                          <ul class="flex flex-col text-xs">
+                            <li>
+                              <button
+                                class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left shadow-0">
+                                Last 7 days
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
+                                Last 14 days
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
+                                Last 30 days
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
+                                Last 3 months
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
+                                Last 12 months
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
+                                Month to date
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
+                                Quarter to date
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
+                                All time
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                class="px-6 py-1.5 w-full leading-5 hover:bg-blue-100 hover:text-blue-600 text-left">
+                                Custom
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                    </template>
-                    <!-- ======================= Option-1 Dropdown Data END =================== -->
-                  </div>
+                    </div>
+                  </template>
+                  <!-- ======================= Option-1 Dropdown Data END =================== -->
                 </div>
-
-                <!-- ==================== Menu Items Section End ==================  -->
-
-                <!-- Component Start -->
-	<div class="flex flex-col items-center w-full p-6 pb-6 bg-white rounded-lg shadow-xl sm:p-8">
-		<h2 class="text-xl font-bold">Monthly Revenue</h2>
-		<span class="text-sm font-semibold text-gray-500">2020</span>
-		<div class="flex items-end flex-grow w-full mt-2 space-x-10 sm:space-x-10 px-12">
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$37,500</span>
-				<div class="relative flex justify-center w-full h-8 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-16 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Jan</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$45,000</span>
-				<div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Feb</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
-				<div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Mar</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$50,000</span>
-				<div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Apr</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
-				<div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">May</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$55,000</span>
-				<div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Jun</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$60,000</span>
-				<div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-16 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Jul</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$57,500</span>
-				<div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Aug</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$67,500</span>
-				<div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-32 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Sep</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$65,000</span>
-				<div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-12 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full bg-indigo-400 h-28"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Oct</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$70,000</span>
-				<div class="relative flex justify-center w-full h-8 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Nov</span>
-			</div>
-			<div class="relative flex flex-col items-center flex-grow pb-5 group">
-				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$75,000</span>
-				<div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-				<div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
-				<div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
-				<span class="absolute bottom-0 text-xs font-bold">Dec</span>
-			</div>
-		</div>
-		<div class="flex w-full mt-3">
-			<div class="flex items-center ml-auto">
-				<span class="block w-4 h-4 bg-indigo-400"></span>
-				<span class="ml-1 text-xs font-medium">Existing</span>
-			</div>
-			<div class="flex items-center ml-4">
-				<span class="block w-4 h-4 bg-indigo-300"></span>
-				<span class="ml-1 text-xs font-medium">Upgrades</span>
-			</div>
-			<div class="flex items-center ml-4">
-				<span class="block w-4 h-4 bg-indigo-200"></span>
-				<span class="ml-1 text-xs font-medium">New</span>
-			</div>
-		</div>
-	</div>
-	<!-- Component End  -->
-  
               </div>
-            </section>
-          </div>
+
+              <!-- ==================== Menu Items Section End ==================  -->
+
+              <!-- Component Start -->
+<div class="flex flex-col items-center w-full p-6 pb-6 bg-white rounded-lg shadow-xl sm:p-8">
+  <h2 class="text-xl font-bold">Monthly Revenue</h2>
+  <span class="text-sm font-semibold text-gray-500">2020</span>
+  <div class="flex items-end flex-grow w-full mt-2 space-x-10 sm:space-x-10 px-12">
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$37,500</span>
+      <div class="relative flex justify-center w-full h-8 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-16 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Jan</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$45,000</span>
+      <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Feb</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
+      <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Mar</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$50,000</span>
+      <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Apr</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
+      <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">May</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$55,000</span>
+      <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Jun</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$60,000</span>
+      <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-16 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Jul</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$57,500</span>
+      <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Aug</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$67,500</span>
+      <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-32 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Sep</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$65,000</span>
+      <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-12 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full bg-indigo-400 h-28"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Oct</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$70,000</span>
+      <div class="relative flex justify-center w-full h-8 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Nov</span>
+    </div>
+    <div class="relative flex flex-col items-center flex-grow pb-5 group">
+      <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$75,000</span>
+      <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+      <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+      <div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
+      <span class="absolute bottom-0 text-xs font-bold">Dec</span>
+    </div>
+  </div>
+  <div class="flex w-full mt-3">
+    <div class="flex items-center ml-auto">
+      <span class="block w-4 h-4 bg-indigo-400"></span>
+      <span class="ml-1 text-xs font-medium">Existing</span>
+    </div>
+    <div class="flex items-center ml-4">
+      <span class="block w-4 h-4 bg-indigo-300"></span>
+      <span class="ml-1 text-xs font-medium">Upgrades</span>
+    </div>
+    <div class="flex items-center ml-4">
+      <span class="block w-4 h-4 bg-indigo-200"></span>
+      <span class="ml-1 text-xs font-medium">New</span>
+    </div>
+  </div>
+</div>
+<!-- Component End  -->
+
+            </div>
+          </section>
         </div>
-        <div id="container"></div>
-        <div class="px-4 sm:px-6 lg:px-8 ">
+      </div>
+      <div id="container"></div>
+       <div class="px-4 sm:px-6 lg:px-8 ">
           <div class="mt-8 flex flex-col drop-shadow-[0_35px_35px_rgba(3,22,114,0.14)] ">
             <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
@@ -901,174 +909,270 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                   <table class="min-w-full table-fixed ">
                     <thead class="bg-[#4169D7]">
                       <tr>
-                        <th scope="col" class="min-w-[8rem] py-5 pr-3 text-left text-sm font-700 text-white px-4">Name
+                        <th scope="col" class="py-5 pr-3 text-left text-[12px] font-700 text-white text-center">Work Order
                         </th>
-                        <th scope="col" class="px-3 py-5 text-left text-sm font-400 text-white">Email ID</th>
-                        <th scope="col" class="px-3 py-5 text-left text-sm font-400 text-white">Status</th>
-                        <th scope="col" class="px-3 py-5 text-left text-sm font-400 text-white">Registration Status
+                        <th scope="col" class="px-3 py-5 text-left text-[12px] font-400 text-white text-center">Add date</th>
+                        <th scope="col" class="px-3 py-5 text-left text-[12px] font-400 text-white text-center">Due date</th>
+                        <th scope="col" class="px-3 py-5 text-left text-[12px] font-400 text-white text-center">Date completed
                         </th>
-                        <th scope="col" class="px-3 py-5 text-left text-sm font-400 text-white">Primary Role</th>
-                        <th scope="col" class="relative py-5 pl-3 pr-4 sm:pr-6 text-white text-right">
-                          <div x-data="{ open: false }" class="relative w-full">
-                            <button x-on:click="open = true"
-                              class="flex items-center text-white  font-semibold focus:outline-none float-right"
-                              type="button">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-5 h-5">
-                                <path fill-rule="evenodd"
-                                  d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-                                  clip-rule="evenodd" />
-                              </svg>
-                            </button>
-                            <ul x-show="open" x-on:click.away="open = false"
-                              class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-1 right-0 text-left"
-                              style="min-width:15rem">
-                              <li>
-                                <a onclick="toggleModal()"
-                                  class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-gray-500 font-normal ">
-                                  Invite
-                                </a>
-                              </li>
-                              <li>
-                                <a onclick="toggleModals()"
-                                  class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-gray-500 font-normal ">
-                                  Activate
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#"
-                                  class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-gray-500 font-normal ">
-                                  De-activate
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#"
-                                  class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-gray-500 font-normal ">
-                                  Import
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#"
-                                  class="block hover:bg-[#f4f4f4] whitespace-no-wrap py-2 px-4 text-gray-500 font-normal ">
-                                  Export
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </th>
+                        <th scope="col" class="px-3 py-5 text-left text-[12px] font-400 text-white text-center">WO type</th>
+                        <th scope="col" class="px-3 py-5 text-left text-[12px] font-400 text-white text-center">Branch</th>
+                        <th scope="col" class="px-3 py-5 text-left text-[12px] font-400 text-white text-center">Requestor</th>
                       </tr>
                     </thead>
                     <tbody class=" bg-white">
                       <tr>
-                        <td class="whitespace-nowrap py-4 pr-3 text-[12px] font-medium text-gray-900 px-3">Charles Casey</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
-                          Caseycharles@gmail.com
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Work Order
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">
-                          <div class="flex items-center">
-                            <div class="flex-0 w-2 h-2 rounded-full" style="background-color:#00CA72"></div>
-                            <div class="ml-2 truncate text-[#00CA72]">Active</div>
-                          </div>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Add date</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Due date</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Date completed
                         </td>
-                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Pending invite</td>
-                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-700">Viewer</td>
-                        <td
-                          class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6 flex justify-between">
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#07A0C3" class="w-5 h-5">
-                              <path
-                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-                            </svg>
-                          </a>
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F9C846" class="w-5 h-5">
-                              <path fill-rule="evenodd"
-                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
-                                clip-rule="evenodd" />
-                            </svg>
-                          </a>
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900"><svg
-                              xmlns="http://www.w3.org/2000/svg" fill="#DD1C1A" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="#DD1C1A" class="w-5 h-5">
-                              <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-                              <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4.867 19.125h.008v.008h-.008v-.008z" />
-                            </svg>
-
-                          </a>
-
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">WO type</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Branch</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Requestor</td>
+                      </tr>
+                      <tr>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Work Order
                         </td>
-
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Add date</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Due date</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Date completed
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">WO type</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Branch</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Requestor</td>
+                      </tr>
+                      <tr>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Work Order
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Add date</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Due date</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Date completed
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">WO type</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Branch</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Requestor</td>
+                      </tr>
+                      <tr>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Work Order
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Add date</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Due date</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Date completed
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">WO type</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Branch</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Requestor</td>
+                      </tr>
+                      <tr>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Work Order
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Add date</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Due date</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Date completed
+                        </td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">WO type</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Branch</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-[12px] font-500 text-gray-500 text-center">Requestor</td>
                       </tr>
                       <!-- More people... -->
                     </tbody>
                   </table>
-                  <!-- This example requires Tailwind CSS v2.0+ -->
-                  <div class="flex items-center justify-between  bg-[#4169D7] px-4 py-3 sm:px-6">
-                    <div class="flex flex-1 justify-between sm:hidden">
-                      <a href="#"
-                        class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
-                      <a href="#"
-                        class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
-                    </div>
-                    <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
-                      <div>
-                        <p class="text-[13px] text-white font-400">
-                          Rows per page : 50
-                          <span class="font-400">1</span>
-                          to
-                          <span class="font-400">10</span>
-                          results
-                        </p>
-                      </div>
-                      <div>
-                        <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
-                          <a href="#"
-                            class="relative inline-flex items-center  px-2 py-2 text-sm font-[13px] text-white focus:z-20">
-                            <span class="sr-only">Previous</span>
-                            <!-- Heroicon name: mini/chevron-left -->
-                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                              fill="currentColor" aria-hidden="true">
-                              <path fill-rule="evenodd"
-                                d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
-                                clip-rule="evenodd" />
-                            </svg>
-                          </a>
-                          <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
-                          <a href="#" aria-current="page"
-                            class="relative inline-flex items-center  px-2 py-2 text-sm font-[13px] text-white focus:z-20">1</a>
-                          <a href="#"
-                            class="relative inline-flex items-center  px-2 py-2 text-sm font-[13px] text-white focus:z-20">2</a>
-                          <a href="#"
-                            class="relative inline-flex items-center  px-2 py-2 text-sm font-[13px] text-white focus:z-20">3</a>
-                          <span
-                            class="relative inline-flex items-center  px-2 py-2 text-sm font-[13px] text-white focus:z-20">...</span>
-                          <a href="#"
-                            class="relative inline-flex items-center  px-2 py-2 text-sm font-[13px] text-white focus:z-20">10</a>
-                          <a href="#"
-                            class="relative inline-flex items-center  px-2 py-2 text-sm font-[13px] text-white focus:z-20">
-                            <span class="sr-only">Next</span>
-                            <!-- Heroicon name: mini/chevron-right -->
-                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                              fill="currentColor" aria-hidden="true">
-                              <path fill-rule="evenodd"
-                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                                clip-rule="evenodd" />
-                            </svg>
-                          </a>
-                        </nav>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
 
               </div>
             </div>
           </div>
         </div>
+    </main>
+  </div>
+  <aside class="flex-shrink-0 w-64 flex flex-col border-r transition-all duration-300 " :class="{ '-mr-64': !sidebarOpen }">
+    <nav class="flex-1 flex flex-col bg-[#FAFAFA] px-3 py-4">
+      <div class="w-full mx-auto " x-data="{selected:1}">
+        <ul class="shadow-box">
 
+
+          <!-- ========================== Company 2 section ======================== -->
+
+
+          <li class="relative  sm:rounded-md mb-3">
+
+            <button type="button" class="w-full px-4 py-3 text-left sm:rounded-md bg-white" @click="selected !== 1 ? selected = 1 : selected = null">
+              <div class="flex items-center justify-between">
+                <div class="w-56">
+                  <h5 class="font-400 text-sm text-gray-500">Company 2</h5>
+                </div>
+                <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                  </svg>
+                </span>
+              </div>
+            </button>
+
+            <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + '%' : ''">
+              <form action="#" method="POST">
+                <div class="">
+                  <div class="bg-white py-1 px-1 transition-all">
+                    <ul class=" z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base ring-opacity-5 focus:outline-none sm:text-sm" @click.away="open = false" x-transition:enter="transition ease-out origin-top-left duration-200" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition origin-top-left ease-in duration-100" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3" aria-expanded="false">
+                      <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-1 pr-2" id="listbox-option-0" role="option">
+                        <div class="flex items-center  py-1 px-1">
+                          <input type="text" class="w-full rounded-md border-0 bg-gray-100 px-4 py-2.5 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="search reports" role="combobox" aria-expanded="false" aria-controls="options">
+                        </div>
+                      </li>
+                      <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+                        <div class="flex items-center  py-1 px-1">
+                          <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                          <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 1</label>
+                        </div>
+                      </li>
+                      <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+                        <div class="flex items-center  py-1 px-1">
+                          <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                          <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 2</label>
+                        </div>
+                      </li>
+                      <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+                        <div class="flex items-center  py-1 px-1">
+                          <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                          <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 3</label>
+                        </div>
+                      </li>
+                      <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+                        <div class="flex items-center  py-1 px-1">
+                          <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                          <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 4</label>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </li>
+     <!-- 2 -->
+     <li class="relative  sm:rounded-md mb-3">
+
+      <button type="button" class="w-full px-4 py-3 text-left sm:rounded-md bg-white" @click="selected !== 2 ? selected = 2 : selected = null">
+        <div class="flex items-center justify-between">
+          <div class="w-56">
+            <h5 class="font-400 text-sm text-gray-500">Company 2</h5>
+          </div>
+          <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+            </svg>
+          </span>
+        </div>
+      </button>
+
+      <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + '%' : ''">
+        <form action="#" method="POST">
+          <div class="">
+            <div class="bg-white py-1 px-1 transition-all">
+              <ul class=" z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base ring-opacity-5 focus:outline-none sm:text-sm" @click.away="open = false" x-transition:enter="transition ease-out origin-top-left duration-200" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition origin-top-left ease-in duration-100" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3" aria-expanded="false">
+                <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-1 pr-2" id="listbox-option-0" role="option">
+                  <div class="flex items-center  py-1 px-1">
+                    <input type="text" class="w-full rounded-md border-0 bg-gray-100 px-4 py-2.5 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="search reports" role="combobox" aria-expanded="false" aria-controls="options">
+                  </div>
+                </li>
+                <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+                  <div class="flex items-center  py-1 px-1">
+                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 1</label>
+                  </div>
+                </li>
+                <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+                  <div class="flex items-center  py-1 px-1">
+                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 2</label>
+                  </div>
+                </li>
+                <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+                  <div class="flex items-center  py-1 px-1">
+                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 3</label>
+                  </div>
+                </li>
+                <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+                  <div class="flex items-center  py-1 px-1">
+                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 4</label>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </li>
+<!-- 3 -->
+<li class="relative  sm:rounded-md mb-3">
+
+  <button type="button" class="w-full px-4 py-3 text-left sm:rounded-md bg-white" @click="selected !== 3 ? selected = 3 : selected = null">
+    <div class="flex items-center justify-between">
+      <div class="w-56">
+        <h5 class="font-400 text-sm text-gray-500">Company 2</h5>
+      </div>
+      <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+        </svg>
+      </span>
+    </div>
+  </button>
+
+  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + '%' : ''">
+    <form action="#" method="POST">
+      <div class="">
+        <div class="bg-white py-1 px-1 transition-all">
+          <ul class=" z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base ring-opacity-5 focus:outline-none sm:text-sm" @click.away="open = false" x-transition:enter="transition ease-out origin-top-left duration-200" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition origin-top-left ease-in duration-100" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3" aria-expanded="false">
+            <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-1 pr-2" id="listbox-option-0" role="option">
+              <div class="flex items-center  py-1 px-1">
+                <input type="text" class="w-full rounded-md border-0 bg-gray-100 px-4 py-2.5 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="search reports" role="combobox" aria-expanded="false" aria-controls="options">
+              </div>
+            </li>
+            <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+              <div class="flex items-center  py-1 px-1">
+                <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 1</label>
+              </div>
+            </li>
+            <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+              <div class="flex items-center  py-1 px-1">
+                <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 2</label>
+              </div>
+            </li>
+            <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+              <div class="flex items-center  py-1 px-1">
+                <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 3</label>
+              </div>
+            </li>
+            <li class="text-lg font-medium text-gray-400 relative cursor-default select-none py-2 pl-2 pr-2" id="listbox-option-0" role="option">
+              <div class="flex items-center  py-1 px-1">
+                <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-category-0" class="ml-3 text-[13px] text-gray-500 font-400">Department 4</label>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</li>
+
+        </ul>
+      </div>
+    </nav>
+  </aside>
+</div>
+<!-- END -->
       </main>
     </div>
   </div>
@@ -1084,7 +1188,6 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-doughnutlabel/2.0.3/chartjs-plugin-doughnutlabel.js"></script>
   <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/chart.js"></script>
 </body>
 
 </html>
