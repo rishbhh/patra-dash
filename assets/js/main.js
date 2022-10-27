@@ -53,41 +53,60 @@
 // 		}
 // 	}
 // }
-function toggleModal() {
-	document.getElementById('modal').classList.toggle('hidden')
+var ctx = document.getElementById("myChart4").getContext('2d');
+var myChart = new Chart(ctx, {
+	type: 'bar',
+	data: {
+		labels: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"],
+		datasets: [{
+			label: 'Completed 9578',
+			backgroundColor: "#25DA91",
+			data: [780, 750, 480, 740, 460,430, 900, 500, 450,590,620,880, 900,490],
+		}, {
+			label: 'With AM 7823',
+			backgroundColor: "#FFD600",
+			data: [12, 59, 5, 56, 58,12, 59, 85, 23, 100,20,90,60,10],
+		}, {
+			label: 'In Progress 4456',
+			backgroundColor: "#436AD6",
+      color:'red',
+			data: [12, 20, 5, 56, 50,1, 59, 85, 23, 10,20,30,60,10],
+		}],
+	},
+options: {
+    tooltips: {
+      displayColors: true,
+      backgroundColor: "#fff",
+      titleFontColor:"#000",
+      bodyFontColor:"#000",
+      callbacks:{
+        mode: 'x',
+      },
+    },
+    scales: {
+      xAxes: [{
+        stacked: true,
+        gridLines: {
+          display: false,
+        }
+      }],
+      yAxes: [{
+        stacked: true,
+        ticks: {
+          beginAtZero: true,
+        },
+        type: 'linear',
+      }]
+    },
+		responsive: true,
+		maintainAspectRatio: false,
+		legend: { 
+      position: 'top', 
+      labels: {
+        boxWidth: 14,
+        boxHeight: 2,
+      }
   }
-  function toggleModals() {
-    document.getElementById('modals').classList.toggle('hidden')
-    }
+	},
 
-    anychart.onDocumentLoad(function(){
-      var dataSet = anychart.data.set([
-        ['11', 100, 101, 140],
-        ['11', 105, 140, 144],
-        ['111', 120, 80, 160],
-        ['111', 90, 79, 162],
-        ['1112', 118, 99, 137],
-        ['212', 100, 101, 140],
-        ['1212', 105, 140, 144],
-        ['121', 120, 80, 160],
-        ['11/', 90, 79, 162],
-        ['11/12', 118, 99, 137],
-        ['11/1', 105, 140, 144],
-        ['11/1', 120, 80, 160],
-        ['11/15/', 90, 79, 16],
-        ['11/16', 90, 79, 16],
-        
-      ]);
-    
-      var chart = anychart.column();
-      
-      chart.column(dataSet.mapAs({value:1,x:0})).name('Product A');  chart.column(dataSet.mapAs({value:2,x:0})).name('Product B');
-      chart.column(dataSet.mapAs({value:3,x:0})).name('Product C');
-      
-      chart.legend(true);
-      chart.title('Compare sales strategy');
-      chart.yScale().stackMode('value');
-      chart.container('container');
-      chart.draw();
-    });
-    
+});
