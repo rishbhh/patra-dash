@@ -777,6 +777,14 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
         <div id="container">
             <canvas id="canvas"></canvas>
           </div>
+          <!--  -->
+          <div id="container">
+            <canvas id="canvas2"></canvas>
+          </div>
+          <!--  -->
+          <div id="container">
+            <canvas id="canvas3"></canvas>
+          </div>
       </div>
     </div>
     </main>
@@ -1277,7 +1285,20 @@ window.onload = function() {
     data: barChartData,
     options: chartOptions
   });
+  var ctx = document.getElementById("canvas2").getContext("2d");
+  window.myBar = new Chart(ctx, {
+    type: "bar",
+    data: barChartData,
+    options: chartOptions
+  });
+  var ctx = document.getElementById("canvas3").getContext("2d");
+  window.myBar = new Chart(ctx, {
+    type: "bar",
+    data: barChartData,
+    options: chartOptions
+  });
 };
+
 
   </script>
 </body>
