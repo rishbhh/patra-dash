@@ -319,7 +319,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
 
           <!-- ==================== Header Heading Text =================== -->
           <div class="mr-6">
-            <h1 class="text-[26px] text-white font-600 mb-6 uppercase">Work Order Status</h1>
+            <h1 class="text-[26px] text-white font-600 mb-6 uppercase">TRANSACTION CHARTS</h1>
           </div>
           <!-- ==================== Header Heading Text END =================== -->
 
@@ -349,7 +349,14 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
               <!-- ==================== Menu Items Section ==================  -->
               <div class=" flex items-center justify-between py-1
               ">
-                <h2 class="text-[16px] font-[500] text-[#444]">Work Order Status Chart</h2>
+                <h2 class="text-[16px] font-[500] text-[#444]">Transaction Count Chart</h2>
+                <div class="flex">
+                <label for="Toggle3" class="inline-flex items-center shadow-xl rounded-md cursor-pointer dark:text-gray-800 mr-3">
+                    <input id="Toggle3" type="checkbox" class="hidden peer">
+                    <span class="text-sm px-4 py-2 rounded-l-md dark:bg-[#6090ED] dark:text-[#fff] peer-checked:dark:bg-white peer-checked:dark:text-gray-500">Monthly</span>
+                    <span class="text-sm px-4 py-2 rounded-r-md dark:bg-white dark:text-gray-500 peer-checked:dark:bg-[#6090ED] peer-checked:dark:text-[#fff]">Annually</span>
+                </label>
+            
                 <div x-data="{ open: false }" class="relative">
                   <!-- ======================= Option-1 Dropdown =================== -->
                   <button @click="open = true"
@@ -756,6 +763,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                   </template>
                   <!-- ======================= Option-1 Dropdown Data END =================== -->
                 </div>
+            </div>
               </div>
 
               <!-- ==================== Menu Items Section End ==================  -->
