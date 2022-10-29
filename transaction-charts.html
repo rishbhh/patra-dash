@@ -331,7 +331,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
       <main class="p-6 sm:p-0 space-y-6">
 
 <!-- ADD -->
-<div x-data="{ sidebarOpen: true }" class="flex overflow-x-hidden h-screen">
+<div x-data="{ sidebarOpen: true }" class="flex overflow-x-hidden">
   <div class="flex-1">
     <header class="py-2 text-semibold text-white text-end">
       <button class="p-1 bg-[#FF005C] rounded-tl-md rounded-bl-md" @click="sidebarOpen = !sidebarOpen">
@@ -349,12 +349,12 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
               <!-- ==================== Menu Items Section ==================  -->
               <div class=" flex items-center justify-between py-1
               ">
-                <h2 class="text-[16px] font-[500] text-[#444]">Transaction Count Chart</h2>
+                <h2 class="text-[16px] font-[500] text-[#666666]">Transaction Count Chart</h2>
                 <div class="flex">
                 <label for="Toggle3" class="inline-flex items-center shadow-xl rounded-md cursor-pointer dark:text-gray-800 mr-3">
                     <input id="Toggle3" type="checkbox" class="hidden peer">
-                    <span class="text-sm px-4 py-2 rounded-l-md dark:bg-[#6090ED] dark:text-[#fff] peer-checked:dark:bg-white peer-checked:dark:text-gray-500">Monthly</span>
-                    <span class="text-sm px-4 py-2 rounded-r-md dark:bg-white dark:text-gray-500 peer-checked:dark:bg-[#6090ED] peer-checked:dark:text-[#fff]">Annually</span>
+                    <span class="text-sm px-4 py-2 rounded-l-md dark:bg-[#6090ED] dark:text-[#fff] peer-checked:dark:bg-white peer-checked:dark:text-gray-500">Weekly</span>
+                    <span class="text-sm px-4 py-2 rounded-r-md dark:bg-white dark:text-gray-500 peer-checked:dark:bg-[#6090ED] peer-checked:dark:text-[#fff]">Monthly</span>
                 </label>
             
                 <div x-data="{ open: false }" class="relative">
@@ -773,14 +773,20 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
       </div>
       
       <div class="px-4 sm:px-6 lg:px-8 ">
-      <div class="p-6 pb-6 bg-white rounded-lg drop-shadow-[0_35px_25px_rgba(3,22,114,0.14)] sm:p-8">
+      <div class="p-6 pb-6 bg-white rounded-lg drop-shadow-[0_35px_25px_rgba(3,22,114,0.14)] sm:p-8 mb-6">
         <div id="container">
             <canvas id="canvas"></canvas>
           </div>
+          </div>
           <!--  -->
+          <h2 class="text-[16px] font-[500] text-[#666666] py-5 mt-3">Estimated Service Amount Chart</h2>
+          <div class="p-6 pb-6 bg-white rounded-lg drop-shadow-[0_35px_25px_rgba(3,22,114,0.14)] sm:p-8 mb-6">
           <div id="container">
             <canvas id="canvas2"></canvas>
           </div>
+        </div> 
+        <h2 class="text-[16px] font-[500] text-[#666666] py-5 mt-3">Cumulative Transaction Count Chart</h2>
+        <div class="p-6 pb-6 bg-white rounded-lg drop-shadow-[0_35px_25px_rgba(3,22,114,0.14)] sm:p-8 mb-6">
           <!--  -->
           <div id="container">
             <canvas id="canvas3"></canvas>
@@ -810,9 +816,10 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                 <div class="w-56">
                   <h5 class="font-400 text-sm text-gray-500">Company</h5>
                 </div>
-                <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
                   </svg>
+                  
                 </span>
               </div>
             </button>
@@ -1220,18 +1227,18 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
   <script>
     var barChartData = {
   labels: [
-    "5月",
-    "6月",
-    "7月",
-    "8月",
-    "9月",
-    "10月",
-    "11月",
-    "12月",
-    "10月",
-    "11月",
-    "12月",
-    "12月"
+    " Week 1",
+    " Week 2",
+    " Week 3",
+    " Week 4",
+    " Week 5",
+    " Week 6",
+    " Week 7",
+    " Week 8",
+    " Week 9",
+    " Week 10",
+    " Week 11",
+    " Week 12"
   ],
   datasets: [
     {
@@ -1248,6 +1255,79 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
         label: 'Total Txns',
       yAxisID: 'bar-stack',
       backgroundColor: "#29CB4D",
+      stack: 'bef',
+      data: [80, 30, 80, 50, 110, 59,70, 130, 10, 125,40,65],
+    },
+    
+  ]
+};
+var barChartData2 = {
+  labels: [
+  " Week 1",
+    " Week 2",
+    " Week 3",
+    " Week 4",
+    " Week 5",
+    " Week 6",
+    " Week 7",
+    " Week 8",
+    " Week 9",
+    " Week 10",
+    " Week 11",
+    " Week 12"
+  ],
+  datasets: [
+    {
+      yAxisID: "line",
+      backgroundColor: "#fff",
+      borderColor: "#DA9224",
+      borderWidth:'2',
+      type: 'line',
+      tension: 0.1,
+      fill: false,
+      data: [80, 30, 80, 50, 110, 59,70, 130, 10, 125,40, 65],
+    },
+    {
+        label: 'Total Txns',
+      yAxisID: 'bar-stack',
+      backgroundColor: "#FD940C",
+      stack: 'bef',
+      data: [80, 30, 80, 50, 110, 59,70, 130, 10, 125,40,65],
+    },
+    
+  ]
+};
+var barChartData3
+ = {
+  labels: [
+  " Week 1",
+    " Week 2",
+    " Week 3",
+    " Week 4",
+    " Week 5",
+    " Week 6",
+    " Week 7",
+    " Week 8",
+    " Week 9",
+    " Week 10",
+    " Week 11",
+    " Week 12"
+  ],
+  datasets: [
+    {
+      yAxisID: "line",
+      backgroundColor: "#FFFFFF",
+      borderColor: "#600790",
+      borderWidth:'2',
+      type: 'line',
+      tension: 0.1,
+      fill: false,
+      data: [80, 30, 80, 50, 110, 59,70, 130, 10, 125,40, 65],
+    },
+    {
+        label: 'Total Txns',
+      yAxisID: 'bar-stack',
+      backgroundColor: "#B550ED",
       stack: 'bef',
       data: [80, 30, 80, 50, 110, 59,70, 130, 10, 125,40,65],
     },
@@ -1292,13 +1372,13 @@ window.onload = function() {
   var ctx = document.getElementById("canvas2").getContext("2d");
   window.myBar = new Chart(ctx, {
     type: "bar",
-    data: barChartData,
+    data: barChartData2,
     options: chartOptions
   });
   var ctx = document.getElementById("canvas3").getContext("2d");
   window.myBar = new Chart(ctx, {
     type: "bar",
-    data: barChartData,
+    data: barChartData3,
     options: chartOptions
   });
 };

@@ -225,10 +225,10 @@ position: relative;
     width: 100%;
     height: 0vh;
   } */
-  #myChart4, #canvas{
+  #myChart4, #canvas, #canvas2, #canvas3{
     background:#fff;
     width: 100% !important;
-    height:300px !important;
+    height:360px !important;
   }
   .tooltips{
 color: #00CA72;
