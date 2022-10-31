@@ -38,16 +38,16 @@
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center " :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}">
               <span class="" :class="{'hidden': menu, 'block': menu == false}"><img
-                  src="/assets/images/icons-nav/dashboard.png" alt=""></span><span x-show="menu">Dashboard</span>
+                  src="/assets/images/icons-nav/dashboard.svg" alt=""></span><span x-show="menu">Dashboard</span>
             </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">View and export company reports in real time.</p>
           </div>
           <nav class="flex flex-col mx-0 my-6 space-y-4 mt-10">
-            <a href=""
+            <a href="transaction-summary.html"
               class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/core-kpi.png" alt="" class="">
-              <span class="ml-2" x-show="menu">Core KPIs</span>
+              <span class="ml-2" x-show="menu">Transaction Summary</span>
             </a>
 
             <a href=""
@@ -93,7 +93,7 @@
           <div class="mt-10 items-center py-4 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
-                class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.png"
+                class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.svg"
                   alt=""></span><span x-show="menu">ADMIN</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">Add and Modify User profiles.</p>
           </div>
@@ -122,7 +122,7 @@
           <div class="mt-10 items-center py-4 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
-                class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/rea.png"
+                class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/resources.svg"
                   alt=""></span><span x-show="menu">Resources</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">Help guides for your company.</p>
           </div>
@@ -342,10 +342,10 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
     </header>
     <main class="p-6 sm:p-1 space-y-4 bg-white">
       <div id="panels">
-        <div class="panel-1 tab-content active py-5">
+        <div class="panel-1 tab-content active py-0">
           
           <section class="flex gap-6">
-            <div class="px-4 sm:px-6 lg:px-12 w-full ">
+            <div class="px-4 sm:px-8 lg:px-8 w-full ">
               <!-- ==================== Menu Items Section ==================  -->
               <div class=" flex items-center justify-between py-1
               ">
@@ -353,7 +353,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                 <div x-data="{ open: false }" class="relative">
                   <!-- ======================= Option-1 Dropdown =================== -->
                   <button @click="open = true"
-                    class="flex items-center bg-white text-gray-500 focus:text-gray-900 font-300 rounded-lg focus:outline-none shadow-lg py-2 px-4 text-[13px]" 
+                    class="flex items-center bg-white text-gray-400 focus:text-gray-900 font-300 rounded-lg focus:outline-none shadow-lg py-2 px-4 text-[13px]" 
                     type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
@@ -902,7 +902,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
     <nav class="flex-1 flex flex-col bg-[#FAFAFA] px-3 py-4 ">
       <div class="flex mb-5 items-center justify-between">
         <p class="text-sm font-400 text-gray-500">Filters</p>
-        <p class="text-sm font-400 text-[#436AD6]"><a href="">Clear All</a><br><span class="text-gray-300">Select All</span></p>
+        <p class="text-sm font-400 text-[#436AD6] text-right"><a href="">Clear All</a><br><a href="" class="text-gray-400">Select All</a></p>
       </div>
       <div class="w-full mx-auto " x-data="{selected:1}">
         <ul class="shadow-box">
@@ -916,7 +916,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
             <button type="button" class="w-full px-4 py-2 text-left sm:rounded-md bg-white" @click="selected !== 1 ? selected = 1 : selected = null">
               <div class="flex items-center justify-between">
                 <div class="w-56">
-                  <h5 class="font-400 text-sm text-gray-500">Company</h5>
+                  <h5 class="font-400 text-sm text-gray-700">Company</h5>
                 </div>
                 <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
@@ -938,19 +938,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                       <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
                         <div class="flex items-center  py-1 px-1">
                           <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                          <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Hylant</label>
+                          <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Hylant</label>
                         </div>
                       </li>
                       <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
                         <div class="flex items-center  py-1 px-1">
                           <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                          <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Department 2</label>
+                          <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Department 2</label>
                         </div>
                       </li>
                       <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
                         <div class="flex items-center  py-1 px-1">
                           <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                          <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Department 3</label>
+                          <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Department 3</label>
                         </div>
                       </li>
                       <li class="text-sm font-300 text-[#436AD6] relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
@@ -972,7 +972,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
       <button type="button" class="w-full px-4 py-2 text-left sm:rounded-md bg-white" @click="selected !== 2 ? selected = 2 : selected = null">
         <div class="flex items-center justify-between">
           <div class="w-56">
-            <h5 class="font-400 text-sm text-gray-500">Service</h5>
+            <h5 class="font-400 text-sm text-gray-700">Service</h5>
           </div>
           <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
@@ -994,19 +994,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
                 <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
                   <div class="flex items-center  py-1 px-1">
                     <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                    <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Policy checking</label>
+                    <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Policy checking</label>
                   </div>
                 </li>
                 <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
                   <div class="flex items-center  py-1 px-1">
                     <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                    <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Service 2</label>
+                    <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Service 2</label>
                   </div>
                 </li>
                 <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
                   <div class="flex items-center  py-1 px-1">
                     <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                    <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Service 3</label>
+                    <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Service 3</label>
                   </div>
                 </li>
                 <li class="text-sm font-300 text-[#436AD6] relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
@@ -1028,7 +1028,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
   <button type="button" class="w-full px-4 py-2 text-left sm:rounded-md bg-white" @click="selected !== 3 ? selected = 3 : selected = null">
     <div class="flex items-center justify-between">
       <div class="w-56">
-        <h5 class="font-400 text-sm text-gray-500">Service type</h5>
+        <h5 class="font-400 text-sm text-gray-700">Service type</h5>
       </div>
       <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
@@ -1050,19 +1050,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Builder's Risk</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Builder's Risk</label>
               </div>
             </li>
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">CL - Agricultural Package</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">CL - Agricultural Package</label>
               </div>
             </li>
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">CL - Business Owners Policy</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">CL - Business Owners Policy</label>
               </div>
             </li>
             <li class="text-sm font-300 text-[#436AD6] relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
@@ -1084,7 +1084,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
   <button type="button" class="w-full px-4 py-2 text-left sm:rounded-md bg-white" @click="selected !== 4 ? selected = 4 : selected = null">
     <div class="flex items-center justify-between">
       <div class="w-56">
-        <h5 class="font-400 text-sm text-gray-500">Product</h5>
+        <h5 class="font-400 text-sm text-gray-700">Product</h5>
       </div>
       <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
@@ -1106,19 +1106,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">BOP</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">BOP</label>
               </div>
             </li>
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Monoline</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Monoline</label>
               </div>
             </li>
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Package</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Package</label>
               </div>
             </li>
             <li class="text-sm font-300 text-[#436AD6] relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
@@ -1140,7 +1140,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
   <button type="button" class="w-full px-4 py-2 text-left sm:rounded-md bg-white" @click="selected !== 5 ? selected = 5 : selected = null">
     <div class="flex items-center justify-between">
       <div class="w-56">
-        <h5 class="font-400 text-sm text-gray-500">Department</h5>
+        <h5 class="font-400 text-sm text-gray-700">Department</h5>
       </div>
       <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
@@ -1162,19 +1162,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Department 1</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Department 1</label>
               </div>
             </li>
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Department 2</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Department 2</label>
               </div>
             </li>
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Department 3</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Department 3</label>
               </div>
             </li>
             <li class="text-sm font-300 text-[#436AD6] relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
@@ -1196,7 +1196,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
   <button type="button" class="w-full px-4 py-2 text-left sm:rounded-md bg-white" @click="selected !== 6 ? selected = 6 : selected = null">
     <div class="flex items-center justify-between">
       <div class="w-56">
-        <h5 class="font-400 text-sm text-gray-500">Branch</h5>
+        <h5 class="font-400 text-sm text-gray-700">Branch</h5>
       </div>
       <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
@@ -1218,19 +1218,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Branch 1</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Branch 1</label>
               </div>
             </li>
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Branch 2</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Branch 2</label>
               </div>
             </li>
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Branch 3</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Branch 3</label>
               </div>
             </li>
             <li class="text-sm font-300 text-[#436AD6] relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
@@ -1252,7 +1252,7 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
   <button type="button" class="w-full px-4 py-2 text-left sm:rounded-md bg-white" @click="selected !== 7 ? selected = 7 : selected = null">
     <div class="flex items-center justify-between">
       <div class="w-56">
-        <h5 class="font-400 text-sm text-gray-500">Requestor</h5>
+        <h5 class="font-400 text-sm text-gray-700">Requestor</h5>
       </div>
       <span class="ico-plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
@@ -1274,19 +1274,19 @@ gg==" transform="matrix(0.1534 0 0 0.1534 -0.2335 9.344361e-02)">
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Requestor 1</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Requestor 1</label>
               </div>
             </li>
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Requestor 2</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Requestor 2</label>
               </div>
             </li>
             <li class="text-sm font-300 text-gray-400 relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">
               <div class="flex items-center  py-1 px-1">
                 <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-3.5 w-3.5 rounded border-gray-300 text-indigo-500 ">
-                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-400 font-300">Requestor 3</label>
+                <label for="filter-mobile-category-0" class="ml-3 text-[12px] text-gray-600 font-300">Requestor 3</label>
               </div>
             </li>
             <li class="text-sm font-300 text-[#436AD6] relative cursor-default select-none py-0 pl-2 pr-2" id="listbox-option-0" role="option">

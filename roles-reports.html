@@ -37,16 +37,16 @@
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center " :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}">
               <span class="" :class="{'hidden': menu, 'block': menu == false}"><img
-                  src="/assets/images/icons-nav/dashboard.png" alt=""></span><span x-show="menu">Dashboard</span>
+                  src="/assets/images/icons-nav/dashboard.svg" alt=""></span><span x-show="menu">Dashboard</span>
             </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">View and export company reports in real time.</p>
           </div>
           <nav class="flex flex-col mx-0 my-6 space-y-4 mt-10">
-            <a href=""
+            <a href="transaction-summary.html"
               class="inline-flex items-center py-2 hover:text-black hover:bg-white rounded-lg px-4 font-400 text-[13px] "
               :class="{'justify-start': menu, 'justify-center': menu == false}">
               <img src="/assets/images/icons-nav/core-kpi.png" alt="" class="">
-              <span class="ml-2" x-show="menu">Core KPIs</span>
+              <span class="ml-2" x-show="menu">Transaction Summary</span>
             </a>
 
             <a href=""
@@ -92,7 +92,7 @@
           <div class="mt-10 items-center py-4 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
-                class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.png"
+                class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/admin.svg"
                   alt=""></span><span x-show="menu">ADMIN</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">Add and Modify User profiles.</p>
           </div>
@@ -121,7 +121,7 @@
           <div class="mt-10 items-center py-4 text-white bg-[#436AD6] rounded-lg px-2 dash-font"
             :class="{'justify-start': menu, 'justify-center': menu == false}">
             <h1 class=" uppercase flex items-center" :class="{'ml-2': menu, 'ml-0 justify-center': menu == false}"><span
-                class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/rea.png"
+                class="" :class="{'hidden': menu, 'block': menu == false}"><img src="/assets/images/icons-nav/resources.svg"
                   alt=""></span><span x-show="menu">Resources</span> </h1>
             <p class="ml-2 text-xs text-gray-50" x-show="menu">Help guides for your company.</p>
           </div>
