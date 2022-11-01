@@ -60,3 +60,22 @@
 function toggleModal() {
     document.getElementById('modal').classList.toggle('hidden')
   }
+
+  function toggleModals() {
+    document.getElementById('modals').classList.toggle('hidden')
+  }
+
+
+
+  function toggleModal2() {
+    document.getElementById('modal2').classList.toggle('hidden')
+  }
+  function toggleModal3() {
+    document.getElementById('modal3').classList.toggle('hidden')
+  }
+  function toggleModal4() {
+    document.getElementById('modal4').classList.toggle('hidden')
+  }
+  function toggleModal5() {
+    document.getElementById('modal5').classList.toggle('hidden')
+  }
